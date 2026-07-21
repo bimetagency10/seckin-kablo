@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="620" viewBox="0 0 480 620">
+  <rect width="480" height="620" fill="#ffffff"/>
+  <rect x="18" y="18" width="444" height="584" fill="none" stroke="#D32F2F" stroke-width="3"/>
+  <rect x="30" y="30" width="420" height="560" fill="none" stroke="#e5e5e5" stroke-width="1"/>
+  <text x="240" y="120" text-anchor="middle" font-family="Montserrat,Arial" font-size="20" font-weight="700" letter-spacing="3" fill="#9E9E9E">SERTİFİKA</text>
+  <circle cx="240" cy="270" r="78" fill="#1a1a1a"/>
+  <text x="240" y="285" text-anchor="middle" font-family="Montserrat,Arial" font-size="30" font-weight="800" fill="#fff">ISO</text>
+  <text x="240" y="430" text-anchor="middle" font-family="Montserrat,Arial" font-size="26" font-weight="800" fill="#1a1a1a">ISO 14001:2015</text>
+  <line x1="120" y1="470" x2="360" y2="470" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="240" y="510" text-anchor="middle" font-family="Arial" font-size="15" fill="#9E9E9E">SEÇKİN KABLO SAN. TİC. A.Ş.</text>
+  <text x="240" y="545" text-anchor="middle" font-family="Arial" font-size="13" fill="#c0c0c0">Belge No: SK-ISO-2025</text>
+</svg>

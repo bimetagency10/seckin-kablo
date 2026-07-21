@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seçkin Kablo — Türkiyenin En Seçkin Kablosu | Data, Koaksiyel, CCTV, Kumanda Kabloları</title>
+  <meta name="description" content="Seçkin Kablo — data, koaksiyel görüntü, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında seçkin standart. TSE & CE belgeli üretim.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#C4161C">
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:title" content="Seçkin Kablo — Türkiyenin En Seçkin Kablosu">
+  <meta property="og:image" content="assets/img/logo-mark.png">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- ============================================================
+       SLAYT 1 — "CANLI KABLO HATTI" (imza slaytı, yalnızca anasayfa)
+       Beyaz zemin · koyu metin · çizilen SVG kablo hattı · 3B soyulmuş
+       kablo ucu · süreç durakları. Diğer slaytları etkilemez; tüm
+       slider mekaniği (main.js) korunur.
+       ============================================================ -->
+  <style>
+    /* ---- imza slaytı temel ---- */
+    .slide--light{background:#FAFAF9;}
+    .sig-slide{position:absolute;inset:0;overflow:hidden;background:#FAFAF9;color:var(--ink);}
+    /* yumuşak kırmızı mesh bloblar */
+    .sig-blob{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0;}
+    .sig-blob-1{width:460px;height:460px;background:rgba(196,22,28,.10);top:-150px;right:-70px;}
+    .sig-blob-2{width:380px;height:380px;background:rgba(224,43,49,.07);bottom:-170px;left:-110px;}
+    .sig-blob-3{width:300px;height:300px;background:rgba(196,22,28,.05);top:26%;left:38%;}
+
+    /* ---- kablo hattı (çizilen çizgi + sinyal darbesi) ---- */
+    .sig-line{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;}
+    .sig-arc-m{display:none;}
+    .sig-path{fill:none;stroke:#C4161C;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;
+      vector-effect:non-scaling-stroke;stroke-dasharray:1000;stroke-dashoffset:0;}
+    .slide--light.is-active .sig-path{animation:sigDraw 2s cubic-bezier(.4,0,.2,1);}
+    @keyframes sigDraw{from{stroke-dashoffset:1000;}to{stroke-dashoffset:0;}}
+
+    /* ---- metin bloğu (sol, beyaz üstünde koyu) ---- */
+    .sig-text{position:absolute;z-index:3;left:clamp(40px,6vw,92px);top:50%;transform:translateY(-50%);
+      max-width:min(560px,54%);display:flex;flex-direction:column;align-items:flex-start;gap:18px;}
+    .sig-h1{color:var(--ink);font-family:var(--font-display);font-weight:800;
+      font-size:clamp(1.9rem,3.4vw,3.1rem);line-height:1.08;letter-spacing:-.02em;}
+    .sig-sub{color:var(--body);font-size:clamp(1rem,1.3vw,1.12rem);max-width:480px;}
+    .sig-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px;}
+
+    /* ---- 3B soyulmuş kablo ucu (sağ) ---- */
+    .sig-cable{position:absolute;z-index:2;right:3%;top:26%;width:clamp(300px,34vw,470px);
+      perspective:1100px;animation:sigFloat 6s ease-in-out infinite;}
+    .sig-cut-cable{display:block;width:100%;height:auto;transform-style:preserve-3d;will-change:transform;
+      filter:drop-shadow(0 18px 30px rgba(15,15,20,.16));}
+    @keyframes sigFloat{0%,100%{transform:translateY(-7px);}50%{transform:translateY(7px);}}
+
+    /* ---- süreç durakları (hat üzerinde cam pill'ler) ---- */
+    .sig-pills{position:absolute;inset:0;z-index:4;pointer-events:none;}
+    .sig-pill{position:absolute;pointer-events:auto;}
+    .sig-node{position:absolute;left:0;top:0;transform:translate(-50%,-50%);
+      width:14px;height:14px;border-radius:50%;background:#C4161C;
+      box-shadow:0 0 0 4px rgba(196,22,28,.14),0 2px 8px rgba(196,22,28,.45);}
+    .sig-pill-body{position:absolute;left:0;bottom:14px;transform:translateX(-50%);
+      display:inline-flex;flex-direction:column;align-items:center;gap:2px;
+      background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      border:1px solid var(--line);border-radius:16px;padding:8px 14px;white-space:nowrap;
+      box-shadow:var(--sh-soft);transition:transform .28s var(--ease),box-shadow .28s var(--ease);
+      transform-origin:bottom center;}
+    .sig-pill-label{font-family:var(--font-mono);font-size:.82rem;font-weight:500;color:var(--ink);}
+    .sig-pill-tip{max-height:0;opacity:0;overflow:hidden;font-size:.76rem;color:var(--body);
+      transition:max-height .3s var(--ease),opacity .3s var(--ease),margin-top .3s var(--ease);}
+    .sig-pill:hover{z-index:6;}
+    .sig-pill:hover .sig-pill-body{transform:translateX(-50%) scale(1.05);box-shadow:var(--sh-hover);}
+    .sig-pill:hover .sig-pill-tip{max-height:40px;opacity:1;margin-top:2px;}
+    /* hat çizildikten sonra sırayla belirme (stagger 150ms) */
+    .slide--light.is-active .sig-pill{animation:sigPill .55s cubic-bezier(.4,0,.2,1) both;}
+    .slide--light.is-active .sig-pill:nth-child(1){animation-delay:2.05s;}
+    .slide--light.is-active .sig-pill:nth-child(2){animation-delay:2.20s;}
+    .slide--light.is-active .sig-pill:nth-child(3){animation-delay:2.35s;}
+    @keyframes sigPill{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+
+    /* ---- slayt 1 aktifken ok/nokta/çip koyu varyant (açık zemin okunur) ---- */
+    .hero-slider.slider-light .slider-arrow{background:rgba(15,15,20,.35);border-color:rgba(15,15,20,.14);color:#fff;box-shadow:0 8px 24px rgba(15,15,20,.18);}
+    .hero-slider.slider-light .slider-arrow:hover{background:var(--grad);color:#fff;border-color:transparent;}
+    .hero-slider.slider-light .slider-dots .dot{background:rgba(15,15,20,.35);box-shadow:none;}
+    .hero-slider.slider-light .slider-dots .dot.is-active{background:var(--red);}
+    .hero-slider.slider-light .chip-cluster{display:none;}
+
+    /* ---- ≤820px: sadeleştir (kısa yay + kablo altta + kaydırılabilir pill'ler) ---- */
+    @media (max-width:820px){
+      /* imza slaytı dikey akış için sabit yükseklik — tüm slaytlarda aynı,
+         böylece slayt değişiminde yükseklik zıplamaz (2-3 medya cover doldurur) */
+      .hero-slider{aspect-ratio:auto;min-height:clamp(540px,110vw,700px);}
+      .sig-slide{display:flex;flex-direction:column;justify-content:center;gap:12px;
+        padding:clamp(20px,5vw,40px);}
+      .sig-line{display:none;}
+      .sig-arc-m{display:block;position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.85;}
+      .sig-text{position:static;transform:none;top:auto;width:100%;max-width:100%;gap:14px;}
+      .sig-text .sig-h1,.sig-text .sig-sub{max-width:100%;}
+      .sig-cable{position:static;right:auto;top:auto;order:3;width:min(210px,52%);margin:2px auto 0;}
+      .sig-pills{position:static;order:4;display:flex;flex-direction:row;gap:12px;
+        overflow-x:auto;padding:6px 2px 4px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+      .sig-pills::-webkit-scrollbar{display:none;}
+      /* mobilde her durak tek bir kompakt çip: kırmızı düğüm + etiket · ipucu */
+      .sig-pill{position:static;flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;
+        background:rgba(255,255,255,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+        border:1px solid var(--line);border-radius:999px;padding:7px 14px;box-shadow:var(--sh-soft);}
+      .sig-node{position:static;transform:none;display:inline-block;flex:none;width:9px;height:9px;
+        box-shadow:0 0 0 3px rgba(196,22,28,.14);}
+      .sig-pill-body{position:static;transform:none;flex-direction:row;align-items:baseline;gap:6px;
+        background:none;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;
+        padding:0;border-radius:0;}
+      .sig-pill:hover .sig-pill-body{transform:none;box-shadow:none;}
+      .sig-pill-tip{max-height:none;opacity:1;font-size:.72rem;}
+      .sig-pill-tip::before{content:"· ";}
+    }
+    @media (max-width:560px){
+      .sig-h1{font-size:clamp(1.6rem,7vw,2.1rem);}
+      .sig-text{gap:14px;}
+    }
+
+    /* ---- hareket azaltma: hat tam çizili, darbe gizli, pill'ler görünür ---- */
+    @media (prefers-reduced-motion:reduce){
+      .sig-path{stroke-dashoffset:0 !important;}
+      .sig-pulse{display:none !important;}
+      .sig-pill{opacity:1 !important;}
+    }
+
+  </style>
+</head>
+<body>
+  <a href="#ana" class="skip-link">İçeriğe geç</a>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Seçkin Kablo — Anasayfa"><img src="assets/img/logo.png" alt="Seçkin Kablo" height="46" loading="eager"></a>
+      <nav aria-label="Ana menü">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">Anasayfa</a></li>
+          <li class="has-drop">
+            <a href="urunler.html">Ürünler</a>
+            <div class="dropdown">
+              <a href="data-kablolari.html">Data Kabloları</a>
+              <a href="koaksiyel-kablolar.html">Koaksiyel Görüntü Kabloları</a>
+              <a href="cctv-kablolari.html">CCTV Kamera Kabloları</a>
+              <a href="yangin-alarm-kablolari.html">Yangın Alarm Kabloları</a>
+              <a href="sinyal-kontrol-kablolari.html">Sinyal Kontrol Kabloları</a>
+              <a href="telefon-kablolari.html">Telefon Kabloları</a>
+              <a href="kumanda-kablolari.html">Kumanda Kabloları</a>
+            </div>
+          </li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="#" class="btn btn-grad">Katalog PDF</a>
+        <button class="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="ana">
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <span class="blob blob-c"></span>
+    <h1 class="sr-only">Seçkin Kablo — Türkiyenin En Seçkin Kablosu</h1>
+    <div class="hero-stage reveal">
+      <div class="hero-slider" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Öne çıkan görseller">
+        <div class="slides">
+          <div class="slide is-active slide--light" data-name="slide-1" role="group" aria-roledescription="slide" aria-label="1 / 3" aria-hidden="false">
+            <div class="sig-slide">
+              <span class="sig-blob sig-blob-1"></span>
+              <span class="sig-blob sig-blob-2"></span>
+              <span class="sig-blob sig-blob-3"></span>
+
+              <!-- KABLO HATTI — kendini çizen SVG yol + hat üzerinde akan sinyal darbesi -->
+              <svg class="sig-line" viewBox="0 0 1200 520" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+                <defs>
+                  <filter id="sigGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="7"/></filter>
+                </defs>
+                <path id="sigMotionPath" class="sig-path" pathLength="1000" d="M -30 470 C 150 470 250 458 340 448 C 470 434 500 414 560 398 C 640 376 662 356 720 334 C 780 314 820 300 868 286"/>
+                <g class="sig-pulse">
+                  <circle r="13" fill="#E02B31" opacity=".4" filter="url(#sigGlow)"/>
+                  <circle r="5.5" fill="#E02B31"/>
+                  <circle r="2.4" fill="#ffffff" opacity=".9"/>
+                  <animateMotion dur="5s" repeatCount="indefinite" calcMode="linear">
+                    <mpath href="#sigMotionPath" xlink:href="#sigMotionPath"/>
+                  </animateMotion>
+                </g>
+              </svg>
+
+              <!-- ≤820px: metnin arkasında kısa dekoratif yay -->
+              <svg class="sig-arc-m" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true">
+                <path class="sig-path" pathLength="1000" d="M -12 176 C 96 120 250 116 372 168"/>
+              </svg>
+
+              <!-- METİN BLOĞU -->
+              <div class="sig-text">
+                <span class="eyebrow">TÜRKİYENİN EN SEÇKİN KABLOSU</span>
+                <h2 class="sig-h1">Bakırdan binaya, <span class="gradient-text">kusursuz</span> iletim.</h2>
+                <p class="sig-sub">Yüksek saflıkta bakır, belgeli üretim ve her metresi test edilmiş kablolar.</p>
+                <div class="sig-actions">
+                  <a class="btn btn-grad" href="urunler.html">Ürünleri Keşfet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                  <a class="btn btn-ghost" href="#">Katalog PDF</a>
+                </div>
+              </div>
+
+              <!-- 3B SOYULMUŞ KABLO UCU — hakkimizda.html bileşeni (hero için büyütülmüş) -->
+              <div class="sig-cable">
+                <svg class="sig-cut-cable" viewBox="0 0 420 340" role="img"
+                     aria-label="Seçkin Kablo — soyulmuş kablo ucu: siyah PVC dış kılıf, kırmızı yalıtım ve yüksek saflıkta bakır iletkenler.">
+                  <defs>
+                    <linearGradient id="cbBody" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#26262f"/><stop offset=".5" stop-color="#17171c"/><stop offset="1" stop-color="#0d0d11"/>
+                    </linearGradient>
+                    <linearGradient id="cbRedBody" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#E8383E"/><stop offset=".5" stop-color="#C4161C"/><stop offset="1" stop-color="#6f0e12"/>
+                    </linearGradient>
+                    <linearGradient id="cbCopBody" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#EEAE68"/><stop offset=".5" stop-color="#B87333"/><stop offset="1" stop-color="#6f4319"/>
+                    </linearGradient>
+                    <radialGradient id="cbSheathCap" cx=".38" cy=".32" r=".75">
+                      <stop offset="0" stop-color="#33333c"/><stop offset="1" stop-color="#0f0f14"/>
+                    </radialGradient>
+                    <radialGradient id="cbRedCap" cx=".42" cy=".28" r=".85">
+                      <stop offset="0" stop-color="#EC4046"/><stop offset=".5" stop-color="#C4161C"/><stop offset="1" stop-color="#720f13"/>
+                    </radialGradient>
+                    <radialGradient id="cbFiller" cx=".4" cy=".3" r=".9">
+                      <stop offset="0" stop-color="#FFFDF8"/><stop offset=".6" stop-color="#ECE4D6"/><stop offset="1" stop-color="#D3C8B4"/>
+                    </radialGradient>
+                    <radialGradient id="cbCopCap" cx=".36" cy=".3" r=".8">
+                      <stop offset="0" stop-color="#F2BE7E"/><stop offset=".55" stop-color="#B87333"/><stop offset="1" stop-color="#7A4A1D"/>
+                    </radialGradient>
+                    <filter id="cbBlur" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9"/></filter>
+                  </defs>
+
+                  <!-- YER GÖLGESİ -->
+                  <ellipse cx="205" cy="288" rx="150" ry="24" fill="rgba(15,15,20,.18)" filter="url(#cbBlur)"/>
+
+                  <!-- KABLO — hafif izometrik açı -->
+                  <g transform="rotate(-13 205 185)">
+                    <path d="M236 104 L96 104 A22 66 0 0 0 96 236 L236 236 Z" fill="url(#cbBody)"/>
+                    <rect x="112" y="116" width="116" height="12" rx="6" fill="#ffffff" opacity=".08"/>
+                    <path d="M122 107 L230 107" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity=".14"/>
+                    <rect x="112" y="214" width="118" height="12" rx="6" fill="#000000" opacity=".16"/>
+
+                    <ellipse cx="236" cy="170" rx="21" ry="66" fill="url(#cbSheathCap)" stroke="rgba(0,0,0,.45)" stroke-width="1"/>
+
+                    <path d="M232 118 L290 118 L290 222 L232 222 Z" fill="url(#cbRedBody)"/>
+                    <rect x="244" y="126" width="40" height="8" rx="4" fill="#ffffff" opacity=".10"/>
+                    <ellipse cx="290" cy="170" rx="16" ry="52" fill="url(#cbRedCap)" stroke="rgba(70,10,12,.55)" stroke-width="1"/>
+
+                    <ellipse cx="292" cy="170" rx="12" ry="42" fill="url(#cbFiller)"/>
+                    <ellipse cx="292" cy="176" rx="10.5" ry="37" fill="none" stroke="rgba(150,130,100,.28)" stroke-width="2"/>
+
+                    <!-- bakır iletkenler -->
+                    <rect x="290" y="128" width="56" height="24" rx="11" fill="url(#cbCopBody)"/>
+                    <path d="M298 130 L340 130" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity=".28"/>
+                    <ellipse cx="346" cy="140" rx="6.5" ry="12" fill="url(#cbCopCap)" stroke="rgba(70,42,18,.7)" stroke-width=".8"/>
+                    <ellipse cx="346" cy="140" rx="4" ry="8" fill="none" stroke="rgba(90,55,22,.5)" stroke-width=".7"/>
+                    <ellipse cx="346" cy="140" rx="2" ry="4" fill="none" stroke="rgba(90,55,22,.5)" stroke-width=".7"/>
+                    <ellipse cx="343" cy="136" rx="1.6" ry="2.4" fill="#ffffff" opacity=".85"/>
+                    <rect x="290" y="160" width="56" height="24" rx="11" fill="url(#cbCopBody)"/>
+                    <path d="M298 162 L340 162" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity=".28"/>
+                    <ellipse cx="346" cy="172" rx="6.5" ry="12" fill="url(#cbCopCap)" stroke="rgba(70,42,18,.7)" stroke-width=".8"/>
+                    <ellipse cx="346" cy="172" rx="4" ry="8" fill="none" stroke="rgba(90,55,22,.5)" stroke-width=".7"/>
+                    <ellipse cx="346" cy="172" rx="2" ry="4" fill="none" stroke="rgba(90,55,22,.5)" stroke-width=".7"/>
+                    <ellipse cx="343" cy="168" rx="1.6" ry="2.4" fill="#ffffff" opacity=".85"/>
+                    <rect x="290" y="190" width="56" height="24" rx="11" fill="url(#cbCopBody)"/>
+                    <path d="M298 192 L340 192" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity=".28"/>
+                    <ellipse cx="346" cy="202" rx="6.5" ry="12" fill="url(#cbCopCap)" stroke="rgba(70,42,18,.7)" stroke-width=".8"/>
+                    <ellipse cx="346" cy="202" rx="4" ry="8" fill="none" stroke="rgba(90,55,22,.5)" stroke-width=".7"/>
+                    <ellipse cx="346" cy="202" rx="2" ry="4" fill="none" stroke="rgba(90,55,22,.5)" stroke-width=".7"/>
+                    <ellipse cx="343" cy="198" rx="1.6" ry="2.4" fill="#ffffff" opacity=".85"/>
+                  </g>
+                </svg>
+              </div>
+
+              <!-- SÜREÇ DURAKLARI — hat üzerindeki kırmızı düğüm + cam pill -->
+              <div class="sig-pills">
+                <div class="sig-pill" style="left:28.3%;top:86.1%">
+                  <span class="sig-node"></span>
+                  <span class="sig-pill-body">
+                    <span class="sig-pill-label">Üretim</span>
+                    <span class="sig-pill-tip">Mikron toleranslı izolasyon</span>
+                  </span>
+                </div>
+                <div class="sig-pill" style="left:46.7%;top:76.5%">
+                  <span class="sig-node"></span>
+                  <span class="sig-pill-body">
+                    <span class="sig-pill-label">Test</span>
+                    <span class="sig-pill-tip">Gerilim ve yalıtım testleri</span>
+                  </span>
+                </div>
+                <div class="sig-pill" style="left:60%;top:64.2%">
+                  <span class="sig-node"></span>
+                  <span class="sig-pill-body">
+                    <span class="sig-pill-label">Sevkiyat</span>
+                    <span class="sig-pill-tip">Metraj baskılı, izlenebilir teslimat</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide" data-name="slide-2" role="group" aria-roledescription="slide" aria-label="2 / 3" aria-hidden="true">
+            <div class="slide-media-wrap"><div class="slide-ph ph-2"><span class="ph-label">Görsel 2 — müşteri medyası buraya</span></div></div>
+            <div class="slide-scrim"></div>
+            <div class="slide-overlay"></div>
+          </div>
+          <div class="slide" data-name="slide-3" role="group" aria-roledescription="slide" aria-label="3 / 3" aria-hidden="true">
+            <div class="slide-media-wrap"><div class="slide-ph ph-3"><span class="ph-label">Görsel 3 — müşteri medyası buraya</span></div></div>
+            <div class="slide-scrim"></div>
+            <div class="slide-overlay"></div>
+          </div>
+        </div>
+        <button class="slider-arrow prev" type="button" aria-label="Önceki görsel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button class="slider-arrow next" type="button" aria-label="Sonraki görsel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg></button>
+        <div class="slider-dots" role="tablist" aria-label="Görsel göstergesi">
+          <button class="dot is-active" type="button" role="tab" aria-selected="true" aria-label="1. görsele git"></button>
+          <button class="dot" type="button" role="tab" aria-selected="false" aria-label="2. görsele git"></button>
+          <button class="dot" type="button" role="tab" aria-selected="false" aria-label="3. görsele git"></button>
+        </div>
+        <div class="chip-cluster" aria-hidden="true">
+          <span class="chip-float">100 ± 5 Ω</span>
+          <span class="chip-float">LSZH Kılıf</span>
+          <span class="chip-float">10 Gigabit</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- İstatistik pill'leri -->
+    <div class="wrap stats">
+      <div class="stats-grid">
+        <div class="stat-pill reveal"><div class="num"><span data-count="7">0</span></div><div class="label">Ürün Grubu</div></div>
+        <div class="stat-pill reveal"><div class="num"><span data-count="60" data-suffix="+">0</span></div><div class="label">Ürün Çeşidi</div></div>
+        <div class="stat-pill reveal"><div class="num"><span data-count="500">0</span> MHz</div><div class="label">Bant Genişliğine Kadar</div></div>
+        <div class="stat-pill reveal"><div class="num">TSE &amp; CE</div><div class="label">Belgeli Üretim</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave" aria-hidden="true"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0,45 C360,95 1080,-5 1440,45 L1440,90 L0,90 Z" fill="#FAFAF9"/></svg></div>
+
+  <!-- ================= ÜRÜN KATEGORİLERİ ================= -->
+  <section class="section soft">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Ürün Grupları</span>
+        <h2>Her uygulama için <span class="gradient-text">seçkin</span> kablo</h2>
+        <p>Zayıf akım ve veri altyapısının tamamını tek çatı altında topluyoruz. Aşağıdan ilgili grubu inceleyin.</p>
+      </div>
+      <div class="cat-grid">
+        <a href="data-kablolari.html" class="cat-card reveal">
+          <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.4 6h7.2M6 8.4v7.2M18 8.4v7.2M8.4 18h7.2M8 8l8 8"/></svg></div>
+          <h3>Data Kabloları</h3>
+          <p>Cat 6 ve Cat 5e UTP · FTP · SFTP; 10 Gigabit'e kadar güvenilir veri iletimi.</p>
+          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="koaksiyel-kablolar.html" class="cat-card reveal">
+          <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.2"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg></div>
+          <h3>Koaksiyel Görüntü Kabloları</h3>
+          <p>RG6, RG11, RG59 ve Mini U serisi; uydu, anten ve TV dağıtım sistemleri.</p>
+          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="cctv-kablolari.html" class="cat-card reveal">
+          <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8l14-3 1.6 5.2-14 3z"/><path d="M4.6 12.8V19h7"/><circle cx="9" cy="9.4" r="1"/><path d="M18.2 10.4l3-1v5l-3-1"/></svg></div>
+          <h3>CCTV Kamera Kabloları</h3>
+          <p>Besleme + görüntü kombine yapılar; kapalı devre kamera ve video sistemleri.</p>
+          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="yangin-alarm-kablolari.html" class="cat-card reveal">
+          <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3s5 4 5 9a5 5 0 01-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3 .5-2-1-4 1-7.5z"/></svg></div>
+          <h3>Yangın Alarm Kabloları</h3>
+          <p>J-Y(St)Y ve F180 devre bütünlüğü; yangın algılama ve sinyal hatları.</p>
+          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="sinyal-kontrol-kablolari.html" class="cat-card reveal">
+          <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h3l2 6 4-14 2 8h5"/></svg></div>
+          <h3>Sinyal Kontrol Kabloları</h3>
+          <p>LIYY, LIYCY, LIHH serisi; elektronik kontrol ve sinyal iletişimi.</p>
+          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="telefon-kablolari.html" class="cat-card reveal">
+          <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.4 2.1L8.1 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c1 .3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg></div>
+          <h3>Telefon Kabloları</h3>
+          <p>VBV ve VBV-K; ses, haberleşme ve dahili telefon altyapısı.</p>
+          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="kumanda-kablolari.html" class="cat-card reveal">
+          <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="2.3" fill="var(--bg-soft)"/><circle cx="15" cy="17" r="2.3" fill="var(--bg-soft)"/></svg></div>
+          <h3>Kumanda Kabloları</h3>
+          <p>LSCYCY, YSLY, HSLH serisi; esnek kumanda ve otomasyon hatları.</p>
+          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave" aria-hidden="true"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0,45 C360,-5 1080,95 1440,45 L1440,0 L0,0 Z" fill="#FAFAF9"/></svg></div>
+
+  <!-- ================= NEDEN SEÇKİN ================= -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Neden Seçkin Kablo?</span>
+        <h2>Kaliteyi <span class="gradient-text">ölçülebilir</span> kılan detaylar</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M8.5 9.5c0-1.4 1.6-2.5 3.5-2.5s3.5 1 3.5 2.4c0 3-7 1.6-7 4.6 0 1.4 1.6 2.5 3.5 2.5s3.5-1 3.5-2.4"/></svg></div>
+          <h3>Yüksek Saflıkta Bakır İletken</h3>
+          <p>Elektrolitik bakır iletken ile düşük direnç, kararlı empedans ve uzun ömürlü iletim.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7l7-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>LSZH-HFFR Halojensiz Seçenekler</h3>
+          <p>Yangın anında düşük duman ve halojen salınımı; can ve tesis güvenliğini önceleyen kılıf tercihleri.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7l8-4 8 4v10l-8 4-8-4z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg></div>
+          <h3>VDE · EN · TIA Standartlarına Uygun Üretim</h3>
+          <p>Uluslararası normlara göre üretilen kablolar; test edilebilir ve belgelendirilebilir kalite.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 9h10M7 13h6M7 17h8"/></svg></div>
+          <h3>Metraj Baskılı İzlenebilir Sevkiyat</h3>
+          <p>Kılıf üzeri metraj ve ürün baskısı ile sahada ölçüm kolaylığı ve tam izlenebilirlik.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KALİTE BANDI ================= -->
+  <section class="section soft">
+    <div class="wrap">
+      <div class="quality-box reveal">
+        <span class="blob blob-b"></span>
+        <div class="inner">
+          <span class="eyebrow">Kalite Güvencesi</span>
+          <h2 style="margin-top:18px">Sözü belgeler söylesin.</h2>
+          <p>Ürünlerimiz ulusal ve uluslararası standartlara göre üretilir, bağımsız kuruluşlarca belgelendirilir.</p>
+          <div class="badge-row">
+            <span class="q-badge">TSE</span>
+            <span class="q-badge">CE</span>
+            <span class="q-badge">VDE</span>
+            <span class="q-badge">RoHS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-card reveal">
+        <div class="inner">
+          <span class="eyebrow" style="background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.25)">Hızlı Teklif</span>
+          <h2 style="margin-top:18px">Projenizin metrajını gönderin, teklifiniz aynı gün hazır.</h2>
+          <p>İhtiyaç listenizi paylaşın; ekibimiz en uygun ürün ve kesitle aynı gün dönüş yapsın.</p>
+          <a href="iletisim.html" class="btn btn-white">Teklif Alın
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <div class="contact-line"><span>info@seckinkablo.com</span><span>www.seckinkablo.com</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo-chip"><img src="assets/img/logo.png" alt="Seçkin Kablo"></div>
+          <p class="about-txt">Türkiyenin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.</p>
+          <div class="socials">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 112.5 6 2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM10 9h3.8v1.7h.05a4.2 4.2 0 013.8-2.1c4 0 4.75 2.6 4.75 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.05 1.4-2.05 2.8V21h-4z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 00-1.7-1.7C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.9.4A2.5 2.5 0 001.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 001.7 1.7c1.5.4 8.9.4 8.9.4s7.4 0 8.9-.4a2.5 2.5 0 001.7-1.7C23 15.2 23 12 23 12zM10 15.5v-7l6 3.5z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="index.html">Anasayfa</a>
+          <a href="urunler.html">Ürünler</a>
+          <a href="hakkimizda.html">Hakkımızda</a>
+          <a href="iletisim.html">İletişim</a>
+        </div>
+        <div class="footer-col">
+          <h4>Ürün Grupları</h4>
+          <a href="data-kablolari.html">Data Kabloları</a>
+          <a href="koaksiyel-kablolar.html">Koaksiyel Görüntü</a>
+          <a href="cctv-kablolari.html">CCTV Kamera</a>
+          <a href="yangin-alarm-kablolari.html">Yangın Alarm</a>
+          <a href="sinyal-kontrol-kablolari.html">Sinyal Kontrol</a>
+          <a href="telefon-kablolari.html">Telefon</a>
+          <a href="kumanda-kablolari.html">Kumanda</a>
+        </div>
+        <div class="footer-col">
+          <h4>İletişim</h4>
+          <ul class="foot-contact">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@seckinkablo.com</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg><span>www.seckinkablo.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> SEÇKİN KABLO — Türkiyenin En Seçkin Kablosu</span>
+        <span>Tüm hakları saklıdır.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <!-- İmza slaytı 3B kablo ucu — fare eğimi parallaksı (rotateX/rotateY, en çok 6°).
+       prefers-reduced-motion açıksa devreye girmez (CSS süzülme de global kuralla durur). -->
+  <script>
+    (function () {
+      'use strict';
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var host = document.querySelector('.sig-cable');
+      var scene = document.querySelector('.sig-cut-cable');
+      if (!host || !scene) return;
+      var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
+      function clamp(v) { return v > 6 ? 6 : (v < -6 ? -6 : v); }
+      function loop() {
+        cx += (tx - cx) * 0.08; cy += (ty - cy) * 0.08;
+        scene.style.transform = 'rotateX(' + cy.toFixed(2) + 'deg) rotateY(' + cx.toFixed(2) + 'deg)';
+        if (Math.abs(tx - cx) > 0.05 || Math.abs(ty - cy) > 0.05) raf = requestAnimationFrame(loop);
+        else raf = null;
+      }
+      function kick() { if (!raf) raf = requestAnimationFrame(loop); }
+      host.addEventListener('pointermove', function (e) {
+        var r = host.getBoundingClientRect();
+        tx = clamp(((e.clientX - r.left) / r.width - 0.5) * 12);
+        ty = clamp(-((e.clientY - r.top) / r.height - 0.5) * 12);
+        kick();
+      });
+      host.addEventListener('pointerleave', function () { tx = 0; ty = 0; kick(); });
+    })();
+  </script>
+</body>
+</html>

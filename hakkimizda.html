@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakkımızda — Seçkin Kablo</title>
+  <meta name="description" content="2003'te İstanbul'da kurulan, tamamı yerli sermayeli Seçkin Kablo; 7 ürün grubu ve 60+ çeşitle, yüksek saflıkta bakır iletken ve VDE/EN/TIA-EIA uyumlu, TSE ve CE belgeli üretim yapar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#C4161C">
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:title" content="Seçkin Kablo — Türkiyenin En Seçkin Kablosu">
+  <meta property="og:image" content="assets/img/logo-mark.png">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Hakkımızda — sayfaya özel küçük eklemeler (yalnızca bu sayfada kullanılır; site genelini etkilemez) -->
+  <style>
+    .about-visual{position:relative;background:linear-gradient(135deg,rgba(224,43,49,.07),#FAFAF9);border:1px solid var(--line);border-radius:var(--r-lg);padding:48px 40px;box-shadow:var(--sh-soft);display:grid;place-items:center;min-height:440px;perspective:1100px;}
+    /* soyulmuş kablo görseli — fare eğimi (JS) + hafif süzülme (CSS) burada birleşir */
+    .cut-cable-wrap{width:min(360px,90%);transform-style:preserve-3d;will-change:transform;animation:aboutFloat 6s ease-in-out infinite;}
+    .cut-cable{display:block;width:100%;height:auto;transform-style:preserve-3d;filter:drop-shadow(0 16px 26px rgba(15,15,20,.14));}
+    .about-chip{position:absolute;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:var(--pill);padding:9px 16px;font-family:var(--font-mono);font-size:.8rem;font-weight:500;color:var(--ink);box-shadow:var(--sh-soft);white-space:nowrap;z-index:2;}
+    .about-chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--grad);flex:none;}
+    /* kesit sağ-altta olduğundan çipler üst ve sol-altta konumlanır, kesim yüzeyini kapatmaz */
+    .about-chip.c1{top:24px;left:16px;animation:aboutFloat 6s ease-in-out infinite;}
+    .about-chip.c2{top:22px;right:18px;animation:aboutFloat 6s ease-in-out infinite .8s;}
+    .about-chip.c3{bottom:30px;left:18px;animation:aboutFloat 6s ease-in-out infinite 1.6s;}
+    @keyframes aboutFloat{0%,100%{transform:translateY(-6px);}50%{transform:translateY(6px);}}
+    @media (max-width:560px){
+      .about-visual{padding:40px 24px;min-height:360px;}
+      .about-chip.c1{left:8px;} .about-chip.c2{right:8px;} .about-chip.c3{left:8px;}
+    }
+  </style>
+</head>
+<body>
+  <a href="#ana" class="skip-link">İçeriğe geç</a>
+
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Seçkin Kablo — Anasayfa"><img src="assets/img/logo.png" alt="Seçkin Kablo" height="46" loading="eager"></a>
+      <nav aria-label="Ana menü">
+        <ul class="nav-menu">
+          <li><a href="index.html">Anasayfa</a></li>
+          <li class="has-drop">
+            <a href="urunler.html">Ürünler</a>
+            <div class="dropdown">
+              <a href="data-kablolari.html">Data Kabloları</a>
+              <a href="koaksiyel-kablolar.html">Koaksiyel Görüntü Kabloları</a>
+              <a href="cctv-kablolari.html">CCTV Kamera Kabloları</a>
+              <a href="yangin-alarm-kablolari.html">Yangın Alarm Kabloları</a>
+              <a href="sinyal-kontrol-kablolari.html">Sinyal Kontrol Kabloları</a>
+              <a href="telefon-kablolari.html">Telefon Kabloları</a>
+              <a href="kumanda-kablolari.html">Kumanda Kabloları</a>
+            </div>
+          </li>
+          <li><a href="hakkimizda.html" class="active">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="#" class="btn btn-grad">Katalog PDF</a>
+        <button class="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="ana">
+
+    <!-- ================= PAGE HERO ================= -->
+    <section class="page-hero">
+      <div class="blob blob-a"></div>
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Sayfa yolu">
+          <a href="index.html">Anasayfa</a><span class="sep">/</span><span class="cur">Hakkımızda</span>
+        </nav>
+        <h1>Adı gibi <span class="gradient-text">Seçkin</span></h1>
+        <p class="lead">2003 yılında İstanbul'da kurulan Seçkin Kablo, tamamı yerli sermayeli bir kablo üreticisidir. Kurulduğumuz günden bu yana zayıf akım ve veri kablolarında uzmanlaşarak; yüksek saflıkta bakır iletken ve standartlara uygun, belgeli üretimle adımızın hakkını veriyoruz.</p>
+      </div>
+    </section>
+
+    <!-- ================= ŞİRKET HİKAYESİ ================= -->
+    <section class="section">
+      <div class="wrap">
+        <div class="story-grid">
+          <div class="reveal">
+            <span class="eyebrow">Biz Kimiz</span>
+            <h2>Kuruluştan bugüne, tek bir odak: seçkin kablo.</h2>
+            <p>2003'te İstanbul'da yola çıkan Seçkin Kablo; data, koaksiyel görüntü, CCTV kamera, yangın alarm, sinyal-kontrol, telefon ve kumanda kabloları olmak üzere <strong>7 ürün grubunda 60'tan fazla çeşit</strong> üretir. Enerji dağıtımından çok, binaların ve tesislerin sinir sistemi olan zayıf akım ve veri hatlarına odaklanarak bu alanda gerçek bir uzmanlık geliştirdik.</p>
+            <p>Ürettiğimiz her kablonun kalbinde yüksek saflıkta bakır iletken yer alır. İletkenin saflığı, yalıtımın niteliği ve ekranlamanın doğru uygulanması, bir kablonun sinyali kayıpsız taşımasını belirler. Bu nedenle üretimimizi malzeme seçiminden sevkiyata kadar ölçülebilir kalite ve standartlara uygunluk üzerine kurarız.</p>
+            <p>Değişen ihtiyaçların önünde durabilmek için halojensiz (LSZH/HFFR) ve yangına dayanıklı kablo teknolojilerine yatırım yapıyoruz. Amacımız; insan ve tesis güvenliğini önceleyen, uluslararası standartlarla uyumlu ve izlenebilir çözümleri Türkiye'nin dört bir yanındaki projelere ulaştırmak. Bizim için "Türkiyenin En Seçkin Kablosu" bir slogan değil, her sevkiyatta yeniden hak ettiğimiz bir sorumluluktur.</p>
+          </div>
+          <div class="reveal">
+            <div class="about-visual">
+              <!-- ============================================================
+                   SOYULMUŞ (STRIPPED) KABLO UCU — katmanlı sözde-3B illüstrasyon
+                   Işık kaynağı sol-üst · dış kılıf (PVC) → kırmızı yalıtım →
+                   dolgu → 3 bakır iletken, kademeli soyularak öne uzanır.
+                   Yeniden kullanım: SVG'yi kopyalayın; boyut için sarmalayıcı
+                   genişliğini değiştirin. Aynı sayfada birden çok kez kullanılacaksa
+                   gradient/filter id'lerine benzersiz bir sonek ekleyin (ör. -hero).
+                   ============================================================ -->
+              <svg class="cut-cable" viewBox="0 0 420 340" role="img"
+                   aria-label="Seçkin Kablo — soyulmuş kablo ucu: siyah PVC dış kılıf, kırmızı yalıtım ve yüksek saflıkta bakır iletkenler.">
+                <defs>
+                  <!-- gövdeler: dikey doğrusal degradeler (üst ışık → alt gölge) -->
+                  <linearGradient id="cbBody" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#26262f"/><stop offset=".5" stop-color="#17171c"/><stop offset="1" stop-color="#0d0d11"/>
+                  </linearGradient>
+                  <linearGradient id="cbRedBody" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#E8383E"/><stop offset=".5" stop-color="#C4161C"/><stop offset="1" stop-color="#6f0e12"/>
+                  </linearGradient>
+                  <linearGradient id="cbCopBody" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#EEAE68"/><stop offset=".5" stop-color="#B87333"/><stop offset="1" stop-color="#6f4319"/>
+                  </linearGradient>
+                  <!-- kesim yüzeyleri: radyal degradeler (ışık sol-üstte) -->
+                  <radialGradient id="cbSheathCap" cx=".38" cy=".32" r=".75">
+                    <stop offset="0" stop-color="#33333c"/><stop offset="1" stop-color="#0f0f14"/>
+                  </radialGradient>
+                  <radialGradient id="cbRedCap" cx=".42" cy=".28" r=".85">
+                    <stop offset="0" stop-color="#EC4046"/><stop offset=".5" stop-color="#C4161C"/><stop offset="1" stop-color="#720f13"/>
+                  </radialGradient>
+                  <radialGradient id="cbFiller" cx=".4" cy=".3" r=".9">
+                    <stop offset="0" stop-color="#FFFDF8"/><stop offset=".6" stop-color="#ECE4D6"/><stop offset="1" stop-color="#D3C8B4"/>
+                  </radialGradient>
+                  <radialGradient id="cbCopCap" cx=".36" cy=".3" r=".8">
+                    <stop offset="0" stop-color="#F2BE7E"/><stop offset=".55" stop-color="#B87333"/><stop offset="1" stop-color="#7A4A1D"/>
+                  </radialGradient>
+                  <filter id="cbBlur" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9"/></filter>
+                </defs>
+
+                <!-- YER GÖLGESİ (grup dışı, sabit zemin) -->
+                <ellipse cx="205" cy="288" rx="150" ry="24" fill="rgba(15,15,20,.18)" filter="url(#cbBlur)"/>
+
+                <!-- KABLO — hafif izometrik açı -->
+                <g transform="rotate(-13 205 185)">
+                  <!-- 1) DIŞ KILIF gövdesi (parlak siyah PVC) -->
+                  <path d="M236 104 L96 104 A22 66 0 0 0 96 236 L236 236 Z" fill="url(#cbBody)"/>
+                  <!-- üst speküler vurgu + ince kenar ışığı -->
+                  <rect x="112" y="116" width="116" height="12" rx="6" fill="#ffffff" opacity=".08"/>
+                  <path d="M122 107 L230 107" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity=".14"/>
+                  <!-- alt çekirdek gölgesi -->
+                  <rect x="112" y="214" width="118" height="12" rx="6" fill="#000000" opacity=".16"/>
+
+                  <!-- kılıf kesim halkası (koyu elips) -->
+                  <ellipse cx="236" cy="170" rx="21" ry="66" fill="url(#cbSheathCap)" stroke="rgba(0,0,0,.45)" stroke-width="1"/>
+
+                  <!-- 2) KIRMIZI YALITIM — açıkta kalan kısa bölüm -->
+                  <path d="M232 118 L290 118 L290 222 L232 222 Z" fill="url(#cbRedBody)"/>
+                  <rect x="244" y="126" width="40" height="8" rx="4" fill="#ffffff" opacity=".10"/>
+                  <!-- yalıtım kesim yüzeyi (alt kenarda koyulaşan radyal) -->
+                  <ellipse cx="290" cy="170" rx="16" ry="52" fill="url(#cbRedCap)" stroke="rgba(70,10,12,.55)" stroke-width="1"/>
+
+                  <!-- 3) DOLGU yüzeyi (sıcak kırık-beyaz, iç gölgeli) -->
+                  <ellipse cx="292" cy="170" rx="12" ry="42" fill="url(#cbFiller)"/>
+                  <ellipse cx="292" cy="176" rx="10.5" ry="37" fill="none" stroke="rgba(150,130,100,.28)" stroke-width="2"/>
+
+                  <!-- 4) BAKIR İLETKENLER — öne uzanan üç kısa silindir + parlak uçlar -->
+                  <!-- üst iletken -->
+                  <rect x="290" y="128" width="56" height="24" rx="11" fill="url(#cbCopBody)"/>
+                  <path d="M298 130 L340 130" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity=".28"/>
+                  <ellipse cx="346" cy="140" rx="6.5" ry="12" fill="url(#cbCopCap)" stroke="rgba(70,42,18,.7)" stroke-width=".8"/>
+                  <ellipse cx="346" cy="140" rx="4" ry="8" fill="none" stroke="rgba(90,55,22,.5)" stroke-width=".7"/>
+                  <ellipse cx="346" cy="140" rx="2" ry="4" fill="none" stroke="rgba(90,55,22,.5)" stroke-width=".7"/>
+                  <ellipse cx="343" cy="136" rx="1.6" ry="2.4" fill="#ffffff" opacity=".85"/>
+                  <!-- orta iletken -->
+                  <rect x="290" y="160" width="56" height="24" rx="11" fill="url(#cbCopBody)"/>
+                  <path d="M298 162 L340 162" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity=".28"/>
+                  <ellipse cx="346" cy="172" rx="6.5" ry="12" fill="url(#cbCopCap)" stroke="rgba(70,42,18,.7)" stroke-width=".8"/>
+                  <ellipse cx="346" cy="172" rx="4" ry="8" fill="none" stroke="rgba(90,55,22,.5)" stroke-width=".7"/>
+                  <ellipse cx="346" cy="172" rx="2" ry="4" fill="none" stroke="rgba(90,55,22,.5)" stroke-width=".7"/>
+                  <ellipse cx="343" cy="168" rx="1.6" ry="2.4" fill="#ffffff" opacity=".85"/>
+                  <!-- alt iletken -->
+                  <rect x="290" y="190" width="56" height="24" rx="11" fill="url(#cbCopBody)"/>
+                  <path d="M298 192 L340 192" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity=".28"/>
+                  <ellipse cx="346" cy="202" rx="6.5" ry="12" fill="url(#cbCopCap)" stroke="rgba(70,42,18,.7)" stroke-width=".8"/>
+                  <ellipse cx="346" cy="202" rx="4" ry="8" fill="none" stroke="rgba(90,55,22,.5)" stroke-width=".7"/>
+                  <ellipse cx="346" cy="202" rx="2" ry="4" fill="none" stroke="rgba(90,55,22,.5)" stroke-width=".7"/>
+                  <ellipse cx="343" cy="198" rx="1.6" ry="2.4" fill="#ffffff" opacity=".85"/>
+                </g>
+              </svg>
+              <span class="about-chip c1">2003'ten beri</span>
+              <span class="about-chip c2">7 Ürün Grubu</span>
+              <span class="about-chip c3">60+ Çeşit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DEĞERLER ================= -->
+    <section class="section soft">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Değerlerimiz</span>
+          <h2>Bizi biz yapan ilkeler.</h2>
+          <p>Kaliteyi bir vaat değil, ölçülebilir bir üretim disiplini olarak görürüz.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card reveal">
+            <div class="feature-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/></svg>
+            </div>
+            <h3>Yüksek Saflıkta Bakır</h3>
+            <p>Her kablonun kalbinde yüksek saflıkta bakır iletken vardır. Saflık, sinyalin ve enerjinin kayıpsız iletilmesini sağlayan en temel unsurdur.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M9 14.5l-2 6.5 5-3 5 3-2-6.5"/></svg>
+            </div>
+            <h3>Belgeli Üretim (TSE/CE)</h3>
+            <p>Ürünlerimiz TSE ve CE belgelidir. Sözünü verdiğimiz teknik değerleri bağımsız standartların gereklerine göre karşılar ve arkasında dururuz.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4.5"/></svg>
+            </div>
+            <h3>Halojensiz Güvenlik (LSZH/HFFR)</h3>
+            <p>Yangın anında düşük duman ve halojensiz emisyon sağlayan LSZH/HFFR seçenekleriyle insan ve tesis güvenliğini önceleriz.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.7"/><circle cx="17.5" cy="18" r="1.7"/></svg>
+            </div>
+            <h3>İzlenebilir Sevkiyat</h3>
+            <p>Metraj baskılı ve izlenebilir üretim; bayilerimize istikrarlı kalite, projelerimize zamanında ve doğru teslimat güvencesi verir.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KALİTE & STANDARTLAR ================= -->
+    <section class="section">
+      <div class="wrap">
+        <div class="quality-box reveal">
+          <div class="blob blob-b"></div>
+          <div class="inner">
+            <span class="eyebrow">Kalite & Standartlar</span>
+            <h2>Sözü belgeler söylesin.</h2>
+            <p>Üretim standartlarımız VDE, EN ve TIA/EIA gereklilikleriyle uyumludur; LSZH/HFFR halojensiz seçeneklerimiz dahil ürün gamımız TSE ve CE belgelidir. Kabloların güvenli, uzun ömürlü ve beklenen performansta çalışmasını bu standartların rehberliğinde güvence altına alırız.</p>
+            <div class="badge-row">
+              <span class="q-badge">VDE</span>
+              <span class="q-badge">EN</span>
+              <span class="q-badge">TIA/EIA</span>
+              <span class="q-badge">TSE</span>
+              <span class="q-badge">CE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section soft">
+      <div class="wrap">
+        <div class="cta-card">
+          <div class="inner">
+            <h2>Projeniz için doğru kabloyu birlikte belirleyelim.</h2>
+            <p>İhtiyacınıza uygun ürün ve teknik değerler için ekibimizle iletişime geçin; size en seçkin çözümü sunalım.</p>
+            <a href="iletisim.html" class="btn btn-white">Teklif Alın</a>
+            <div class="contact-line">
+              <span>info@seckinkablo.com</span>
+              <span>www.seckinkablo.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo-chip"><img src="assets/img/logo.png" alt="Seçkin Kablo"></div>
+          <p class="about-txt">Türkiyenin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.</p>
+          <div class="socials">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 112.5 6 2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM10 9h3.8v1.7h.05a4.2 4.2 0 013.8-2.1c4 0 4.75 2.6 4.75 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.05 1.4-2.05 2.8V21h-4z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 00-1.7-1.7C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.9.4A2.5 2.5 0 001.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 001.7 1.7c1.5.4 8.9.4 8.9.4s7.4 0 8.9-.4a2.5 2.5 0 001.7-1.7C23 15.2 23 12 23 12zM10 15.5v-7l6 3.5z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="index.html">Anasayfa</a><a href="urunler.html">Ürünler</a><a href="hakkimizda.html">Hakkımızda</a><a href="iletisim.html">İletişim</a>
+        </div>
+        <div class="footer-col">
+          <h4>Ürün Grupları</h4>
+          <a href="data-kablolari.html">Data Kabloları</a><a href="koaksiyel-kablolar.html">Koaksiyel Görüntü</a><a href="cctv-kablolari.html">CCTV Kamera</a><a href="yangin-alarm-kablolari.html">Yangın Alarm</a><a href="sinyal-kontrol-kablolari.html">Sinyal Kontrol</a><a href="telefon-kablolari.html">Telefon</a><a href="kumanda-kablolari.html">Kumanda</a>
+        </div>
+        <div class="footer-col">
+          <h4>İletişim</h4>
+          <ul class="foot-contact">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@seckinkablo.com</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg><span>www.seckinkablo.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> SEÇKİN KABLO — Türkiyenin En Seçkin Kablosu</span>
+        <span>Tüm hakları saklıdır.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+
+  <!-- Soyulmuş kablo görseli — fare eğimi parallaksı (rotateX/rotateY, en çok 6°).
+       prefers-reduced-motion açıksa devreye girmez; CSS süzülme animasyonu da global kuralla durur. -->
+  <script>
+    (function () {
+      'use strict';
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var host = document.querySelector('.about-visual');
+      var scene = document.querySelector('.cut-cable');
+      if (!host || !scene) return;
+      var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
+      function clamp(v) { return v > 6 ? 6 : (v < -6 ? -6 : v); }
+      function loop() {
+        cx += (tx - cx) * 0.08; cy += (ty - cy) * 0.08;
+        scene.style.transform = 'rotateX(' + cy.toFixed(2) + 'deg) rotateY(' + cx.toFixed(2) + 'deg)';
+        if (Math.abs(tx - cx) > 0.05 || Math.abs(ty - cy) > 0.05) raf = requestAnimationFrame(loop);
+        else raf = null;
+      }
+      function kick() { if (!raf) raf = requestAnimationFrame(loop); }
+      host.addEventListener('pointermove', function (e) {
+        var r = host.getBoundingClientRect();
+        tx = clamp(((e.clientX - r.left) / r.width - 0.5) * 12);
+        ty = clamp(-((e.clientY - r.top) / r.height - 0.5) * 12);
+        kick();
+      });
+      host.addEventListener('pointerleave', function () { tx = 0; ty = 0; kick(); });
+    })();
+  </script>
+</body>
+</html>

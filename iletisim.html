@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim — Seçkin Kablo</title>
+  <meta name="description" content="Seçkin Kablo ile iletişime geçin. Teklif, bayilik ve genel sorularınız için bize ulaşın: 0 533 479 55 30 · info@seckinkablo.com. Teklif talepleriniz aynı gün yanıtlanır.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#C4161C">
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:title" content="Seçkin Kablo — Türkiyenin En Seçkin Kablosu">
+  <meta property="og:image" content="assets/img/logo-mark.png">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- İletişim — sayfaya özel küçük eklemeler (yalnızca bu sayfada kullanılır; site genelini etkilemez) -->
+  <style>
+    /* form hata durumu + Türkçe mesajlar */
+    .field .err{display:none;margin-top:7px;font-size:.8rem;font-weight:500;color:var(--red);}
+    .field.invalid .err{display:block;}
+    .field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--red);box-shadow:0 0 0 4px var(--red-soft);}
+    /* tam genişlik harita */
+    .map-full{margin-top:0;height:380px;}
+    .map-full .sub{margin-top:6px;font-size:.82rem;color:var(--body);}
+    /* güvence şeridi */
+    .assurance{display:flex;align-items:center;gap:15px;margin-top:26px;background:var(--red-soft);border:1px solid rgba(196,22,28,.14);border-left:4px solid var(--red);border-radius:var(--r);padding:18px 24px;box-shadow:var(--sh-rest);}
+    .assurance .ico{width:44px;height:44px;border-radius:14px;background:var(--grad);display:grid;place-items:center;flex:none;box-shadow:0 10px 24px -10px rgba(196,22,28,.6);}
+    .assurance .ico svg{width:22px;height:22px;color:#fff;}
+    .assurance p{font-size:1rem;font-weight:600;color:var(--ink);}
+    @media (max-width:560px){ .map-full{height:300px;} }
+  </style>
+</head>
+<body>
+  <a href="#ana" class="skip-link">İçeriğe geç</a>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Seçkin Kablo — Anasayfa"><img src="assets/img/logo.png" alt="Seçkin Kablo" height="46" loading="eager"></a>
+      <nav aria-label="Ana menü">
+        <ul class="nav-menu">
+          <li><a href="index.html">Anasayfa</a></li>
+          <li class="has-drop">
+            <a href="urunler.html">Ürünler</a>
+            <div class="dropdown">
+              <a href="data-kablolari.html">Data Kabloları</a>
+              <a href="koaksiyel-kablolar.html">Koaksiyel Görüntü Kabloları</a>
+              <a href="cctv-kablolari.html">CCTV Kamera Kabloları</a>
+              <a href="yangin-alarm-kablolari.html">Yangın Alarm Kabloları</a>
+              <a href="sinyal-kontrol-kablolari.html">Sinyal Kontrol Kabloları</a>
+              <a href="telefon-kablolari.html">Telefon Kabloları</a>
+              <a href="kumanda-kablolari.html">Kumanda Kabloları</a>
+            </div>
+          </li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html" class="active">İletişim</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="#" class="btn btn-grad">Katalog PDF</a>
+        <button class="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="ana">
+
+    <!-- ================= PAGE HERO ================= -->
+    <section class="page-hero">
+      <div class="blob blob-a"></div>
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Sayfa yolu">
+          <a href="index.html">Anasayfa</a>
+          <span class="sep">/</span>
+          <span class="cur">İletişim</span>
+        </nav>
+        <h1>Bize <span class="gradient-text">Ulaşın</span></h1>
+        <p class="lead">Teklif, bayilik ve genel sorularınız için buradayız. Metrajınızı ve ihtiyaçlarınızı iletin, ekibimiz en kısa sürede size dönüş yapsın.</p>
+      </div>
+    </section>
+
+    <!-- ================= FORM + BİLGİ ================= -->
+    <section class="section">
+      <div class="wrap">
+        <div class="contact-grid">
+
+          <!-- SOL: cam form kartı (Türkçe doğrulama + başarı durumu; backend yok, mailto yedeği) -->
+          <form id="iletisim-form" class="form-card reveal" novalidate>
+            <div class="form-success" role="status" aria-live="polite">Mesajınız alındı. En kısa sürede size dönüş yapacağız.</div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="ad-soyad">Ad Soyad *</label>
+                <input type="text" id="ad-soyad" name="ad-soyad" autocomplete="name" required>
+                <span class="err" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="firma">Firma</label>
+                <input type="text" id="firma" name="firma" autocomplete="organization">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="eposta">E-posta *</label>
+                <input type="email" id="eposta" name="eposta" autocomplete="email" required>
+                <span class="err" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="telefon">Telefon</label>
+                <input type="tel" id="telefon" name="telefon" autocomplete="tel">
+                <span class="err" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="konu">Konu *</label>
+              <select id="konu" name="konu" required>
+                <option value="" selected disabled>Seçiniz</option>
+                <option value="teklif">Teklif</option>
+                <option value="bayilik">Bayilik</option>
+                <option value="genel">Genel</option>
+              </select>
+              <span class="err" aria-live="polite"></span>
+            </div>
+
+            <div class="field">
+              <label for="mesaj">Mesaj *</label>
+              <textarea id="mesaj" name="mesaj" required></textarea>
+              <span class="err" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn-grad">Gönder
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <p class="form-note">* Bilgileriniz KVKK kapsamında korunur.</p>
+          </form>
+
+          <!-- SAĞ: iletişim bilgileri -->
+          <div class="info-card reveal">
+            <div class="info-item">
+              <div class="ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0-1 .8-1.6 1.7-1.4l2.4.5c.7.2 1.2.8 1.3 1.5l.3 2.2c.1.6-.1 1.2-.6 1.6l-1.3 1a12 12 0 005.8 5.8l1-1.3c.4-.5 1-.7 1.6-.6l2.2.3c.7.1 1.3.6 1.5 1.3l.5 2.4c.2.9-.4 1.7-1.4 1.7A16 16 0 014 5z"/></svg>
+              </div>
+              <div>
+                <div class="k">Telefon</div>
+                <div class="v"><a href="tel:+905334795530">0 533 479 55 30</a></div>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              </div>
+              <div>
+                <div class="k">E-posta</div>
+                <div class="v"><a href="mailto:info@seckinkablo.com">info@seckinkablo.com</a></div>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg>
+              </div>
+              <div>
+                <div class="k">Web</div>
+                <div class="v"><a href="https://www.seckinkablo.com" target="_blank" rel="noopener">www.seckinkablo.com</a></div>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.4 7-11a7 7 0 10-14 0c0 4.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              </div>
+              <div>
+                <div class="k">Konum</div>
+                <div class="v">İstanbul</div>
+              </div>
+            </div>
+
+            <!-- Çalışma saatleri — DÜZENLENEBİLİR: gerçek saatlerle güncelleyin -->
+            <div class="info-item">
+              <div class="ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </div>
+              <div>
+                <div class="k">Çalışma Saatleri</div>
+                <div class="v">Hafta içi 08:30–18:00</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HARİTA + GÜVENCE ================= -->
+    <section class="section soft">
+      <div class="wrap">
+        <!-- Harita: gömülü harita eklemek için aşağıdaki .map-ph bloğunun içeriğini tek satırda değiştirin:
+             <iframe src="https://www.google.com/maps/embed?..." style="width:100%;height:100%;border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Seçkin Kablo — konum"></iframe> -->
+        <div class="map-ph map-full reveal">
+          <div>
+            <div class="ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.4 7-11a7 7 0 10-14 0c0 4.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </div>
+            <span class="mono">Harita yakında</span>
+            <div class="sub">İstanbul</div>
+          </div>
+        </div>
+
+        <!-- Güvence şeridi -->
+        <div class="assurance reveal">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <p>Teklif talepleriniz aynı gün yanıtlanır.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo-chip"><img src="assets/img/logo.png" alt="Seçkin Kablo"></div>
+          <p class="about-txt">Türkiyenin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.</p>
+          <div class="socials">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 112.5 6 2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM10 9h3.8v1.7h.05a4.2 4.2 0 013.8-2.1c4 0 4.75 2.6 4.75 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.05 1.4-2.05 2.8V21h-4z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 00-1.7-1.7C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.9.4A2.5 2.5 0 001.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 001.7 1.7c1.5.4 8.9.4 8.9.4s7.4 0 8.9-.4a2.5 2.5 0 001.7-1.7C23 15.2 23 12 23 12zM10 15.5v-7l6 3.5z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="index.html">Anasayfa</a><a href="urunler.html">Ürünler</a><a href="hakkimizda.html">Hakkımızda</a><a href="iletisim.html">İletişim</a>
+        </div>
+        <div class="footer-col">
+          <h4>Ürün Grupları</h4>
+          <a href="data-kablolari.html">Data Kabloları</a><a href="koaksiyel-kablolar.html">Koaksiyel Görüntü</a><a href="cctv-kablolari.html">CCTV Kamera</a><a href="yangin-alarm-kablolari.html">Yangın Alarm</a><a href="sinyal-kontrol-kablolari.html">Sinyal Kontrol</a><a href="telefon-kablolari.html">Telefon</a><a href="kumanda-kablolari.html">Kumanda</a>
+        </div>
+        <div class="footer-col">
+          <h4>İletişim</h4>
+          <ul class="foot-contact">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@seckinkablo.com</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg><span>www.seckinkablo.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> SEÇKİN KABLO — Türkiyenin En Seçkin Kablosu</span>
+        <span>Tüm hakları saklıdır.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <!-- İletişim formu — istemci taraflı doğrulama (Türkçe mesajlar) + başarı durumu + mailto yedeği.
+       Form id'si "iletisim-form" olduğundan main.js içindeki genel #contact-form işleyicisi devreye girmez. -->
+  <script>
+    (function () {
+      'use strict';
+      var form = document.getElementById('iletisim-form');
+      if (!form) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var success = form.querySelector('.form-success');
+      var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      function fieldOf(el) { return el.closest('.field'); }
+      function setError(el, msg) {
+        var f = fieldOf(el); if (!f) return;
+        f.classList.add('invalid');
+        var e = f.querySelector('.err'); if (e) e.textContent = msg;
+        el.setAttribute('aria-invalid', 'true');
+      }
+      function clearError(el) {
+        var f = fieldOf(el); if (!f) return;
+        f.classList.remove('invalid');
+        var e = f.querySelector('.err'); if (e) e.textContent = '';
+        el.removeAttribute('aria-invalid');
+      }
+
+      var ad = form.querySelector('#ad-soyad');
+      var eposta = form.querySelector('#eposta');
+      var telefon = form.querySelector('#telefon');
+      var konu = form.querySelector('#konu');
+      var mesaj = form.querySelector('#mesaj');
+
+      // yazarken/değiştirirken hatayı temizle
+      [ad, eposta, telefon, konu, mesaj].forEach(function (el) {
+        if (!el) return;
+        el.addEventListener('input', function () { clearError(el); });
+        el.addEventListener('change', function () { clearError(el); });
+      });
+
+      function validate() {
+        var first = null;
+        function fail(el, msg) { setError(el, msg); if (!first) first = el; }
+
+        if (!ad.value.trim()) fail(ad, 'Lütfen ad soyad girin.');
+
+        if (!eposta.value.trim()) fail(eposta, 'Lütfen e-posta adresinizi girin.');
+        else if (!emailRe.test(eposta.value.trim())) fail(eposta, 'Geçerli bir e-posta adresi girin.');
+
+        // telefon isteğe bağlı; girildiyse basit kontrol
+        if (telefon.value.trim() && telefon.value.replace(/\D/g, '').length < 10)
+          fail(telefon, 'Geçerli bir telefon numarası girin.');
+
+        if (!konu.value) fail(konu, 'Lütfen bir konu seçin.');
+
+        if (!mesaj.value.trim()) fail(mesaj, 'Lütfen mesajınızı yazın.');
+        else if (mesaj.value.trim().length < 10) fail(mesaj, 'Mesajınız en az 10 karakter olmalı.');
+
+        return first;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (success) success.classList.remove('show');
+
+        var bad = validate();
+        if (bad) { bad.focus(); return; }
+
+        // Başarı durumu (backend yok)
+        if (success) {
+          success.classList.add('show');
+          success.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+        }
+
+        // mailto yedeği — bilgileri e-posta istemcisine taşır
+        var konuMetni = konu.options[konu.selectedIndex].text;
+        var subject = 'Web İletişim — ' + konuMetni + (form.querySelector('#firma').value.trim() ? ' — ' + form.querySelector('#firma').value.trim() : '');
+        var body =
+          'Ad Soyad: ' + ad.value.trim() + '\n' +
+          'Firma: ' + form.querySelector('#firma').value.trim() + '\n' +
+          'E-posta: ' + eposta.value.trim() + '\n' +
+          'Telefon: ' + telefon.value.trim() + '\n' +
+          'Konu: ' + konuMetni + '\n\n' +
+          mesaj.value.trim();
+        window.location.href = 'mailto:info@seckinkablo.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+        form.reset();
+        setTimeout(function () { if (success) success.classList.remove('show'); }, 8000);
+      });
+    })();
+  </script>
+</body>
+</html>
