@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir \"C:\\\\Users\\\\bilal\\\\Desktop\\\\seckin-kablo\\\\assets\\\\video\")",
+      "Bash(mv \"C:\\\\Users\\\\bilal\\\\Desktop\\\\seckin-kablo\\\\3d video.mp4\" \"C:\\\\Users\\\\bilal\\\\Desktop\\\\seckin-kablo\\\\assets\\\\video\\\\3d-video.mp4\")",
+      "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=width,height,duration,codec_name -of default=noprint_wrappers=1 \"C:\\\\Users\\\\bilal\\\\Desktop\\\\seckin-kablo\\\\assets\\\\video\\\\3d-video.mp4\")",
+      "Bash(where ffmpeg *)"
+    ]
+  }
+}
