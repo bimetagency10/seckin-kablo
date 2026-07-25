@@ -41,6 +41,7 @@ export default defineConfig({
         'sinyal-kontrol-kablolari': resolve(__dirname, 'sinyal-kontrol-kablolari.html'),
         'telefon-kablolari': resolve(__dirname, 'telefon-kablolari.html'),
         'kumanda-kablolari': resolve(__dirname, 'kumanda-kablolari.html'),
+        politikalarimiz: resolve(__dirname, 'politikalarimiz.html'),
       },
     },
   },
