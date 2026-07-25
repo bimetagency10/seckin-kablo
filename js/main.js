@@ -105,23 +105,45 @@
     });
   }
 
-  /* -------- Scroll reveal + kardeş gecikmesi (stagger) -------- */
+  /* -------- Scroll reveal (opt-in gizleme) --------
+     Strateji:
+     1) reduced-motion veya IO desteği yoksa hiç gizleme, tüm reveal .in.
+     2) Sayfa yüklendiğinde viewport içindeki reveal'ları anında .in yap
+        (fade beklemesin — kullanıcı boş sayfa görmesin).
+     3) Sonra <html>'a .js-reveal ekle → henüz .in olmayan (kritik-altı)
+        öğeler CSS ile gizlenir; scroll'da IO ile fade-in olur.
+     Her öğe için animasyon tek seferliktir (unobserve). */
   var revealEls = document.querySelectorAll('.reveal');
-  if (reduce || !('IntersectionObserver' in window)) {
-    revealEls.forEach(function (el) { el.classList.add('in'); });
-  } else {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (!en.isIntersecting) return;
-        var el = en.target;
-        var sibs = Array.prototype.filter.call(el.parentElement.children, function (c) { return c.classList.contains('reveal'); });
-        var i = sibs.indexOf(el);
-        el.style.transitionDelay = (Math.max(i, 0) * 80) + 'ms';
-        el.classList.add('in');
-        io.unobserve(el);
+  if (revealEls.length) {
+    if (reduce || !('IntersectionObserver' in window)) {
+      revealEls.forEach(function (el) { el.classList.add('in'); });
+    } else {
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      /* 1) İlk paint'te viewport içinde olanları anında .in yap */
+      revealEls.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.top < vh && r.bottom > 0) el.classList.add('in');
       });
-    }, { threshold: 0.14, rootMargin: '0px 0px -60px 0px' });
-    revealEls.forEach(function (el) { io.observe(el); });
+      /* 2) Off-screen öğeler için CSS gizlemesini aç */
+      document.documentElement.classList.add('js-reveal');
+      /* 3) IO: kaydırma ile görünür olanları .in yap ve unobserve et */
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          var el = en.target;
+          if (!el.classList.contains('in')) {
+            var sibs = Array.prototype.filter.call(el.parentElement.children, function (c) { return c.classList.contains('reveal'); });
+            var i = sibs.indexOf(el);
+            el.style.transitionDelay = (Math.max(Math.min(i, 4), 0) * 60) + 'ms';
+            el.classList.add('in');
+          }
+          io.unobserve(el);
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(function (el) {
+        if (!el.classList.contains('in')) io.observe(el);
+      });
+    }
   }
 
   /* -------- Animasyonlu sayaçlar -------- */
