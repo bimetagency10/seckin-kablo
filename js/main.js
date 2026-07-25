@@ -16,21 +16,72 @@
     }, { passive: true });
   }
   if (hamburger && navMenu) {
+    /* Body scroll kilidi: menü açıkken sayfa kaymasın; kapanınca eski konum korunur. */
+    var lockedScrollY = 0;
+    function lockScroll() {
+      lockedScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+      document.body.style.position = 'fixed';
+      document.body.style.top = '-' + lockedScrollY + 'px';
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+      document.body.style.width = '100%';
+    }
+    function unlockScroll() {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      document.body.style.width = '';
+      window.scrollTo(0, lockedScrollY);
+    }
+
+    /* Menü arkası karartma katmanı — <body>'ye eklenir; tıklanınca menüyü kapatır. */
+    var backdrop = document.createElement('div');
+    backdrop.className = 'nav-backdrop';
+    backdrop.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(backdrop);
+
+    function isMobile() { return window.innerWidth <= 820; }
+    function openMenu() {
+      navMenu.classList.add('open');
+      hamburger.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('nav-open');
+      if (isMobile()) lockScroll();
+    }
+    function closeMenu() {
+      navMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      /* Açık kalmış tüm alt menüleri de kapat */
+      document.querySelectorAll('.has-drop.open').forEach(function (li) { li.classList.remove('open'); });
+      if (document.body.classList.contains('nav-open')) {
+        document.body.classList.remove('nav-open');
+        unlockScroll();
+      }
+    }
+
     hamburger.addEventListener('click', function () {
-      var open = navMenu.classList.toggle('open');
-      hamburger.classList.toggle('open', open);
-      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (navMenu.classList.contains('open')) closeMenu(); else openMenu();
     });
+    backdrop.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navMenu.classList.contains('open')) closeMenu();
+    });
+    /* Ekran mobilden desktop'a genişlerse kilidi bırak */
+    window.addEventListener('resize', function () {
+      if (!isMobile() && document.body.classList.contains('nav-open')) closeMenu();
+    });
+
     document.querySelectorAll('.has-drop > a').forEach(function (a) {
       a.addEventListener('click', function (e) {
-        if (window.innerWidth <= 820) { e.preventDefault(); a.parentElement.classList.toggle('open'); }
+        if (isMobile()) { e.preventDefault(); a.parentElement.classList.toggle('open'); }
       });
     });
     navMenu.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () {
-        if (a.parentElement.classList.contains('has-drop') && window.innerWidth <= 820) return;
-        navMenu.classList.remove('open'); hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
+        if (a.parentElement.classList.contains('has-drop') && isMobile()) return;
+        closeMenu();
       });
     });
   }
