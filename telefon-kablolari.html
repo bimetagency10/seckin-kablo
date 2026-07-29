@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a href="#ana" class="skip-link">İçeriğe geç</a>
+  <a href="#ana" class="skip-link" data-i18n="a11y.skip">İçeriğe geç</a>
 
   <!-- ================= NAVBAR ================= -->
   <header class="navbar">
@@ -30,31 +30,31 @@
       <a href="/" class="logo brand-logo brand-logo--md" aria-label="Seçkin Kablo — Anasayfa"><img src="assets/img/logo.png" alt="Seçkin Kablo" width="234" height="106" loading="eager"></a>
       <nav aria-label="Ana menü">
         <ul class="nav-menu">
-          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Anasayfa</a></li>
           <li class="has-drop">
-            <a href="urunler.html" class="active">Ürünler</a>
+            <a href="urunler.html" class="active" data-i18n="nav.products">Ürünler</a>
             <div class="dropdown">
-              <a href="data-kablolari.html">Data Kabloları</a>
-              <a href="koaksiyel-kablolar.html">Koaksiyel Görüntü Kabloları</a>
-              <a href="cctv-kablolari.html">CCTV Kamera Kabloları</a>
-              <a href="yangin-alarm-kablolari.html">Yangın Alarm Kabloları</a>
-              <a href="sinyal-kontrol-kablolari.html">Sinyal Kontrol Kabloları</a>
-              <a href="telefon-kablolari.html">Telefon Kabloları</a>
-              <a href="kumanda-kablolari.html">Kumanda Kabloları</a>
+              <a href="data-kablolari.html" data-i18n="prod.data">Data Kabloları</a>
+              <a href="koaksiyel-kablolar.html" data-i18n="prod.koakFull">Koaksiyel Görüntü Kabloları</a>
+              <a href="cctv-kablolari.html" data-i18n="prod.cctvFull">CCTV Kamera Kabloları</a>
+              <a href="yangin-alarm-kablolari.html" data-i18n="prod.yanginFull">Yangın Alarm Kabloları</a>
+              <a href="sinyal-kontrol-kablolari.html" data-i18n="prod.sinyalFull">Sinyal Kontrol Kabloları</a>
+              <a href="telefon-kablolari.html" data-i18n="prod.telefonFull">Telefon Kabloları</a>
+              <a href="kumanda-kablolari.html" data-i18n="prod.kumandaFull">Kumanda Kabloları</a>
             </div>
           </li>
           <li class="has-drop">
-            <a href="hakkimizda.html">Kurumsal</a>
+            <a href="hakkimizda.html" data-i18n="nav.corporate">Kurumsal</a>
             <div class="dropdown">
-              <a href="hakkimizda.html">Hakkımızda</a>
-              <a href="politikalarimiz.html">Politikalarımız</a>
+              <a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+              <a href="politikalarimiz.html" data-i18n="nav.policies">Politikalarımız</a>
             </div>
           </li>
-          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="iletisim.html" data-i18n="nav.contact">İletişim</a></li>
         </ul>
       </nav>
       <div class="nav-cta">
-        <a href="#" class="btn btn-grad">Katalog PDF</a>
+        <a href="#" class="btn btn-grad" data-i18n="btn.catalog">Katalog PDF</a>
         <button class="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -68,14 +68,14 @@
       <div class="detail-hero">
         <div class="detail-hero-text">
           <div class="breadcrumb">
-            <a href="index.html">Anasayfa</a>
+            <a href="index.html" data-i18n="nav.home">Anasayfa</a>
             <span class="sep">/</span>
-            <a href="urunler.html">Ürünler</a>
+            <a href="urunler.html" data-i18n="nav.products">Ürünler</a>
             <span class="sep">/</span>
-            <span class="cur">Telefon Kabloları</span>
+            <span class="cur" data-i18n="prod.telefonFull">Telefon Kabloları</span>
           </div>
-          <h1>Telefon <span class="gradient-text">Kabloları</span></h1>
-          <p class="lead">VBV ve ekranlı VBV-K yapıları ile ses ve haberleşme altyapısının güvenilir omurgası; mono kalaylı bakır iletken, PVC yalıtım ve 1x2x0,5'ten 20x2x0,5'e kadar geniş çift sayısı seçenekleriyle dahili telefon tesisatı ve iletişim hatları için tasarlanmıştır.</p>
+          <h1 data-i18n-html="telefon.t001">Telefon <span class="gradient-text">Kabloları</span></h1>
+          <p class="lead" data-i18n="telefon.t003">VBV ve ekranlı VBV-K yapıları ile ses ve haberleşme altyapısının güvenilir omurgası; mono kalaylı bakır iletken, PVC yalıtım ve 1x2x0,5'ten 20x2x0,5'e kadar geniş çift sayısı seçenekleriyle dahili telefon tesisatı ve iletişim hatları için tasarlanmıştır.</p>
         </div>
         <div class="mini-cable"><div class="cable-scene"><div class="cable-float">
           <div class="ring sheath"></div><div class="ring insulation"></div><div class="ring core"></div>
@@ -92,52 +92,52 @@
 
           <!-- 01 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">Ekranlı</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="telefon.t004">Ekranlı</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/vbv-k.jpg" alt="VBV-K ekranlı telefon kablosu"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Telefon kablosu kesiti"><circle cx="100" cy="100" r="90" fill="#2C2C33"/><circle cx="100" cy="100" r="78" fill="#F4EEEA"/><circle cx="100" cy="100" r="73" fill="none" stroke="#BFC3C8" stroke-width="5" stroke-dasharray="5 4"/><g stroke="#7A4A18" stroke-width="1.4"><circle cx="80" cy="80" r="19" fill="#EFE7E0"/><circle cx="80" cy="80" r="10" fill="#B87333"/><circle cx="120" cy="80" r="19" fill="#EFE7E0"/><circle cx="120" cy="80" r="10" fill="#B87333"/><circle cx="80" cy="120" r="19" fill="#EFE7E0"/><circle cx="80" cy="120" r="10" fill="#B87333"/><circle cx="120" cy="120" r="19" fill="#EFE7E0"/><circle cx="120" cy="120" r="10" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">VBV-K</h3>
-              <p class="card-desc">Ekranlı (kranlı) telefon kablosu; ses frekansı iletiminde sinyal ve bilgi haberleşme hatları için.</p>
+              <h3 class="card-name" data-i18n="telefon.t005">VBV-K</h3>
+              <p class="card-desc" data-i18n="telefon.t006">Ekranlı (kranlı) telefon kablosu; ses frekansı iletiminde sinyal ve bilgi haberleşme hatları için.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>Yapı</th><td>Ekranlı (kalaylı bakır toprak teli)</td></tr>
-                  <tr><th>İç iletken</th><td>Mono kalaylı bakır (EN 60228 sınıf 1)</td></tr>
-                  <tr><th>İzolasyon</th><td>PVC (VDE 0207-Y11)</td></tr>
-                  <tr><th>Dış kılıf</th><td>PVC (VDE 0207-YM1) · RAL 7001 gri</td></tr>
-                  <tr><th>Toprak iletkeni</th><td>Beyaz renkli, kırmızı kodlu PVC</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−30…+70 °C</td></tr>
-                  <tr><th>Yalıtım direnci</th><td>500 MΩ·km</td></tr>
-                  <tr><th>Test gerilimi</th><td>1000 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>250 V</td></tr>
-                  <tr><th>Kapasite</th><td>120 nF/km</td></tr>
-                  <tr><th>Min. bükme yarıçapı</th><td>15 × kablo çapı</td></tr>
-                  <tr><th>Çift sayısı</th><td>1×2×0,5 … 20×2×0,5</td></tr>
+                  <tr><th data-i18n="telefon.t007">Yapı</th><td data-i18n="telefon.t008">Ekranlı (kalaylı bakır toprak teli)</td></tr>
+                  <tr><th data-i18n="telefon.t009">İç iletken</th><td data-i18n="telefon.t010">Mono kalaylı bakır (EN 60228 sınıf 1)</td></tr>
+                  <tr><th data-i18n="telefon.t011">İzolasyon</th><td data-i18n="telefon.t012">PVC (VDE 0207-Y11)</td></tr>
+                  <tr><th data-i18n="telefon.t013">Dış kılıf</th><td data-i18n="telefon.t014">PVC (VDE 0207-YM1) · RAL 7001 gri</td></tr>
+                  <tr><th data-i18n="telefon.t015">Toprak iletkeni</th><td data-i18n="telefon.t016">Beyaz renkli, kırmızı kodlu PVC</td></tr>
+                  <tr><th data-i18n="telefon.t017">Çalışma sıcaklığı</th><td data-i18n="telefon.t018">−30…+70 °C</td></tr>
+                  <tr><th data-i18n="telefon.t019">Yalıtım direnci</th><td data-i18n="telefon.t020">500 MΩ·km</td></tr>
+                  <tr><th data-i18n="telefon.t021">Test gerilimi</th><td data-i18n="telefon.t022">1000 V</td></tr>
+                  <tr><th data-i18n="telefon.t023">Çalışma gerilimi</th><td data-i18n="telefon.t024">250 V</td></tr>
+                  <tr><th data-i18n="telefon.t025">Kapasite</th><td data-i18n="telefon.t026">120 nF/km</td></tr>
+                  <tr><th data-i18n="telefon.t027">Min. bükme yarıçapı</th><td data-i18n="telefon.t028">15 × kablo çapı</td></tr>
+                  <tr><th data-i18n="telefon.t029">Çift sayısı</th><td>1×2×0,5 … 20×2×0,5</td></tr>
                 </tbody></table>
                 <div class="spec-scroll" style="overflow-x:auto;margin-top:14px;">
                 <table class="spec-table"><thead>
-                  <tr><th>Çift</th><th>A-teli</th><th>B-teli</th></tr>
+                  <tr><th data-i18n="telefon.t030">Çift</th><th data-i18n="telefon.t031">A-teli</th><th data-i18n="telefon.t032">B-teli</th></tr>
                 </thead><tbody>
-                  <tr><td>1</td><td>Beyaz</td><td>Mavi</td></tr>
-                  <tr><td>2</td><td>Beyaz</td><td>Portakal</td></tr>
-                  <tr><td>3</td><td>Beyaz</td><td>Yeşil</td></tr>
-                  <tr><td>4</td><td>Beyaz</td><td>Kahve</td></tr>
-                  <tr><td>5</td><td>Beyaz</td><td>Gri</td></tr>
-                  <tr><td>6</td><td>Kırmızı</td><td>Mavi</td></tr>
-                  <tr><td>7</td><td>Kırmızı</td><td>Portakal</td></tr>
-                  <tr><td>8</td><td>Kırmızı</td><td>Yeşil</td></tr>
-                  <tr><td>9</td><td>Kırmızı</td><td>Kahve</td></tr>
-                  <tr><td>10</td><td>Kırmızı</td><td>Gri</td></tr>
-                  <tr><td>11</td><td>Siyah</td><td>Mavi</td></tr>
-                  <tr><td>12</td><td>Siyah</td><td>Portakal</td></tr>
-                  <tr><td>13</td><td>Siyah</td><td>Yeşil</td></tr>
-                  <tr><td>14</td><td>Siyah</td><td>Kahve</td></tr>
-                  <tr><td>15</td><td>Siyah</td><td>Gri</td></tr>
-                  <tr><td>16</td><td>Sarı</td><td>Mavi</td></tr>
-                  <tr><td>17</td><td>Sarı</td><td>Portakal</td></tr>
-                  <tr><td>18</td><td>Sarı</td><td>Yeşil</td></tr>
-                  <tr><td>19</td><td>Sarı</td><td>Kahve</td></tr>
-                  <tr><td>20</td><td>Sarı</td><td>Gri</td></tr>
+                  <tr><td>1</td><td data-i18n="telefon.t033">Beyaz</td><td data-i18n="telefon.t034">Mavi</td></tr>
+                  <tr><td>2</td><td data-i18n="telefon.t035">Beyaz</td><td data-i18n="telefon.t036">Portakal</td></tr>
+                  <tr><td>3</td><td data-i18n="telefon.t037">Beyaz</td><td data-i18n="telefon.t038">Yeşil</td></tr>
+                  <tr><td>4</td><td data-i18n="telefon.t039">Beyaz</td><td data-i18n="telefon.t040">Kahve</td></tr>
+                  <tr><td>5</td><td data-i18n="telefon.t041">Beyaz</td><td data-i18n="telefon.t042">Gri</td></tr>
+                  <tr><td>6</td><td data-i18n="telefon.t043">Kırmızı</td><td data-i18n="telefon.t044">Mavi</td></tr>
+                  <tr><td>7</td><td data-i18n="telefon.t045">Kırmızı</td><td data-i18n="telefon.t046">Portakal</td></tr>
+                  <tr><td>8</td><td data-i18n="telefon.t047">Kırmızı</td><td data-i18n="telefon.t048">Yeşil</td></tr>
+                  <tr><td>9</td><td data-i18n="telefon.t049">Kırmızı</td><td data-i18n="telefon.t050">Kahve</td></tr>
+                  <tr><td>10</td><td data-i18n="telefon.t051">Kırmızı</td><td data-i18n="telefon.t052">Gri</td></tr>
+                  <tr><td>11</td><td data-i18n="telefon.t053">Siyah</td><td data-i18n="telefon.t054">Mavi</td></tr>
+                  <tr><td>12</td><td data-i18n="telefon.t055">Siyah</td><td data-i18n="telefon.t056">Portakal</td></tr>
+                  <tr><td>13</td><td data-i18n="telefon.t057">Siyah</td><td data-i18n="telefon.t058">Yeşil</td></tr>
+                  <tr><td>14</td><td data-i18n="telefon.t059">Siyah</td><td data-i18n="telefon.t060">Kahve</td></tr>
+                  <tr><td>15</td><td data-i18n="telefon.t061">Siyah</td><td data-i18n="telefon.t062">Gri</td></tr>
+                  <tr><td>16</td><td data-i18n="telefon.t063">Sarı</td><td data-i18n="telefon.t064">Mavi</td></tr>
+                  <tr><td>17</td><td data-i18n="telefon.t065">Sarı</td><td data-i18n="telefon.t066">Portakal</td></tr>
+                  <tr><td>18</td><td data-i18n="telefon.t067">Sarı</td><td data-i18n="telefon.t068">Yeşil</td></tr>
+                  <tr><td>19</td><td data-i18n="telefon.t069">Sarı</td><td data-i18n="telefon.t070">Kahve</td></tr>
+                  <tr><td>20</td><td data-i18n="telefon.t071">Sarı</td><td data-i18n="telefon.t072">Gri</td></tr>
                 </tbody></table>
                 </div>
                 <p class="use-note"><b>Kullanım:</b> ses ve haberleşme altyapısı, dahili telefon tesisatı.</p>
@@ -147,52 +147,52 @@
 
           <!-- 02 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">Ekransız</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="telefon.t073">Ekransız</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/vbv.jpg" alt="VBV ekransız telefon kablosu"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Telefon kablosu kesiti"><circle cx="100" cy="100" r="90" fill="#2C2C33"/><circle cx="100" cy="100" r="78" fill="#F4EEEA"/><g stroke="#7A4A18" stroke-width="1.4"><circle cx="80" cy="80" r="19" fill="#EFE7E0"/><circle cx="80" cy="80" r="10" fill="#B87333"/><circle cx="120" cy="80" r="19" fill="#EFE7E0"/><circle cx="120" cy="80" r="10" fill="#B87333"/><circle cx="80" cy="120" r="19" fill="#EFE7E0"/><circle cx="80" cy="120" r="10" fill="#B87333"/><circle cx="120" cy="120" r="19" fill="#EFE7E0"/><circle cx="120" cy="120" r="10" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">VBV</h3>
-              <p class="card-desc">Ekransız telefon kablosu; ses frekansı iletiminde sinyal ve bilgi haberleşme hatları için.</p>
+              <h3 class="card-name" data-i18n="telefon.t074">VBV</h3>
+              <p class="card-desc" data-i18n="telefon.t075">Ekransız telefon kablosu; ses frekansı iletiminde sinyal ve bilgi haberleşme hatları için.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>Yapı</th><td>Ekransız</td></tr>
-                  <tr><th>İç iletken</th><td>Mono kalaylı bakır (EN 60228 sınıf 1)</td></tr>
-                  <tr><th>İzolasyon</th><td>PVC (VDE 0207-Y11)</td></tr>
-                  <tr><th>Dış kılıf</th><td>PVC (VDE 0207-YM1) · RAL 7001 gri</td></tr>
-                  <tr><th>Toprak iletkeni</th><td>Beyaz renkli, kırmızı kodlu PVC</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−30…+70 °C</td></tr>
-                  <tr><th>Yalıtım direnci</th><td>500 MΩ·km</td></tr>
-                  <tr><th>Test gerilimi</th><td>1000 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>250 V</td></tr>
-                  <tr><th>Kapasite</th><td>120 nF/km</td></tr>
-                  <tr><th>Min. bükme yarıçapı</th><td>15 × kablo çapı</td></tr>
-                  <tr><th>Çift sayısı</th><td>1×2×0,5 … 20×2×0,5</td></tr>
+                  <tr><th data-i18n="telefon.t076">Yapı</th><td data-i18n="telefon.t077">Ekransız</td></tr>
+                  <tr><th data-i18n="telefon.t078">İç iletken</th><td data-i18n="telefon.t079">Mono kalaylı bakır (EN 60228 sınıf 1)</td></tr>
+                  <tr><th data-i18n="telefon.t080">İzolasyon</th><td data-i18n="telefon.t081">PVC (VDE 0207-Y11)</td></tr>
+                  <tr><th data-i18n="telefon.t082">Dış kılıf</th><td data-i18n="telefon.t083">PVC (VDE 0207-YM1) · RAL 7001 gri</td></tr>
+                  <tr><th data-i18n="telefon.t084">Toprak iletkeni</th><td data-i18n="telefon.t085">Beyaz renkli, kırmızı kodlu PVC</td></tr>
+                  <tr><th data-i18n="telefon.t086">Çalışma sıcaklığı</th><td data-i18n="telefon.t087">−30…+70 °C</td></tr>
+                  <tr><th data-i18n="telefon.t088">Yalıtım direnci</th><td data-i18n="telefon.t089">500 MΩ·km</td></tr>
+                  <tr><th data-i18n="telefon.t090">Test gerilimi</th><td data-i18n="telefon.t091">1000 V</td></tr>
+                  <tr><th data-i18n="telefon.t092">Çalışma gerilimi</th><td data-i18n="telefon.t093">250 V</td></tr>
+                  <tr><th data-i18n="telefon.t094">Kapasite</th><td data-i18n="telefon.t095">120 nF/km</td></tr>
+                  <tr><th data-i18n="telefon.t096">Min. bükme yarıçapı</th><td data-i18n="telefon.t097">15 × kablo çapı</td></tr>
+                  <tr><th data-i18n="telefon.t098">Çift sayısı</th><td>1×2×0,5 … 20×2×0,5</td></tr>
                 </tbody></table>
                 <div class="spec-scroll" style="overflow-x:auto;margin-top:14px;">
                 <table class="spec-table"><thead>
-                  <tr><th>Çift</th><th>A-teli</th><th>B-teli</th></tr>
+                  <tr><th data-i18n="telefon.t099">Çift</th><th data-i18n="telefon.t100">A-teli</th><th data-i18n="telefon.t101">B-teli</th></tr>
                 </thead><tbody>
-                  <tr><td>1</td><td>Beyaz</td><td>Mavi</td></tr>
-                  <tr><td>2</td><td>Beyaz</td><td>Portakal</td></tr>
-                  <tr><td>3</td><td>Beyaz</td><td>Yeşil</td></tr>
-                  <tr><td>4</td><td>Beyaz</td><td>Kahve</td></tr>
-                  <tr><td>5</td><td>Beyaz</td><td>Gri</td></tr>
-                  <tr><td>6</td><td>Kırmızı</td><td>Mavi</td></tr>
-                  <tr><td>7</td><td>Kırmızı</td><td>Portakal</td></tr>
-                  <tr><td>8</td><td>Kırmızı</td><td>Yeşil</td></tr>
-                  <tr><td>9</td><td>Kırmızı</td><td>Kahve</td></tr>
-                  <tr><td>10</td><td>Kırmızı</td><td>Gri</td></tr>
-                  <tr><td>11</td><td>Siyah</td><td>Mavi</td></tr>
-                  <tr><td>12</td><td>Siyah</td><td>Portakal</td></tr>
-                  <tr><td>13</td><td>Siyah</td><td>Yeşil</td></tr>
-                  <tr><td>14</td><td>Siyah</td><td>Kahve</td></tr>
-                  <tr><td>15</td><td>Siyah</td><td>Gri</td></tr>
-                  <tr><td>16</td><td>Sarı</td><td>Mavi</td></tr>
-                  <tr><td>17</td><td>Sarı</td><td>Portakal</td></tr>
-                  <tr><td>18</td><td>Sarı</td><td>Yeşil</td></tr>
-                  <tr><td>19</td><td>Sarı</td><td>Kahve</td></tr>
-                  <tr><td>20</td><td>Sarı</td><td>Gri</td></tr>
+                  <tr><td>1</td><td data-i18n="telefon.t102">Beyaz</td><td data-i18n="telefon.t103">Mavi</td></tr>
+                  <tr><td>2</td><td data-i18n="telefon.t104">Beyaz</td><td data-i18n="telefon.t105">Portakal</td></tr>
+                  <tr><td>3</td><td data-i18n="telefon.t106">Beyaz</td><td data-i18n="telefon.t107">Yeşil</td></tr>
+                  <tr><td>4</td><td data-i18n="telefon.t108">Beyaz</td><td data-i18n="telefon.t109">Kahve</td></tr>
+                  <tr><td>5</td><td data-i18n="telefon.t110">Beyaz</td><td data-i18n="telefon.t111">Gri</td></tr>
+                  <tr><td>6</td><td data-i18n="telefon.t112">Kırmızı</td><td data-i18n="telefon.t113">Mavi</td></tr>
+                  <tr><td>7</td><td data-i18n="telefon.t114">Kırmızı</td><td data-i18n="telefon.t115">Portakal</td></tr>
+                  <tr><td>8</td><td data-i18n="telefon.t116">Kırmızı</td><td data-i18n="telefon.t117">Yeşil</td></tr>
+                  <tr><td>9</td><td data-i18n="telefon.t118">Kırmızı</td><td data-i18n="telefon.t119">Kahve</td></tr>
+                  <tr><td>10</td><td data-i18n="telefon.t120">Kırmızı</td><td data-i18n="telefon.t121">Gri</td></tr>
+                  <tr><td>11</td><td data-i18n="telefon.t122">Siyah</td><td data-i18n="telefon.t123">Mavi</td></tr>
+                  <tr><td>12</td><td data-i18n="telefon.t124">Siyah</td><td data-i18n="telefon.t125">Portakal</td></tr>
+                  <tr><td>13</td><td data-i18n="telefon.t126">Siyah</td><td data-i18n="telefon.t127">Yeşil</td></tr>
+                  <tr><td>14</td><td data-i18n="telefon.t128">Siyah</td><td data-i18n="telefon.t129">Kahve</td></tr>
+                  <tr><td>15</td><td data-i18n="telefon.t130">Siyah</td><td data-i18n="telefon.t131">Gri</td></tr>
+                  <tr><td>16</td><td data-i18n="telefon.t132">Sarı</td><td data-i18n="telefon.t133">Mavi</td></tr>
+                  <tr><td>17</td><td data-i18n="telefon.t134">Sarı</td><td data-i18n="telefon.t135">Portakal</td></tr>
+                  <tr><td>18</td><td data-i18n="telefon.t136">Sarı</td><td data-i18n="telefon.t137">Yeşil</td></tr>
+                  <tr><td>19</td><td data-i18n="telefon.t138">Sarı</td><td data-i18n="telefon.t139">Kahve</td></tr>
+                  <tr><td>20</td><td data-i18n="telefon.t140">Sarı</td><td data-i18n="telefon.t141">Gri</td></tr>
                 </tbody></table>
                 </div>
                 <p class="use-note"><b>Kullanım:</b> ses ve haberleşme altyapısı, dahili telefon tesisatı.</p>
@@ -204,12 +204,12 @@
 
         <div class="offer-band">
           <div class="offer-band-text">
-            <h3>Bu gruptan teklif al</h3>
-            <p>İhtiyaç duyduğunuz VBV / VBV-K tipini, çift sayısını ve metrajı iletin; ekibimiz aynı gün fiyat ve stok dönüşü yapsın.</p>
+            <h3 data-i18n="telefon.t142">Bu gruptan teklif al</h3>
+            <p data-i18n="telefon.t143">İhtiyaç duyduğunuz VBV / VBV-K tipini, çift sayısını ve metrajı iletin; ekibimiz aynı gün fiyat ve stok dönüşü yapsın.</p>
           </div>
           <div class="offer-band-actions">
-            <a class="btn btn-grad" href="iletisim.html">Teklif Al</a>
-            <a class="btn btn-ghost" href="#">Katalog PDF</a>
+            <a class="btn btn-grad" href="iletisim.html" data-i18n="btn.quote">Teklif Al</a>
+            <a class="btn btn-ghost" href="#" data-i18n="btn.catalog">Katalog PDF</a>
           </div>
         </div>
     </div>
@@ -219,27 +219,27 @@
   <section class="section soft">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">Diğer Gruplar</span>
-        <h2>İlgili <span class="gradient-text">Kategoriler</span></h2>
+        <span class="eyebrow" data-i18n="telefon.t144">Diğer Gruplar</span>
+        <h2 data-i18n-html="telefon.t002">İlgili <span class="gradient-text">Kategoriler</span></h2>
       </div>
       <div class="related-grid">
         <a href="data-kablolari.html" class="cat-card reveal">
           <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.4 6h7.2M6 8.4v7.2M18 8.4v7.2M8.4 18h7.2M8 8l8 8"/></svg></div>
-          <h3>Data Kabloları</h3>
-          <p>Cat 6 ve Cat 5e UTP · FTP · SFTP; 10 Gigabit'e kadar veri iletimi.</p>
-          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <h3 data-i18n="prod.data">Data Kabloları</h3>
+          <p data-i18n="telefon.t145">Cat 6 ve Cat 5e UTP · FTP · SFTP; 10 Gigabit'e kadar veri iletimi.</p>
+          <span class="cat-link"><span data-i18n="common.review">İncele</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
         <a href="sinyal-kontrol-kablolari.html" class="cat-card reveal">
           <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h3l2 6 4-14 2 8h5"/></svg></div>
-          <h3>Sinyal Kontrol Kabloları</h3>
-          <p>LIYY, LIYCY, LIHH serisi; elektronik kontrol ve sinyal iletişimi.</p>
-          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <h3 data-i18n="prod.sinyalFull">Sinyal Kontrol Kabloları</h3>
+          <p data-i18n="telefon.t146">LIYY, LIYCY, LIHH serisi; elektronik kontrol ve sinyal iletişimi.</p>
+          <span class="cat-link"><span data-i18n="common.review">İncele</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
         <a href="cctv-kablolari.html" class="cat-card reveal">
           <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8l14-3 1.6 5.2-14 3z"/><path d="M4.6 12.8V19h7"/><circle cx="9" cy="9.4" r="1"/><path d="M18.2 10.4l3-1v5l-3-1"/></svg></div>
-          <h3>CCTV Kamera Kabloları</h3>
-          <p>Besleme + görüntü kombine yapılar; kapalı devre kamera ve video sistemleri.</p>
-          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <h3 data-i18n="prod.cctvFull">CCTV Kamera Kabloları</h3>
+          <p data-i18n="telefon.t147">Besleme + görüntü kombine yapılar; kapalı devre kamera ve video sistemleri.</p>
+          <span class="cat-link"><span data-i18n="common.review">İncele</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
       </div>
     </div>
@@ -251,8 +251,8 @@
     <div class="wrap">
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="logo-chip"><img src="assets/img/logo.png" alt="Seçkin Kablo"></div>
-          <p class="about-txt">Türkiyenin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.</p>
+          <div class="logo-chip"><img src="assets/img/logo-footer.png" alt="Seçkin Kablo"></div>
+          <p class="about-txt" data-i18n="footer.about">Türkiyenin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.</p>
           <div class="socials">
             <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 112.5 6 2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM10 9h3.8v1.7h.05a4.2 4.2 0 013.8-2.1c4 0 4.75 2.6 4.75 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.05 1.4-2.05 2.8V21h-4z"/></svg></a>
             <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
@@ -260,15 +260,15 @@
           </div>
         </div>
         <div class="footer-col">
-          <h4>Site</h4>
-          <a href="index.html">Anasayfa</a><a href="urunler.html">Ürünler</a><a href="hakkimizda.html">Hakkımızda</a><a href="politikalarimiz.html">Politikalarımız</a><a href="iletisim.html">İletişim</a>
+          <h4 data-i18n="footer.site">Site</h4>
+          <a href="index.html" data-i18n="nav.home">Anasayfa</a><a href="urunler.html" data-i18n="nav.products">Ürünler</a><a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a><a href="politikalarimiz.html" data-i18n="nav.policies">Politikalarımız</a><a href="iletisim.html" data-i18n="nav.contact">İletişim</a>
         </div>
         <div class="footer-col">
-          <h4>Ürün Grupları</h4>
-          <a href="data-kablolari.html">Data Kabloları</a><a href="koaksiyel-kablolar.html">Koaksiyel Görüntü</a><a href="cctv-kablolari.html">CCTV Kamera</a><a href="yangin-alarm-kablolari.html">Yangın Alarm</a><a href="sinyal-kontrol-kablolari.html">Sinyal Kontrol</a><a href="telefon-kablolari.html">Telefon</a><a href="kumanda-kablolari.html">Kumanda</a>
+          <h4 data-i18n="footer.productGroups">Ürün Grupları</h4>
+          <a href="data-kablolari.html" data-i18n="prod.data">Data Kabloları</a><a href="koaksiyel-kablolar.html" data-i18n="footer.koak">Koaksiyel Görüntü</a><a href="cctv-kablolari.html" data-i18n="footer.cctv">CCTV Kamera</a><a href="yangin-alarm-kablolari.html" data-i18n="footer.yangin">Yangın Alarm</a><a href="sinyal-kontrol-kablolari.html" data-i18n="footer.sinyal">Sinyal Kontrol</a><a href="telefon-kablolari.html" data-i18n="footer.telefon">Telefon</a><a href="kumanda-kablolari.html" data-i18n="footer.kumanda">Kumanda</a>
         </div>
         <div class="footer-col">
-          <h4>İletişim</h4>
+          <h4 data-i18n="nav.contact">İletişim</h4>
           <ul class="foot-contact">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@seckinkablo.com</span></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg><span>www.seckinkablo.com</span></li>
@@ -277,10 +277,11 @@
       </div>
       <div class="footer-bottom">
         <span>© <span id="year">2026</span> SEÇKİN KABLO — Türkiyenin En Seçkin Kablosu</span>
-        <span>Tüm hakları saklıdır.</span>
+        <span data-i18n="footer.rights">Tüm hakları saklıdır.</span>
       </div>
     </div>
   </footer>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a href="#ana" class="skip-link">İçeriğe geç</a>
+  <a href="#ana" class="skip-link" data-i18n="a11y.skip">İçeriğe geç</a>
 
   <!-- ================= NAVBAR ================= -->
   <header class="navbar">
@@ -30,31 +30,31 @@
       <a href="/" class="logo brand-logo brand-logo--md" aria-label="Seçkin Kablo — Anasayfa"><img src="assets/img/logo.png" alt="Seçkin Kablo" width="234" height="106" loading="eager"></a>
       <nav aria-label="Ana menü">
         <ul class="nav-menu">
-          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Anasayfa</a></li>
           <li class="has-drop">
-            <a href="urunler.html" class="active">Ürünler</a>
+            <a href="urunler.html" class="active" data-i18n="nav.products">Ürünler</a>
             <div class="dropdown">
-              <a href="data-kablolari.html">Data Kabloları</a>
-              <a href="koaksiyel-kablolar.html">Koaksiyel Görüntü Kabloları</a>
-              <a href="cctv-kablolari.html">CCTV Kamera Kabloları</a>
-              <a href="yangin-alarm-kablolari.html">Yangın Alarm Kabloları</a>
-              <a href="sinyal-kontrol-kablolari.html">Sinyal Kontrol Kabloları</a>
-              <a href="telefon-kablolari.html">Telefon Kabloları</a>
-              <a href="kumanda-kablolari.html">Kumanda Kabloları</a>
+              <a href="data-kablolari.html" data-i18n="prod.data">Data Kabloları</a>
+              <a href="koaksiyel-kablolar.html" data-i18n="prod.koakFull">Koaksiyel Görüntü Kabloları</a>
+              <a href="cctv-kablolari.html" data-i18n="prod.cctvFull">CCTV Kamera Kabloları</a>
+              <a href="yangin-alarm-kablolari.html" data-i18n="prod.yanginFull">Yangın Alarm Kabloları</a>
+              <a href="sinyal-kontrol-kablolari.html" data-i18n="prod.sinyalFull">Sinyal Kontrol Kabloları</a>
+              <a href="telefon-kablolari.html" data-i18n="prod.telefonFull">Telefon Kabloları</a>
+              <a href="kumanda-kablolari.html" data-i18n="prod.kumandaFull">Kumanda Kabloları</a>
             </div>
           </li>
           <li class="has-drop">
-            <a href="hakkimizda.html">Kurumsal</a>
+            <a href="hakkimizda.html" data-i18n="nav.corporate">Kurumsal</a>
             <div class="dropdown">
-              <a href="hakkimizda.html">Hakkımızda</a>
-              <a href="politikalarimiz.html">Politikalarımız</a>
+              <a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+              <a href="politikalarimiz.html" data-i18n="nav.policies">Politikalarımız</a>
             </div>
           </li>
-          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="iletisim.html" data-i18n="nav.contact">İletişim</a></li>
         </ul>
       </nav>
       <div class="nav-cta">
-        <a href="#" class="btn btn-grad">Katalog PDF</a>
+        <a href="#" class="btn btn-grad" data-i18n="btn.catalog">Katalog PDF</a>
         <button class="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -68,14 +68,14 @@
       <div class="detail-hero">
         <div class="detail-hero-text">
           <div class="breadcrumb">
-            <a href="index.html">Anasayfa</a>
+            <a href="index.html" data-i18n="nav.home">Anasayfa</a>
             <span class="sep">/</span>
-            <a href="urunler.html">Ürünler</a>
+            <a href="urunler.html" data-i18n="nav.products">Ürünler</a>
             <span class="sep">/</span>
-            <span class="cur">Kumanda Kabloları</span>
+            <span class="cur" data-i18n="prod.kumandaFull">Kumanda Kabloları</span>
           </div>
-          <h1>Kumanda <span class="gradient-text">Kabloları</span></h1>
-          <p class="lead">LSCYCY, YSLY ve HSLH serisi; bükülü bakır iletken ve numara kodlu damarlarla esnek kumanda ve otomasyon hatları. 300/500 V çalışma gerilimi, halojensiz ve yağa dayanıklı seçenekleriyle hareketli makine ve tesis panolarında güvenilir bağlantı sağlar.</p>
+          <h1 data-i18n-html="kumanda.t001">Kumanda <span class="gradient-text">Kabloları</span></h1>
+          <p class="lead" data-i18n="kumanda.t003">LSCYCY, YSLY ve HSLH serisi; bükülü bakır iletken ve numara kodlu damarlarla esnek kumanda ve otomasyon hatları. 300/500 V çalışma gerilimi, halojensiz ve yağa dayanıklı seçenekleriyle hareketli makine ve tesis panolarında güvenilir bağlantı sağlar.</p>
         </div>
         <div class="mini-cable"><div class="cable-scene"><div class="cable-float">
           <div class="ring sheath"></div><div class="ring insulation"></div><div class="ring core"></div>
@@ -92,30 +92,30 @@
 
           <!-- 01 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">300/500 V</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="kumanda.t004">300/500 V</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/lscycy.jpg" alt="LSCYCY kumanda kablosu"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Kumanda kablosu kesiti"><circle cx="100" cy="100" r="90" fill="#2C2C33"/><circle cx="100" cy="100" r="78" fill="#F4EEEA"/><circle cx="100" cy="100" r="73" fill="none" stroke="#B87333" stroke-width="5" stroke-dasharray="5 4"/><g stroke="#7A4A18" stroke-width="1.4"><circle cx="100" cy="100" r="17" fill="#EFE7E0"/><circle cx="100" cy="100" r="9" fill="#B87333"/><circle cx="100" cy="62" r="17" fill="#EFE7E0"/><circle cx="100" cy="62" r="9" fill="#B87333"/><circle cx="138" cy="100" r="17" fill="#EFE7E0"/><circle cx="138" cy="100" r="9" fill="#B87333"/><circle cx="100" cy="138" r="17" fill="#EFE7E0"/><circle cx="100" cy="138" r="9" fill="#B87333"/><circle cx="62" cy="100" r="17" fill="#EFE7E0"/><circle cx="62" cy="100" r="9" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">LSCYCY</h3>
-              <p class="card-desc">PVC izole ve kılıflı, damarları numara kodlu, kalaylı bakır örgü ekranlı esnek kumanda kablosu.</p>
+              <h3 class="card-name" data-i18n="kumanda.t005">LSCYCY</h3>
+              <p class="card-desc" data-i18n="kumanda.t006">PVC izole ve kılıflı, damarları numara kodlu, kalaylı bakır örgü ekranlı esnek kumanda kablosu.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>İç iletken</th><td>Bükülü bakır tel, siyah damar beyaz numara kodlu (EN 50334)</td></tr>
-                  <tr><th>İzolasyon</th><td>PVC (EN 50334 kodlamasına uygun)</td></tr>
-                  <tr><th>İç kılıf</th><td>PVC</td></tr>
-                  <tr><th>Ekran</th><td>Kalaylı bakır tellerden örgü ekran</td></tr>
-                  <tr><th>Dış kılıf</th><td>PVC · RAL 7001 gri</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−30…+70 °C</td></tr>
-                  <tr><th>İletken direnci</th><td>0,5 mm²: 39,0 · 0,75: 26,0 · 1,0: 19,5 · 1,5: 13,3 · 2,5: 7,98 Ω/km (maks.)</td></tr>
-                  <tr><th>Test gerilimi</th><td>2500 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>300/500 V</td></tr>
-                  <tr><th>Kapasite (efektif, 800 Hz)</th><td>120 nF/km (damar/damar)</td></tr>
-                  <tr><th>Bükülme çapı</th><td>7,5 × kablo çapı</td></tr>
+                  <tr><th data-i18n="kumanda.t007">İç iletken</th><td data-i18n="kumanda.t008">Bükülü bakır tel, siyah damar beyaz numara kodlu (EN 50334)</td></tr>
+                  <tr><th data-i18n="kumanda.t009">İzolasyon</th><td data-i18n="kumanda.t010">PVC (EN 50334 kodlamasına uygun)</td></tr>
+                  <tr><th data-i18n="kumanda.t011">İç kılıf</th><td data-i18n="kumanda.t012">PVC</td></tr>
+                  <tr><th data-i18n="kumanda.t013">Ekran</th><td data-i18n="kumanda.t014">Kalaylı bakır tellerden örgü ekran</td></tr>
+                  <tr><th data-i18n="kumanda.t015">Dış kılıf</th><td data-i18n="kumanda.t016">PVC · RAL 7001 gri</td></tr>
+                  <tr><th data-i18n="kumanda.t017">Çalışma sıcaklığı</th><td data-i18n="kumanda.t018">−30…+70 °C</td></tr>
+                  <tr><th data-i18n="kumanda.t019">İletken direnci</th><td data-i18n="kumanda.t020">0,5 mm²: 39,0 · 0,75: 26,0 · 1,0: 19,5 · 1,5: 13,3 · 2,5: 7,98 Ω/km (maks.)</td></tr>
+                  <tr><th data-i18n="kumanda.t021">Test gerilimi</th><td data-i18n="kumanda.t022">2500 V</td></tr>
+                  <tr><th data-i18n="kumanda.t023">Çalışma gerilimi</th><td data-i18n="kumanda.t024">300/500 V</td></tr>
+                  <tr><th data-i18n="kumanda.t025">Kapasite (efektif, 800 Hz)</th><td data-i18n="kumanda.t026">120 nF/km (damar/damar)</td></tr>
+                  <tr><th data-i18n="kumanda.t027">Bükülme çapı</th><td data-i18n="kumanda.t028">7,5 × kablo çapı</td></tr>
                 </tbody></table>
                 <div class="spec-scroll" style="overflow-x:auto;margin-top:14px;">
                 <table class="spec-table"><thead>
-                  <tr><th>Kesit (n×mm²)</th><th>Kablo çapı (mm)</th><th>Bakır (kg/km)</th><th>Toplam (kg/km)</th></tr>
+                  <tr><th data-i18n="kumanda.t029">Kesit (n×mm²)</th><th data-i18n="kumanda.t030">Kablo çapı (mm)</th><th data-i18n="kumanda.t031">Bakır (kg/km)</th><th data-i18n="kumanda.t032">Toplam (kg/km)</th></tr>
                 </thead><tbody>
                   <tr><td>2×0,50</td><td>6,8</td><td>19</td><td>69</td></tr>
                   <tr><td>3×0,50</td><td>7,1</td><td>24</td><td>74</td></tr>
@@ -171,29 +171,29 @@
 
           <!-- 02 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">300/500 V</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="kumanda.t033">300/500 V</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/ysly.jpg" alt="YSLY kumanda kablosu"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Kumanda kablosu kesiti"><circle cx="100" cy="100" r="90" fill="#2C2C33"/><circle cx="100" cy="100" r="78" fill="#F4EEEA"/><g stroke="#7A4A18" stroke-width="1.4"><circle cx="100" cy="100" r="17" fill="#EFE7E0"/><circle cx="100" cy="100" r="9" fill="#B87333"/><circle cx="100" cy="62" r="17" fill="#EFE7E0"/><circle cx="100" cy="62" r="9" fill="#B87333"/><circle cx="138" cy="100" r="17" fill="#EFE7E0"/><circle cx="138" cy="100" r="9" fill="#B87333"/><circle cx="100" cy="138" r="17" fill="#EFE7E0"/><circle cx="100" cy="138" r="9" fill="#B87333"/><circle cx="62" cy="100" r="17" fill="#EFE7E0"/><circle cx="62" cy="100" r="9" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">YSLY</h3>
-              <p class="card-desc">PVC izole ve kılıflı, damarları numara kodlu esnek kumanda kablosu.</p>
+              <h3 class="card-name" data-i18n="kumanda.t034">YSLY</h3>
+              <p class="card-desc" data-i18n="kumanda.t035">PVC izole ve kılıflı, damarları numara kodlu esnek kumanda kablosu.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>İç iletken</th><td>Bükülü bakır tel, siyah damar beyaz numara kodlu (EN 50334)</td></tr>
-                  <tr><th>İzolasyon</th><td>PVC (EN 50334 kodlamasına uygun)</td></tr>
-                  <tr><th>Dış kılıf</th><td>PVC · RAL 7001 gri</td></tr>
-                  <tr><th>Ekran</th><td>Ekransız</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−30…+70 °C</td></tr>
-                  <tr><th>İletken direnci</th><td>0,5 mm²: 39,0 · 0,75: 26,0 · 1,0: 19,5 · 1,5: 13,3 · 2,5: 7,98 Ω/km (maks.)</td></tr>
-                  <tr><th>İzolasyon direnci</th><td>Min. 20 MΩ×km</td></tr>
-                  <tr><th>Test gerilimi</th><td>2500 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>300/500 V</td></tr>
-                  <tr><th>Bükülme çapı</th><td>7,5 × kablo çapı</td></tr>
+                  <tr><th data-i18n="kumanda.t036">İç iletken</th><td data-i18n="kumanda.t037">Bükülü bakır tel, siyah damar beyaz numara kodlu (EN 50334)</td></tr>
+                  <tr><th data-i18n="kumanda.t038">İzolasyon</th><td data-i18n="kumanda.t039">PVC (EN 50334 kodlamasına uygun)</td></tr>
+                  <tr><th data-i18n="kumanda.t040">Dış kılıf</th><td data-i18n="kumanda.t041">PVC · RAL 7001 gri</td></tr>
+                  <tr><th data-i18n="kumanda.t042">Ekran</th><td data-i18n="kumanda.t043">Ekransız</td></tr>
+                  <tr><th data-i18n="kumanda.t044">Çalışma sıcaklığı</th><td data-i18n="kumanda.t045">−30…+70 °C</td></tr>
+                  <tr><th data-i18n="kumanda.t046">İletken direnci</th><td data-i18n="kumanda.t047">0,5 mm²: 39,0 · 0,75: 26,0 · 1,0: 19,5 · 1,5: 13,3 · 2,5: 7,98 Ω/km (maks.)</td></tr>
+                  <tr><th data-i18n="kumanda.t048">İzolasyon direnci</th><td data-i18n="kumanda.t049">Min. 20 MΩ×km</td></tr>
+                  <tr><th data-i18n="kumanda.t050">Test gerilimi</th><td data-i18n="kumanda.t051">2500 V</td></tr>
+                  <tr><th data-i18n="kumanda.t052">Çalışma gerilimi</th><td data-i18n="kumanda.t053">300/500 V</td></tr>
+                  <tr><th data-i18n="kumanda.t054">Bükülme çapı</th><td data-i18n="kumanda.t055">7,5 × kablo çapı</td></tr>
                 </tbody></table>
                 <div class="spec-scroll" style="overflow-x:auto;margin-top:14px;">
                 <table class="spec-table"><thead>
-                  <tr><th>Kesit (n×mm²)</th><th>Kablo çapı (mm)</th><th>Bakır (kg/km)</th><th>Toplam (kg/km)</th></tr>
+                  <tr><th data-i18n="kumanda.t056">Kesit (n×mm²)</th><th data-i18n="kumanda.t057">Kablo çapı (mm)</th><th data-i18n="kumanda.t058">Bakır (kg/km)</th><th data-i18n="kumanda.t059">Toplam (kg/km)</th></tr>
                 </thead><tbody>
                   <tr><td>2×0,50</td><td>4,8</td><td>9</td><td>37</td></tr>
                   <tr><td>3×0,50</td><td>5,1</td><td>14</td><td>40</td></tr>
@@ -249,29 +249,29 @@
 
           <!-- 03 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">300/500 V</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="kumanda.t060">300/500 V</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/hslh.jpg" alt="HSLH kumanda kablosu"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Kumanda kablosu kesiti"><circle cx="100" cy="100" r="90" fill="#2C2C33"/><circle cx="100" cy="100" r="78" fill="#F4EEEA"/><g stroke="#7A4A18" stroke-width="1.4"><circle cx="100" cy="100" r="17" fill="#EFE7E0"/><circle cx="100" cy="100" r="9" fill="#B87333"/><circle cx="100" cy="62" r="17" fill="#EFE7E0"/><circle cx="100" cy="62" r="9" fill="#B87333"/><circle cx="138" cy="100" r="17" fill="#EFE7E0"/><circle cx="138" cy="100" r="9" fill="#B87333"/><circle cx="100" cy="138" r="17" fill="#EFE7E0"/><circle cx="100" cy="138" r="9" fill="#B87333"/><circle cx="62" cy="100" r="17" fill="#EFE7E0"/><circle cx="62" cy="100" r="9" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">HSLH</h3>
-              <p class="card-desc">Halojensiz (HFFR) izole ve kılıflı, damarları numara kodlu esnek kumanda kablosu.</p>
+              <h3 class="card-name" data-i18n="kumanda.t061">HSLH</h3>
+              <p class="card-desc" data-i18n="kumanda.t062">Halojensiz (HFFR) izole ve kılıflı, damarları numara kodlu esnek kumanda kablosu.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>İç iletken</th><td>Bükülü bakır tel, siyah damar beyaz numara kodlu (EN 50334)</td></tr>
-                  <tr><th>İzolasyon</th><td>HFFR (EN 50334 kodlamasına uygun)</td></tr>
-                  <tr><th>Dış kılıf</th><td>HFFR · RAL 7001 gri</td></tr>
-                  <tr><th>Ekran</th><td>Ekransız</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−30…+70 °C</td></tr>
-                  <tr><th>İletken direnci</th><td>0,5 mm²: 39,0 · 0,75: 26,0 · 1,0: 19,5 · 1,5: 13,3 · 2,5: 7,98 Ω/km (maks.)</td></tr>
-                  <tr><th>İzolasyon direnci</th><td>Min. 20 MΩ×km</td></tr>
-                  <tr><th>Test gerilimi</th><td>2500 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>300/500 V</td></tr>
-                  <tr><th>Bükülme çapı</th><td>7,5 × kablo çapı</td></tr>
+                  <tr><th data-i18n="kumanda.t063">İç iletken</th><td data-i18n="kumanda.t064">Bükülü bakır tel, siyah damar beyaz numara kodlu (EN 50334)</td></tr>
+                  <tr><th data-i18n="kumanda.t065">İzolasyon</th><td data-i18n="kumanda.t066">HFFR (EN 50334 kodlamasına uygun)</td></tr>
+                  <tr><th data-i18n="kumanda.t067">Dış kılıf</th><td data-i18n="kumanda.t068">HFFR · RAL 7001 gri</td></tr>
+                  <tr><th data-i18n="kumanda.t069">Ekran</th><td data-i18n="kumanda.t070">Ekransız</td></tr>
+                  <tr><th data-i18n="kumanda.t071">Çalışma sıcaklığı</th><td data-i18n="kumanda.t072">−30…+70 °C</td></tr>
+                  <tr><th data-i18n="kumanda.t073">İletken direnci</th><td data-i18n="kumanda.t074">0,5 mm²: 39,0 · 0,75: 26,0 · 1,0: 19,5 · 1,5: 13,3 · 2,5: 7,98 Ω/km (maks.)</td></tr>
+                  <tr><th data-i18n="kumanda.t075">İzolasyon direnci</th><td data-i18n="kumanda.t076">Min. 20 MΩ×km</td></tr>
+                  <tr><th data-i18n="kumanda.t077">Test gerilimi</th><td data-i18n="kumanda.t078">2500 V</td></tr>
+                  <tr><th data-i18n="kumanda.t079">Çalışma gerilimi</th><td data-i18n="kumanda.t080">300/500 V</td></tr>
+                  <tr><th data-i18n="kumanda.t081">Bükülme çapı</th><td data-i18n="kumanda.t082">7,5 × kablo çapı</td></tr>
                 </tbody></table>
                 <div class="spec-scroll" style="overflow-x:auto;margin-top:14px;">
                 <table class="spec-table"><thead>
-                  <tr><th>Kesit (n×mm²)</th><th>Kablo çapı (mm)</th><th>Bakır (kg/km)</th><th>Toplam (kg/km)</th></tr>
+                  <tr><th data-i18n="kumanda.t083">Kesit (n×mm²)</th><th data-i18n="kumanda.t084">Kablo çapı (mm)</th><th data-i18n="kumanda.t085">Bakır (kg/km)</th><th data-i18n="kumanda.t086">Toplam (kg/km)</th></tr>
                 </thead><tbody>
                   <tr><td>2×0,50</td><td>4,8</td><td>9</td><td>38</td></tr>
                   <tr><td>3×0,50</td><td>5,1</td><td>14</td><td>42</td></tr>
@@ -327,31 +327,31 @@
 
           <!-- 04 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">300/500 V</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="kumanda.t087">300/500 V</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/hslhch.jpg" alt="HSLHCH kumanda kablosu"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Kumanda kablosu kesiti"><circle cx="100" cy="100" r="90" fill="#2C2C33"/><circle cx="100" cy="100" r="78" fill="#F4EEEA"/><circle cx="100" cy="100" r="73" fill="none" stroke="#B87333" stroke-width="5" stroke-dasharray="5 4"/><g stroke="#7A4A18" stroke-width="1.4"><circle cx="100" cy="100" r="17" fill="#EFE7E0"/><circle cx="100" cy="100" r="9" fill="#B87333"/><circle cx="100" cy="62" r="17" fill="#EFE7E0"/><circle cx="100" cy="62" r="9" fill="#B87333"/><circle cx="138" cy="100" r="17" fill="#EFE7E0"/><circle cx="138" cy="100" r="9" fill="#B87333"/><circle cx="100" cy="138" r="17" fill="#EFE7E0"/><circle cx="100" cy="138" r="9" fill="#B87333"/><circle cx="62" cy="100" r="17" fill="#EFE7E0"/><circle cx="62" cy="100" r="9" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">HSLHCH</h3>
-              <p class="card-desc">Damarları numara kodlu, kalaylı bakır örgü ekranlı, yağa dayanıklı bükülgen kumanda kablosu.</p>
+              <h3 class="card-name" data-i18n="kumanda.t088">HSLHCH</h3>
+              <p class="card-desc" data-i18n="kumanda.t089">Damarları numara kodlu, kalaylı bakır örgü ekranlı, yağa dayanıklı bükülgen kumanda kablosu.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>İç iletken</th><td>Bükülü bakır tel, siyah damar beyaz numara kodlu (EN 50334)</td></tr>
-                  <tr><th>İzolasyon</th><td>PVC (EN 50334 kodlamasına uygun)</td></tr>
-                  <tr><th>İç kılıf</th><td>PVC</td></tr>
-                  <tr><th>Ekran</th><td>Kalaylı bakır tellerden örgü ekran</td></tr>
-                  <tr><th>Dış kılıf</th><td>PVC · RAL 7001 gri</td></tr>
-                  <tr><th>Yağa dayanıklılık</th><td>EN 60811-404</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−30…+70 °C</td></tr>
-                  <tr><th>İletken direnci</th><td>0,5 mm²: 39,0 · 0,75: 26,0 · 1,0: 19,5 · 1,5: 13,3 · 2,5: 7,98 Ω/km (maks.)</td></tr>
-                  <tr><th>İzolasyon direnci</th><td>Min. 20 MΩ×km</td></tr>
-                  <tr><th>Test gerilimi</th><td>2500 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>300/500 V</td></tr>
-                  <tr><th>Bükülme çapı</th><td>7,5 × kablo çapı</td></tr>
+                  <tr><th data-i18n="kumanda.t090">İç iletken</th><td data-i18n="kumanda.t091">Bükülü bakır tel, siyah damar beyaz numara kodlu (EN 50334)</td></tr>
+                  <tr><th data-i18n="kumanda.t092">İzolasyon</th><td data-i18n="kumanda.t093">PVC (EN 50334 kodlamasına uygun)</td></tr>
+                  <tr><th data-i18n="kumanda.t094">İç kılıf</th><td data-i18n="kumanda.t095">PVC</td></tr>
+                  <tr><th data-i18n="kumanda.t096">Ekran</th><td data-i18n="kumanda.t097">Kalaylı bakır tellerden örgü ekran</td></tr>
+                  <tr><th data-i18n="kumanda.t098">Dış kılıf</th><td data-i18n="kumanda.t099">PVC · RAL 7001 gri</td></tr>
+                  <tr><th data-i18n="kumanda.t100">Yağa dayanıklılık</th><td data-i18n="kumanda.t101">EN 60811-404</td></tr>
+                  <tr><th data-i18n="kumanda.t102">Çalışma sıcaklığı</th><td data-i18n="kumanda.t103">−30…+70 °C</td></tr>
+                  <tr><th data-i18n="kumanda.t104">İletken direnci</th><td data-i18n="kumanda.t105">0,5 mm²: 39,0 · 0,75: 26,0 · 1,0: 19,5 · 1,5: 13,3 · 2,5: 7,98 Ω/km (maks.)</td></tr>
+                  <tr><th data-i18n="kumanda.t106">İzolasyon direnci</th><td data-i18n="kumanda.t107">Min. 20 MΩ×km</td></tr>
+                  <tr><th data-i18n="kumanda.t108">Test gerilimi</th><td data-i18n="kumanda.t109">2500 V</td></tr>
+                  <tr><th data-i18n="kumanda.t110">Çalışma gerilimi</th><td data-i18n="kumanda.t111">300/500 V</td></tr>
+                  <tr><th data-i18n="kumanda.t112">Bükülme çapı</th><td data-i18n="kumanda.t113">7,5 × kablo çapı</td></tr>
                 </tbody></table>
                 <div class="spec-scroll" style="overflow-x:auto;margin-top:14px;">
                 <table class="spec-table"><thead>
-                  <tr><th>Kesit (n×mm²)</th><th>Kablo çapı (mm)</th><th>Bakır (kg/km)</th><th>Toplam (kg/km)</th></tr>
+                  <tr><th data-i18n="kumanda.t114">Kesit (n×mm²)</th><th data-i18n="kumanda.t115">Kablo çapı (mm)</th><th data-i18n="kumanda.t116">Bakır (kg/km)</th><th data-i18n="kumanda.t117">Toplam (kg/km)</th></tr>
                 </thead><tbody>
                   <tr><td>2×0,50</td><td>8,0</td><td>34</td><td>102</td></tr>
                   <tr><td>3×0,50</td><td>8,4</td><td>38</td><td>108</td></tr>
@@ -407,30 +407,30 @@
 
           <!-- 05 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">300/500 V</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="kumanda.t118">300/500 V</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/nslyo.jpg" alt="NSLYÖ kumanda kablosu"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Kumanda kablosu kesiti"><circle cx="100" cy="100" r="90" fill="#2C2C33"/><circle cx="100" cy="100" r="78" fill="#F4EEEA"/><g stroke="#7A4A18" stroke-width="1.4"><circle cx="100" cy="100" r="17" fill="#EFE7E0"/><circle cx="100" cy="100" r="9" fill="#B87333"/><circle cx="100" cy="62" r="17" fill="#EFE7E0"/><circle cx="100" cy="62" r="9" fill="#B87333"/><circle cx="138" cy="100" r="17" fill="#EFE7E0"/><circle cx="138" cy="100" r="9" fill="#B87333"/><circle cx="100" cy="138" r="17" fill="#EFE7E0"/><circle cx="100" cy="138" r="9" fill="#B87333"/><circle cx="62" cy="100" r="17" fill="#EFE7E0"/><circle cx="62" cy="100" r="9" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">NSLYÖ</h3>
-              <p class="card-desc">PVC izole ve kılıflı, numara kodlu, kalaylı bakır örgü ekranlı yağa dayanıklı kumanda kablosu.</p>
+              <h3 class="card-name" data-i18n="kumanda.t119">NSLYÖ</h3>
+              <p class="card-desc" data-i18n="kumanda.t120">PVC izole ve kılıflı, numara kodlu, kalaylı bakır örgü ekranlı yağa dayanıklı kumanda kablosu.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>İç iletken</th><td>Bükülü bakır tel, siyah damar beyaz numara kodlu (EN 50334)</td></tr>
-                  <tr><th>İzolasyon</th><td>PVC (EN 50334 kodlamasına uygun)</td></tr>
-                  <tr><th>Ekran</th><td>Kalaylı bakır örgü ekran</td></tr>
-                  <tr><th>Dış kılıf</th><td>PVC · RAL 7001 gri</td></tr>
-                  <tr><th>Yağa dayanıklılık</th><td>EN 60811-404</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−30…+70 °C</td></tr>
-                  <tr><th>İletken direnci</th><td>0,5 mm²: 39,0 · 0,75: 26,0 · 1,0: 19,5 · 1,5: 13,3 · 2,5: 7,98 Ω/km (maks.)</td></tr>
-                  <tr><th>İzolasyon direnci</th><td>Min. 20 MΩ×km</td></tr>
-                  <tr><th>Test gerilimi</th><td>2500 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>300/500 V</td></tr>
-                  <tr><th>Bükülme çapı</th><td>7,5 × kablo çapı</td></tr>
+                  <tr><th data-i18n="kumanda.t121">İç iletken</th><td data-i18n="kumanda.t122">Bükülü bakır tel, siyah damar beyaz numara kodlu (EN 50334)</td></tr>
+                  <tr><th data-i18n="kumanda.t123">İzolasyon</th><td data-i18n="kumanda.t124">PVC (EN 50334 kodlamasına uygun)</td></tr>
+                  <tr><th data-i18n="kumanda.t125">Ekran</th><td data-i18n="kumanda.t126">Kalaylı bakır örgü ekran</td></tr>
+                  <tr><th data-i18n="kumanda.t127">Dış kılıf</th><td data-i18n="kumanda.t128">PVC · RAL 7001 gri</td></tr>
+                  <tr><th data-i18n="kumanda.t129">Yağa dayanıklılık</th><td data-i18n="kumanda.t130">EN 60811-404</td></tr>
+                  <tr><th data-i18n="kumanda.t131">Çalışma sıcaklığı</th><td data-i18n="kumanda.t132">−30…+70 °C</td></tr>
+                  <tr><th data-i18n="kumanda.t133">İletken direnci</th><td data-i18n="kumanda.t134">0,5 mm²: 39,0 · 0,75: 26,0 · 1,0: 19,5 · 1,5: 13,3 · 2,5: 7,98 Ω/km (maks.)</td></tr>
+                  <tr><th data-i18n="kumanda.t135">İzolasyon direnci</th><td data-i18n="kumanda.t136">Min. 20 MΩ×km</td></tr>
+                  <tr><th data-i18n="kumanda.t137">Test gerilimi</th><td data-i18n="kumanda.t138">2500 V</td></tr>
+                  <tr><th data-i18n="kumanda.t139">Çalışma gerilimi</th><td data-i18n="kumanda.t140">300/500 V</td></tr>
+                  <tr><th data-i18n="kumanda.t141">Bükülme çapı</th><td data-i18n="kumanda.t142">7,5 × kablo çapı</td></tr>
                 </tbody></table>
                 <div class="spec-scroll" style="overflow-x:auto;margin-top:14px;">
                 <table class="spec-table"><thead>
-                  <tr><th>Kesit (n×mm²)</th><th>Kablo çapı (mm)</th><th>Bakır (kg/km)</th><th>Toplam (kg/km)</th></tr>
+                  <tr><th data-i18n="kumanda.t143">Kesit (n×mm²)</th><th data-i18n="kumanda.t144">Kablo çapı (mm)</th><th data-i18n="kumanda.t145">Bakır (kg/km)</th><th data-i18n="kumanda.t146">Toplam (kg/km)</th></tr>
                 </thead><tbody>
                   <tr><td>2×0,50</td><td>5,6</td><td>9</td><td>48</td></tr>
                   <tr><td>3×0,50</td><td>6,2</td><td>14</td><td>54</td></tr>
@@ -488,12 +488,12 @@
 
         <div class="offer-band">
           <div class="offer-band-text">
-            <h3>Bu gruptan teklif al</h3>
-            <p>İhtiyaç duyduğunuz kumanda kablosu tipi, damar sayısı, kesit ve metrajı iletin; ekibimiz aynı gün fiyat ve stok dönüşü yapsın.</p>
+            <h3 data-i18n="kumanda.t147">Bu gruptan teklif al</h3>
+            <p data-i18n="kumanda.t148">İhtiyaç duyduğunuz kumanda kablosu tipi, damar sayısı, kesit ve metrajı iletin; ekibimiz aynı gün fiyat ve stok dönüşü yapsın.</p>
           </div>
           <div class="offer-band-actions">
-            <a class="btn btn-grad" href="iletisim.html">Teklif Al</a>
-            <a class="btn btn-ghost" href="#">Katalog PDF</a>
+            <a class="btn btn-grad" href="iletisim.html" data-i18n="btn.quote">Teklif Al</a>
+            <a class="btn btn-ghost" href="#" data-i18n="btn.catalog">Katalog PDF</a>
           </div>
         </div>
     </div>
@@ -503,27 +503,27 @@
   <section class="section soft">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">Diğer Gruplar</span>
-        <h2>İlgili <span class="gradient-text">Kategoriler</span></h2>
+        <span class="eyebrow" data-i18n="kumanda.t149">Diğer Gruplar</span>
+        <h2 data-i18n-html="kumanda.t002">İlgili <span class="gradient-text">Kategoriler</span></h2>
       </div>
       <div class="related-grid">
         <a href="sinyal-kontrol-kablolari.html" class="cat-card reveal">
           <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h3l2 6 4-14 2 8h5"/></svg></div>
-          <h3>Sinyal Kontrol Kabloları</h3>
-          <p>LIYY, LIYCY, LIHH serisi; elektronik kontrol ve sinyal iletişimi.</p>
-          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <h3 data-i18n="prod.sinyalFull">Sinyal Kontrol Kabloları</h3>
+          <p data-i18n="kumanda.t150">LIYY, LIYCY, LIHH serisi; elektronik kontrol ve sinyal iletişimi.</p>
+          <span class="cat-link"><span data-i18n="common.review">İncele</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
         <a href="yangin-alarm-kablolari.html" class="cat-card reveal">
           <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3s5 4 5 9a5 5 0 01-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3 .5-2-1-4 1-7.5z"/></svg></div>
-          <h3>Yangın Alarm Kabloları</h3>
-          <p>J-Y(St)Y ve F180 devre bütünlüğü; yangın algılama ve alarm hatları.</p>
-          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <h3 data-i18n="prod.yanginFull">Yangın Alarm Kabloları</h3>
+          <p data-i18n="kumanda.t151">J-Y(St)Y ve F180 devre bütünlüğü; yangın algılama ve alarm hatları.</p>
+          <span class="cat-link"><span data-i18n="common.review">İncele</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
         <a href="data-kablolari.html" class="cat-card reveal">
           <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.4 6h7.2M6 8.4v7.2M18 8.4v7.2M8.4 18h7.2M8 8l8 8"/></svg></div>
-          <h3>Data Kabloları</h3>
-          <p>Cat 6 ve Cat 5e UTP · FTP · SFTP; 10 Gigabit'e kadar veri iletimi.</p>
-          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <h3 data-i18n="prod.data">Data Kabloları</h3>
+          <p data-i18n="kumanda.t152">Cat 6 ve Cat 5e UTP · FTP · SFTP; 10 Gigabit'e kadar veri iletimi.</p>
+          <span class="cat-link"><span data-i18n="common.review">İncele</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
       </div>
     </div>
@@ -535,8 +535,8 @@
     <div class="wrap">
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="logo-chip"><img src="assets/img/logo.png" alt="Seçkin Kablo"></div>
-          <p class="about-txt">Türkiyenin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.</p>
+          <div class="logo-chip"><img src="assets/img/logo-footer.png" alt="Seçkin Kablo"></div>
+          <p class="about-txt" data-i18n="footer.about">Türkiyenin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.</p>
           <div class="socials">
             <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 112.5 6 2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM10 9h3.8v1.7h.05a4.2 4.2 0 013.8-2.1c4 0 4.75 2.6 4.75 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.05 1.4-2.05 2.8V21h-4z"/></svg></a>
             <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
@@ -544,15 +544,15 @@
           </div>
         </div>
         <div class="footer-col">
-          <h4>Site</h4>
-          <a href="index.html">Anasayfa</a><a href="urunler.html">Ürünler</a><a href="hakkimizda.html">Hakkımızda</a><a href="politikalarimiz.html">Politikalarımız</a><a href="iletisim.html">İletişim</a>
+          <h4 data-i18n="footer.site">Site</h4>
+          <a href="index.html" data-i18n="nav.home">Anasayfa</a><a href="urunler.html" data-i18n="nav.products">Ürünler</a><a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a><a href="politikalarimiz.html" data-i18n="nav.policies">Politikalarımız</a><a href="iletisim.html" data-i18n="nav.contact">İletişim</a>
         </div>
         <div class="footer-col">
-          <h4>Ürün Grupları</h4>
-          <a href="data-kablolari.html">Data Kabloları</a><a href="koaksiyel-kablolar.html">Koaksiyel Görüntü</a><a href="cctv-kablolari.html">CCTV Kamera</a><a href="yangin-alarm-kablolari.html">Yangın Alarm</a><a href="sinyal-kontrol-kablolari.html">Sinyal Kontrol</a><a href="telefon-kablolari.html">Telefon</a><a href="kumanda-kablolari.html">Kumanda</a>
+          <h4 data-i18n="footer.productGroups">Ürün Grupları</h4>
+          <a href="data-kablolari.html" data-i18n="prod.data">Data Kabloları</a><a href="koaksiyel-kablolar.html" data-i18n="footer.koak">Koaksiyel Görüntü</a><a href="cctv-kablolari.html" data-i18n="footer.cctv">CCTV Kamera</a><a href="yangin-alarm-kablolari.html" data-i18n="footer.yangin">Yangın Alarm</a><a href="sinyal-kontrol-kablolari.html" data-i18n="footer.sinyal">Sinyal Kontrol</a><a href="telefon-kablolari.html" data-i18n="footer.telefon">Telefon</a><a href="kumanda-kablolari.html" data-i18n="footer.kumanda">Kumanda</a>
         </div>
         <div class="footer-col">
-          <h4>İletişim</h4>
+          <h4 data-i18n="nav.contact">İletişim</h4>
           <ul class="foot-contact">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@seckinkablo.com</span></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg><span>www.seckinkablo.com</span></li>
@@ -561,10 +561,11 @@
       </div>
       <div class="footer-bottom">
         <span>© <span id="year">2026</span> SEÇKİN KABLO — Türkiyenin En Seçkin Kablosu</span>
-        <span>Tüm hakları saklıdır.</span>
+        <span data-i18n="footer.rights">Tüm hakları saklıdır.</span>
       </div>
     </div>
   </footer>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
