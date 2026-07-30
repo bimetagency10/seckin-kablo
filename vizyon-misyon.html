@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vizyon, Misyon ve Kurumsal Değerlerimiz — Seçkin Kablo</title>
+  <meta name="description" content="Seçkin Kablo’nun vizyonu, misyonu ve kurumsal değerleri: dürüstlük ve güvenilirlik, sürekli iyileştirme, müşteri odaklılık, adalet ve insan-çevre saygısı.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#C4161C">
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:title" content="Vizyon, Misyon ve Kurumsal Değerlerimiz — Seçkin Kablo">
+  <meta property="og:image" content="/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/og-image.png">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Vizyon / Misyon / Kurumsal Değerler — sayfaya özel eklemeler -->
+  <style>
+    .vm-page .wrap{max-width:1320px;}
+    .vm-page .page-hero{padding:64px 0 28px;}
+    .vm-page .section.vm-section{padding:48px 0 88px;position:relative;}
+    .vm-page .page-hero .lead{color:#3F3F48;}
+    .breadcrumb ol{display:inline-flex;align-items:center;gap:9px;list-style:none;margin:0;padding:0;}
+    .breadcrumb li{display:inline-flex;align-items:center;gap:9px;}
+
+    /* Yan dekor: sayfa kenarlarını dolduran soft blob'lar */
+    .vm-page .section.vm-section::before,
+    .vm-page .section.vm-section::after{
+      content:"";position:absolute;top:120px;width:340px;height:340px;
+      border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0;
+    }
+    .vm-page .section.vm-section::before{left:-160px;background:rgba(196,22,28,.08);}
+    .vm-page .section.vm-section::after{right:-160px;background:rgba(224,43,49,.06);}
+    .vm-page .section.vm-section > .wrap{position:relative;z-index:1;}
+
+    /* Vizyon + Misyon: yan yana iki kart */
+    .vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:64px;}
+    .vm-card{
+      position:relative;background:#fff;border:1px solid var(--line);
+      border-radius:var(--r-lg);padding:36px 34px;box-shadow:var(--sh-rest);
+      display:flex;flex-direction:column;gap:14px;overflow:hidden;
+      transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;
+    }
+    .vm-card:hover{transform:translateY(-4px);box-shadow:var(--sh-hover);border-color:rgba(196,22,28,.18);}
+    .vm-card::before{
+      content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--grad);
+    }
+    .vm-card .vm-head{display:flex;align-items:center;gap:14px;}
+    .vm-card .vm-ico{
+      width:52px;height:52px;border-radius:16px;background:var(--grad-soft);
+      display:grid;place-items:center;flex:none;
+    }
+    .vm-card .vm-ico svg{width:26px;height:26px;color:var(--red);}
+    .vm-card h2{font-size:1.35rem;color:var(--ink);letter-spacing:-.01em;line-height:1.2;}
+    .vm-card p{color:#3F3F48;font-size:1rem;line-height:1.7;}
+    .vm-card p + p{margin-top:8px;}
+
+    /* Kurumsal Değerler */
+    .values-head{margin:0 auto 32px;text-align:center;max-width:680px;}
+    .values-head .eyebrow{margin-bottom:14px;}
+    .values-head h2{
+      font-family:var(--font-display);font-weight:800;color:var(--ink);
+      font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.2;letter-spacing:-.02em;
+    }
+    .values-head p{margin-top:12px;color:#3F3F48;font-size:1rem;line-height:1.6;}
+
+    .cvalues-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .cvalue-card{
+      position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+      padding:28px 26px;box-shadow:var(--sh-rest);
+      transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;
+      display:flex;flex-direction:column;gap:12px;overflow:hidden;
+    }
+    .cvalue-card:hover{transform:translateY(-4px);box-shadow:var(--sh-hover);border-color:rgba(196,22,28,.18);}
+    .cvalue-card .cv-top{display:flex;align-items:center;gap:12px;}
+    .cvalue-num{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:36px;height:36px;border-radius:12px;background:var(--grad-soft);
+      color:var(--red);font-family:var(--font-mono);font-size:.82rem;font-weight:600;
+      letter-spacing:.06em;flex:none;
+    }
+    .cvalue-card h3{font-family:var(--font-display);font-weight:700;color:var(--ink);
+      font-size:1.1rem;line-height:1.25;letter-spacing:-.01em;}
+    .cvalue-card p{color:#3F3F48;font-size:.96rem;line-height:1.65;}
+
+    @media (max-width:1080px){
+      .vm-grid{grid-template-columns:1fr;gap:16px;margin-bottom:44px;}
+      .cvalues-grid{grid-template-columns:repeat(2,1fr);}
+      .vm-page .section.vm-section::before,
+      .vm-page .section.vm-section::after{display:none;}
+    }
+    @media (max-width:820px){
+      .vm-page .section.vm-section{padding:36px 0 56px;}
+      .vm-card{padding:26px 22px;}
+      .vm-card h2{font-size:1.2rem;}
+      .vm-card p{font-size:.96rem;line-height:1.6;}
+      .values-head h2{font-size:clamp(1.4rem,5vw,1.8rem);}
+    }
+    @media (max-width:560px){
+      .cvalues-grid{grid-template-columns:1fr;gap:14px;}
+      .cvalue-card{padding:22px 20px;}
+    }
+  </style>
+</head>
+<body class="vm-page">
+  <a href="#ana" class="skip-link" data-i18n="a11y.skip">İçeriğe geç</a>
+
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="/" class="logo brand-logo brand-logo--md" aria-label="Seçkin Kablo — Anasayfa"><img src="assets/img/logo.png" alt="Seçkin Kablo" width="234" height="106" loading="eager"></a>
+      <nav aria-label="Ana menü">
+        <ul class="nav-menu">
+          <li><a href="index.html" data-i18n="nav.home">Anasayfa</a></li>
+          <li class="has-drop">
+            <a href="urunler.html" data-i18n="nav.products">Ürünler</a>
+            <div class="dropdown">
+              <a href="data-kablolari.html" data-i18n="prod.data">Data Kabloları</a>
+              <a href="koaksiyel-kablolar.html" data-i18n="prod.koakFull">Koaksiyel Görüntü Kabloları</a>
+              <a href="cctv-kablolari.html" data-i18n="prod.cctvFull">CCTV Kamera Kabloları</a>
+              <a href="yangin-alarm-kablolari.html" data-i18n="prod.yanginFull">Yangın Alarm Kabloları</a>
+              <a href="sinyal-kontrol-kablolari.html" data-i18n="prod.sinyalFull">Sinyal Kontrol Kabloları</a>
+              <a href="telefon-kablolari.html" data-i18n="prod.telefonFull">Telefon Kabloları</a>
+              <a href="kumanda-kablolari.html" data-i18n="prod.kumandaFull">Kumanda Kabloları</a>
+            </div>
+          </li>
+          <li class="has-drop">
+            <a href="hakkimizda.html" class="active" aria-current="page" data-i18n="nav.corporate">Kurumsal</a>
+            <div class="dropdown">
+              <a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+              <a href="vizyon-misyon.html" class="active" data-i18n="nav.vision">Vizyon, Misyon, Kurumsal Değerlerimiz</a>
+              <a href="politikalarimiz.html" data-i18n="nav.policies">Politikalarımız</a>
+            </div>
+          </li>
+          <li><a href="iletisim.html" data-i18n="nav.contact">İletişim</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="#" class="btn btn-grad" data-i18n="btn.catalog">Katalog PDF</a>
+        <button class="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="ana">
+
+    <!-- ================= PAGE HERO ================= -->
+    <section class="page-hero">
+      <div class="blob blob-a"></div>
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Sayfa yolu">
+          <ol>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li aria-hidden="true"><span class="sep">/</span></li>
+            <li><a href="hakkimizda.html">Kurumsal</a></li>
+            <li aria-hidden="true"><span class="sep">/</span></li>
+            <li><span class="cur" aria-current="page">Vizyon, Misyon, Kurumsal Değerlerimiz</span></li>
+          </ol>
+        </nav>
+        <h1>Vizyon, Misyon ve <span class="gradient-text">Kurumsal Değerlerimiz</span></h1>
+        <p class="lead">Ne yapmak istediğimizi, bunu nasıl yaptığımızı ve hangi ilkelerle hareket ettiğimizi tek bir sayfada topladık.</p>
+      </div>
+    </section>
+
+    <!-- ================= VİZYON / MİSYON / KURUMSAL DEĞERLER ================= -->
+    <section class="section vm-section">
+      <div class="wrap">
+
+        <div class="vm-grid">
+          <article class="vm-card reveal" aria-labelledby="vizyon-h">
+            <div class="vm-head">
+              <div class="vm-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </div>
+              <h2 id="vizyon-h">Vizyonumuz</h2>
+            </div>
+            <p>Türkiye’de zayıf akım kablosu üretimindeki uzmanlığımızı ölçülebilir kalite ve sürdürülebilir yatırımlarla güçlendirmek; ürettiğimiz ürün gruplarında küresel pazarlarda referans gösterilen bir Türk üreticisi olarak konumumuzu pekiştirmek.</p>
+            <p>Bunu mühendislik disiplini, standartlara tam uyum ve müşterinin güvenini her sevkiyatta yeniden hak eden bir üretim anlayışıyla başarmak.</p>
+          </article>
+
+          <article class="vm-card reveal" aria-labelledby="misyon-h">
+            <div class="vm-head">
+              <div class="vm-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l2.5 5.5L20 9l-4 4 1 6-5-2.7L7 19l1-6-4-4 5.5-1.5z"/>
+                </svg>
+              </div>
+              <h2 id="misyon-h">Misyonumuz</h2>
+            </div>
+            <p>Zayıf akım ve veri kablolarında; yüksek saflıkta bakır iletken, doğru yalıtım ve titiz ekranlama ile beklenen performansı istikrarlı biçimde sunmak.</p>
+            <p>Halojensiz (LSZH/HFFR) ve yangına dayanıklı çözümler başta olmak üzere teknolojik yatırımlarımızı sektörün ihtiyaçlarının önünde tutmak; bayilerimize, projelerimize ve tedarik zincirimize öngörülebilir kalite ile zamanında teslimat güvencesi vererek ülke ekonomisine kalıcı katkı sağlamak.</p>
+          </article>
+        </div>
+
+        <div class="values-head">
+          <span class="eyebrow">Kurumsal Değerlerimiz</span>
+          <h2>Her kararımızın arkasında duran beş ilke.</h2>
+          <p>Bunlar bir liste değil, üretim ve iş yapış biçimimizin çerçevesi.</p>
+        </div>
+
+        <div class="cvalues-grid">
+          <article class="cvalue-card reveal">
+            <div class="cv-top">
+              <span class="cvalue-num">01</span>
+              <h3>Dürüstlük ve Güvenilirlik</h3>
+            </div>
+            <p>Verdiğimiz teknik değerlerin, sözleşme koşullarının ve teslimat taahhütlerinin arkasında dururuz. Ürün etiketinden metraj baskısına kadar her ayrıntı, iş ortağımızın bize güvenmesi içindir.</p>
+          </article>
+
+          <article class="cvalue-card reveal">
+            <div class="cv-top">
+              <span class="cvalue-num">02</span>
+              <h3>Etkin ve Sürekli İyileştirme</h3>
+            </div>
+            <p>Üretim süreçlerimizi malzeme seçiminden final kontrole kadar ölçer, ölçtüğümüzü iyileştiririz. Değişen standartlara ve saha ihtiyaçlarına uyum, olağan işleyişimizin bir parçasıdır.</p>
+          </article>
+
+          <article class="cvalue-card reveal">
+            <div class="cv-top">
+              <span class="cvalue-num">03</span>
+              <h3>Müşteri ve Değer Odaklılık</h3>
+            </div>
+            <p>Her projenin teknik, ticari ve zaman kısıtları farklıdır. Ürün önermeden önce dinler, doğru kablo seçimini birlikte belirler; satış sonrasında da yanınızda oluruz.</p>
+          </article>
+
+          <article class="cvalue-card reveal">
+            <div class="cv-top">
+              <span class="cvalue-num">04</span>
+              <h3>Adalet ve Eşitlik</h3>
+            </div>
+            <p>Bayilerimize, tedarikçilerimize ve çalışanlarımıza aynı ölçüyle ve aynı şeffaflıkla yaklaşırız. Karar süreçlerimizde ilişki değil; liyakat ve nesnel kriterler belirleyicidir.</p>
+          </article>
+
+          <article class="cvalue-card reveal">
+            <div class="cv-top">
+              <span class="cvalue-num">05</span>
+              <h3>İnsana ve Çevreye Saygı</h3>
+            </div>
+            <p>Halojensiz LSZH/HFFR çözümlerimiz ve yangına dayanıklı üretim hattımız, insan ve tesis güvenliğini üründe somutlaştırır. Enerji, hammadde ve atık yönetiminde çevresel ayak izimizi düşürmek uzun vadeli sorumluluğumuzdur.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section soft">
+      <div class="wrap">
+        <div class="cta-card">
+          <div class="inner">
+            <h2>İlkelerimizin sahada karşılığını görün.</h2>
+            <p>Projeniz için doğru kabloyu birlikte belirleyelim; size en seçkin çözümü sunalım.</p>
+            <a href="iletisim.html" class="btn btn-white">Teklif Alın</a>
+            <div class="contact-line">
+              <span>info@seckinkablo.com</span>
+              <span>www.seckinkablo.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo-chip"><img src="assets/img/logo-footer.png" alt="Seçkin Kablo"></div>
+          <p class="about-txt" data-i18n="footer.about">Türkiye’nin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.</p>
+          <div class="socials">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 112.5 6 2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM10 9h3.8v1.7h.05a4.2 4.2 0 013.8-2.1c4 0 4.75 2.6 4.75 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.05 1.4-2.05 2.8V21h-4z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 00-1.7-1.7C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.9.4A2.5 2.5 0 001.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 001.7 1.7c1.5.4 8.9.4 8.9.4s7.4 0 8.9-.4a2.5 2.5 0 001.7-1.7C23 15.2 23 12 23 12zM10 15.5v-7l6 3.5z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.site">Site</h4>
+          <a href="index.html" data-i18n="nav.home">Anasayfa</a><a href="urunler.html" data-i18n="nav.products">Ürünler</a><a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a><a href="vizyon-misyon.html" data-i18n="nav.vision">Vizyon &amp; Misyon</a><a href="politikalarimiz.html" data-i18n="nav.policies">Politikalarımız</a><a href="iletisim.html" data-i18n="nav.contact">İletişim</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.productGroups">Ürün Grupları</h4>
+          <a href="data-kablolari.html" data-i18n="prod.data">Data Kabloları</a><a href="koaksiyel-kablolar.html" data-i18n="footer.koak">Koaksiyel Görüntü</a><a href="cctv-kablolari.html" data-i18n="footer.cctv">CCTV Kamera</a><a href="yangin-alarm-kablolari.html" data-i18n="footer.yangin">Yangın Alarm</a><a href="sinyal-kontrol-kablolari.html" data-i18n="footer.sinyal">Sinyal Kontrol</a><a href="telefon-kablolari.html" data-i18n="footer.telefon">Telefon</a><a href="kumanda-kablolari.html" data-i18n="footer.kumanda">Kumanda</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="nav.contact">İletişim</h4>
+          <ul class="foot-contact">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@seckinkablo.com</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg><span>www.seckinkablo.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> SEÇKİN KABLO — Türkiye’nin En Seçkin Kablosu</span>
+        <span data-i18n="footer.rights">Tüm hakları saklıdır.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
