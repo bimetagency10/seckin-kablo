@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hakkımızda — Seçkin Kablo</title>
-  <meta name="description" content="2003'te İstanbul'da kurulan, tamamı yerli sermayeli Seçkin Kablo; 7 ürün grubu ve 60+ çeşitle, yüksek saflıkta bakır iletken ve VDE/EN/TIA-EIA uyumlu, TSE ve CE belgeli üretim yapar.">
+  <meta name="description" content="2003’te İstanbul’da kurulan, tamamı yerli sermayeli Seçkin Kablo; 7 ürün grubunda 60’tan fazla çeşitle, yüksek saflıkta bakır iletken ve VDE/EN/TIA-EIA uyumlu, TSE ve CE belgeli üretim yapar.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
   <link rel="icon" href="assets/img/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <meta property="og:title" content="Seçkin Kablo — Türkiyenin En Seçkin Kablosu">
+  <meta property="og:title" content="Seçkin Kablo — Türkiye’nin En Seçkin Kablosu">
   <meta property="og:image" content="/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -21,53 +21,136 @@
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Hakkımızda — sayfaya özel küçük eklemeler (yalnızca bu sayfada kullanılır; site genelini etkilemez) -->
+  <!-- Hakkımızda — sayfaya özel eklemeler -->
   <style>
-    /* Kart: aspect-ratio sabit → video yüklenirken layout shift yok.
-       overflow:hidden + border-radius → video kart köşelerinden dışarı taşmaz. */
-    .about-visual{
-      position:relative;overflow:hidden;
-      background:linear-gradient(135deg,rgba(224,43,49,.06),var(--bg-soft));
-      border:1px solid var(--line);border-radius:var(--r-lg);
-      box-shadow:var(--sh-soft);
-      aspect-ratio:4/3;width:100%;
+    /* Genel: sayfayı biraz genişletip iki yandaki ölü boşlukları azalt.
+       Yalnız about-page scope'unda geçerli — global .wrap etkilenmez. */
+    .about-page .wrap{max-width:1320px;}
+
+    /* Sayfa ritmi ve AA-safe body rengi */
+    .about-page .page-hero{padding:64px 0 28px;}
+    .about-page .section.story{padding:48px 0 96px;position:relative;}
+    .about-page .page-hero .lead{color:#3F3F48;}
+    .about-page .story-lead p,
+    .about-page .about-box p{color:#3F3F48;}
+
+    /* Breadcrumb: <nav><ol> semantik yapısı için görsel korunur */
+    .breadcrumb ol{display:inline-flex;align-items:center;gap:9px;list-style:none;margin:0;padding:0;}
+    .breadcrumb li{display:inline-flex;align-items:center;gap:9px;}
+
+    /* --- Story üst şeridi: eyebrow + h2 + tek satır intro --- */
+    .about-page .story-lead{max-width:820px;margin:0 0 40px;}
+    .about-page .story-lead .eyebrow{margin-bottom:16px;}
+    .about-page .story-lead h2{
+      font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.15;margin-bottom:16px;color:var(--ink);
     }
-    .about-video{
-      position:absolute;inset:0;width:100%;height:100%;
-      object-fit:cover;display:block;
-      background:var(--bg-soft);
-      /* Poster (logo-mark) küçük olduğu için ortalı ve sığdır; video yüklenince
-         object-fit:cover devreye girer */
-      object-position:center;
+    .about-page .story-lead p{font-size:1.05rem;line-height:1.65;}
+
+    /* --- BOX GRID (3 tematik kart, tam genişlik) ---
+       Sayfanın sağ/sol beyaz alanlarını içerikle doldurur. */
+    .about-boxes{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
     }
-    /* Poster tam ekran değil, ortalı küçük logo hissi versin */
-    .about-video[poster]:not([data-loaded]){object-fit:contain;padding:14%;}
-    .about-chip{
-      position:absolute;display:inline-flex;align-items:center;gap:8px;
-      background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-      border:1px solid var(--line);border-radius:var(--pill);
-      padding:8px 14px;font-family:var(--font-mono);font-size:.78rem;font-weight:500;color:var(--ink);
-      box-shadow:var(--sh-rest);white-space:nowrap;z-index:2;
+    .about-box{
+      position:relative;background:#fff;border:1px solid var(--line);
+      border-radius:var(--r-lg);padding:32px 30px;box-shadow:var(--sh-rest);
+      display:flex;flex-direction:column;gap:14px;overflow:hidden;
+      transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;
     }
-    .about-chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--grad);flex:none;}
-    .about-chip.c1{top:18px;left:16px;}
-    .about-chip.c2{top:18px;right:16px;}
-    .about-chip.c3{bottom:18px;left:16px;}
-    /* Mobil: 3. etiket videoyu ezmesin — kartın altına, satır olarak taşı */
+    .about-box:hover{transform:translateY(-4px);box-shadow:var(--sh-hover);border-color:rgba(196,22,28,.18);}
+    .about-box::before{
+      content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--grad);
+    }
+    .about-box .box-head{display:flex;align-items:center;gap:14px;}
+    .about-box .box-ico{
+      width:52px;height:52px;border-radius:16px;background:var(--grad-soft);
+      display:grid;place-items:center;flex:none;
+    }
+    .about-box .box-ico svg{width:26px;height:26px;color:var(--red);}
+    .about-box h3{font-size:1.15rem;color:var(--ink);letter-spacing:-.01em;line-height:1.25;}
+    .about-box p{font-size:.96rem;line-height:1.65;}
+    .about-box .box-tags{
+      margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;padding-top:6px;
+    }
+    .about-box .box-tag{
+      display:inline-flex;align-items:center;padding:5px 12px;border-radius:var(--pill);
+      background:var(--bg-soft);border:1px solid var(--line);color:#3F3F48;
+      font-size:.78rem;font-weight:500;
+    }
+
+    /* --- Sayı şeridi: hikayenin altında tam-genişlik istatistikler --- */
+    .about-strip{
+      margin-top:36px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+      background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+      box-shadow:var(--sh-rest);overflow:hidden;
+    }
+    .about-strip .cell{
+      padding:26px 24px;text-align:center;
+      border-right:1px solid var(--line);
+    }
+    .about-strip .cell:last-child{border-right:0;}
+    .about-strip .num{
+      display:block;font-family:var(--font-display);font-weight:800;
+      font-size:clamp(1.6rem,2.4vw,2.1rem);line-height:1;color:var(--ink);
+      letter-spacing:-.02em;font-variant-numeric:tabular-nums;
+    }
+    .about-strip .label{
+      display:block;margin-top:8px;font-size:.86rem;color:#4A4A54;line-height:1.35;
+    }
+
+    /* --- Standartlar bandı + CTA --- */
+    .about-standards-band{
+      margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;
+      background:linear-gradient(135deg, var(--red-soft), #FAFAF9);
+      border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 28px;
+    }
+    .about-standards-band .std-label{
+      font-family:var(--font-display);font-weight:700;color:var(--ink);font-size:1rem;
+    }
+    .about-standards-band .std-badges{display:flex;flex-wrap:wrap;gap:8px;}
+    .about-standards-band .q-badge{padding:8px 14px;font-size:.82rem;}
+    .about-standards-band .std-cta{display:flex;flex-wrap:wrap;gap:10px;}
+
+    /* --- Yan dekor: iki büyük yumuşak blob, sayfa kenarlarını doldurur --- */
+    .about-page .section.story::before,
+    .about-page .section.story::after{
+      content:"";position:absolute;top:120px;width:340px;height:340px;
+      border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0;
+    }
+    .about-page .section.story::before{left:-160px;background:rgba(196,22,28,.08);}
+    .about-page .section.story::after{right:-160px;background:rgba(224,43,49,.06);}
+    .about-page .section.story > .wrap{position:relative;z-index:1;}
+
+    /* --- Responsive --- */
+    @media (max-width:1080px){
+      .about-boxes{grid-template-columns:repeat(2,1fr);}
+      .about-strip{grid-template-columns:repeat(2,1fr);}
+      .about-strip .cell{border-right:0;border-bottom:1px solid var(--line);}
+      .about-strip .cell:nth-child(2n){border-right:0;}
+      .about-strip .cell:nth-last-child(-n+2){border-bottom:0;}
+    }
+    @media (max-width:820px){
+      .about-page .section.story{padding:36px 0 56px;}
+      .about-page .story-lead h2{font-size:clamp(1.5rem,5.2vw,1.9rem);}
+      .about-page .story-lead p{font-size:.98rem;line-height:1.6;}
+      .about-boxes{gap:14px;}
+      .about-box{padding:22px 20px;}
+      .about-box h3{font-size:1.05rem;}
+      .about-box p{font-size:.94rem;line-height:1.6;}
+      .about-standards-band{padding:18px 20px;flex-direction:column;align-items:flex-start;gap:12px;}
+      .about-page .section.story::before,
+      .about-page .section.story::after{display:none;}
+    }
     @media (max-width:560px){
-      .about-visual{aspect-ratio:16/10;}
-      .about-chip{font-size:.72rem;padding:6px 12px;}
-      .about-chip.c1{top:12px;left:12px;}
-      .about-chip.c2{top:12px;right:12px;}
-      .about-chip.c3{bottom:12px;left:12px;right:auto;}
-    }
-    /* Hareket azaltma: videoyu duraklat, poster kalır */
-    @media (prefers-reduced-motion: reduce){
-      .about-video{animation:none;}
+      .about-boxes{grid-template-columns:1fr;}
+      .about-strip{grid-template-columns:1fr 1fr;}
+      .about-strip .cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+      .about-strip .cell:nth-child(2n){border-right:0;}
+      .about-strip .cell:nth-last-child(-n+2){border-bottom:0;}
     }
   </style>
 </head>
-<body>
+<body class="about-page">
   <a href="#ana" class="skip-link">İçeriğe geç</a>
 
   <header class="navbar">
@@ -89,9 +172,10 @@
             </div>
           </li>
           <li class="has-drop">
-            <a href="hakkimizda.html" class="active">Kurumsal</a>
+            <a href="hakkimizda.html" class="active" aria-current="page">Kurumsal</a>
             <div class="dropdown">
-              <a href="hakkimizda.html" class="active">Hakkımızda</a>
+              <a href="hakkimizda.html">Hakkımızda</a>
+              <a href="vizyon-misyon.html">Vizyon, Misyon, Kurumsal Değerlerimiz</a>
               <a href="politikalarimiz.html">Politikalarımız</a>
             </div>
           </li>
@@ -112,52 +196,127 @@
       <div class="blob blob-a"></div>
       <div class="wrap">
         <nav class="breadcrumb" aria-label="Sayfa yolu">
-          <a href="index.html">Anasayfa</a><span class="sep">/</span><span class="cur">Hakkımızda</span>
+          <ol>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li aria-hidden="true"><span class="sep">/</span></li>
+            <li><span class="cur" aria-current="page">Hakkımızda</span></li>
+          </ol>
         </nav>
         <h1>Adı gibi <span class="gradient-text">Seçkin</span></h1>
-        <p class="lead">2003 yılında İstanbul'da kurulan Seçkin Kablo, tamamı yerli sermayeli bir kablo üreticisidir. Kurulduğumuz günden bu yana zayıf akım ve veri kablolarında uzmanlaşarak; yüksek saflıkta bakır iletken ve standartlara uygun, belgeli üretimle adımızın hakkını veriyoruz.</p>
+        <p class="lead">2003 yılında İstanbul’da kurulan Seçkin Kablo, tamamı yerli sermayeli bir üreticidir. Zayıf akım ve veri kablolarında uzmanlaşarak; yüksek saflıkta bakır iletken ve belgeli üretimle adımızın hakkını veriyoruz.</p>
       </div>
     </section>
 
     <!-- ================= ŞİRKET HİKAYESİ ================= -->
-    <section class="section">
+    <section class="section story">
       <div class="wrap">
-        <div class="story-grid">
-          <div class="reveal">
-            <span class="eyebrow">Biz Kimiz</span>
-            <h2>Kuruluştan bugüne, tek bir odak: seçkin kablo.</h2>
-            <p>2003'te İstanbul'da yola çıkan Seçkin Kablo; data, koaksiyel görüntü, CCTV kamera, yangın alarm, sinyal-kontrol, telefon ve kumanda kabloları olmak üzere <strong>7 ürün grubunda 60'tan fazla çeşit</strong> üretir. Enerji dağıtımından çok, binaların ve tesislerin sinir sistemi olan zayıf akım ve veri hatlarına odaklanarak bu alanda gerçek bir uzmanlık geliştirdik.</p>
-            <p>Ürettiğimiz her kablonun kalbinde yüksek saflıkta bakır iletken yer alır. İletkenin saflığı, yalıtımın niteliği ve ekranlamanın doğru uygulanması, bir kablonun sinyali kayıpsız taşımasını belirler. Bu nedenle üretimimizi malzeme seçiminden sevkiyata kadar ölçülebilir kalite ve standartlara uygunluk üzerine kurarız.</p>
-            <p>Değişen ihtiyaçların önünde durabilmek için halojensiz (LSZH/HFFR) ve yangına dayanıklı kablo teknolojilerine yatırım yapıyoruz. Amacımız; insan ve tesis güvenliğini önceleyen, uluslararası standartlarla uyumlu ve izlenebilir çözümleri Türkiye'nin dört bir yanındaki projelere ulaştırmak. Bizim için "Türkiyenin En Seçkin Kablosu" bir slogan değil, her sevkiyatta yeniden hak ettiğimiz bir sorumluluktur.</p>
-          </div>
-          <div class="reveal">
-            <!-- Kart: video, kartın köşe yuvarlaklığına oturur; aspect-ratio ile
-                 layout shift önlenir. Video henüz repoya eklenmemişse poster
-                 (logo-mark) gözükür; preload="metadata" mobilde bant tasarrufu.
-                 prefers-reduced-motion açıkken CSS video oynatmayı engeller. -->
-            <div class="about-visual">
-              <video class="about-video"
-                     poster="assets/img/logo-mark.png"
-                     autoplay muted loop playsinline preload="metadata"
-                     aria-label="Seçkin Kablo — kablo üretim görüntüsü">
-                <source src="/videos/kablo-hero.webm" type="video/webm">
-                <source src="/videos/kablo-hero.mp4" type="video/mp4">
-              </video>
-              <span class="about-chip c1">2003'ten beri</span>
-              <span class="about-chip c2">7 Ürün Grubu</span>
-              <span class="about-chip c3">60+ Çeşit</span>
+        <div class="story-lead reveal">
+          <span class="eyebrow">Biz Kimiz</span>
+          <h2>Kuruluştan bugüne tek bir odak: Seçkin Kablo.</h2>
+          <p>2003’te İstanbul’da yola çıkan Seçkin Kablo; data, koaksiyel görüntü, CCTV kamera, yangın alarm, sinyal-kontrol, telefon ve kumanda kabloları olmak üzere 7 ürün grubunda 60’tan fazla çeşit üretiyor. Binaların ve tesislerin sinir sistemi olan hatlarda uzmanlaştık ve bu odağı sürdürüyoruz.</p>
+        </div>
+
+        <div class="about-boxes">
+          <article class="about-box reveal">
+            <div class="box-head">
+              <div class="box-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/>
+                  <path d="M9 12l2 2 4-4.5"/>
+                </svg>
+              </div>
+              <h3>Zayıf Akım ve Veri Uzmanlığı</h3>
             </div>
+            <p>Enerji dağıtımı yerine binaların ve tesislerin sinir sistemi olan hatlara odaklandık: data, koaksiyel görüntü, CCTV kamera, yangın alarm, sinyal-kontrol, telefon ve kumanda kabloları. Bu daralmış odak, gerçek bir mühendislik derinliği anlamına geliyor.</p>
+            <div class="box-tags">
+              <span class="box-tag">7 ürün grubu</span>
+              <span class="box-tag">60+ çeşit</span>
+            </div>
+          </article>
+
+          <article class="about-box reveal">
+            <div class="box-head">
+              <div class="box-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="9"/>
+                  <circle cx="12" cy="12" r="4.5"/>
+                </svg>
+              </div>
+              <h3>Yüksek Saflıkta Bakır İletken</h3>
+            </div>
+            <p>Her kablonun kalbinde yüksek saflıkta bakır iletken yer alır. İletkenin saflığı, yalıtımın niteliği ve ekranlamanın doğru uygulanması, sinyalin kayıpsız taşınmasını belirler. Üretimimizi malzeme seçiminden sevkiyata kadar ölçülebilir kalite üzerine kurarız.</p>
+            <div class="box-tags">
+              <span class="box-tag">Ölçülebilir kalite</span>
+              <span class="box-tag">Uçtan uca kontrol</span>
+            </div>
+          </article>
+
+          <article class="about-box reveal">
+            <div class="box-head">
+              <div class="box-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/>
+                  <path d="M9 12l2 2 4-4.5"/>
+                </svg>
+              </div>
+              <h3>Halojensiz ve Yangına Dayanıklı</h3>
+            </div>
+            <p>Halojensiz (LSZH/HFFR) ve yangına dayanıklı kablo teknolojilerine yatırım yapıyoruz. Amacımız; insan ve tesis güvenliğini önceleyen, uluslararası standartlarla uyumlu ve izlenebilir çözümleri Türkiye’nin dört bir yanındaki projelere ulaştırmak.</p>
+            <div class="box-tags">
+              <span class="box-tag">LSZH / HFFR</span>
+              <span class="box-tag">İzlenebilir sevkiyat</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="about-strip reveal" role="list" aria-label="Öne çıkan sayılar">
+          <div class="cell" role="listitem">
+            <span class="num">2003</span>
+            <span class="label">Kuruluş yılı</span>
+          </div>
+          <div class="cell" role="listitem">
+            <span class="num">7</span>
+            <span class="label">Ürün grubu</span>
+          </div>
+          <div class="cell" role="listitem">
+            <span class="num">60+</span>
+            <span class="label">Ürün çeşidi</span>
+          </div>
+          <div class="cell" role="listitem">
+            <span class="num">%100</span>
+            <span class="label">Yerli sermaye</span>
+          </div>
+        </div>
+
+        <div class="about-standards-band reveal">
+          <span class="std-label">Uyumlu olduğumuz standartlar</span>
+          <div class="std-badges">
+            <span class="q-badge">VDE</span>
+            <span class="q-badge">EN</span>
+            <span class="q-badge">TIA/EIA</span>
+            <span class="q-badge">TSE</span>
+            <span class="q-badge">CE</span>
+          </div>
+          <div class="std-cta">
+            <a href="assets/katalog/seckin-katalog.pdf" class="btn btn-grad" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v13"/><path d="M6 12l6 6 6-6"/><path d="M5 21h14"/></svg>
+              Katalog PDF
+            </a>
+            <a href="iletisim.html" class="btn btn-ghost">
+              İletişime geç
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= DEĞERLER ================= -->
+    <!-- ================= ÜRETİM İLKELERİ ================= -->
     <section class="section soft">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow">Değerlerimiz</span>
-          <h2>Bizi biz yapan ilkeler.</h2>
+          <span class="eyebrow">Üretim İlkelerimiz</span>
+          <h2>Sahada karşılığı olan dört disiplin.</h2>
           <p>Kaliteyi bir vaat değil, ölçülebilir bir üretim disiplini olarak görürüz.</p>
         </div>
         <div class="feature-grid">
@@ -238,7 +397,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="logo-chip"><img src="assets/img/logo.png" alt="Seçkin Kablo"></div>
-          <p class="about-txt">Türkiyenin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.</p>
+          <p class="about-txt">Türkiye’nin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.</p>
           <div class="socials">
             <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 112.5 6 2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM10 9h3.8v1.7h.05a4.2 4.2 0 013.8-2.1c4 0 4.75 2.6 4.75 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.05 1.4-2.05 2.8V21h-4z"/></svg></a>
             <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
@@ -262,26 +421,11 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span id="year">2026</span> SEÇKİN KABLO — Türkiyenin En Seçkin Kablosu</span>
+        <span>© <span id="year">2026</span> SEÇKİN KABLO — Türkiye’nin En Seçkin Kablosu</span>
         <span>Tüm hakları saklıdır.</span>
       </div>
     </div>
   </footer>
   <script src="js/main.js"></script>
-
-  <!-- Video: prefers-reduced-motion açıkken oynatmayı durdur ve poster'i göster;
-       yüklendiğinde poster-only object-fit değişimi için data-loaded işaretle. -->
-  <script>
-    (function () {
-      'use strict';
-      var v = document.querySelector('.about-video');
-      if (!v) return;
-      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        v.autoplay = false; try { v.pause(); } catch (_) {}
-        return;
-      }
-      v.addEventListener('loadeddata', function () { v.setAttribute('data-loaded', ''); });
-    })();
-  </script>
 </body>
 </html>

@@ -33,6 +33,7 @@ export default defineConfig({
         index: resolve(__dirname, 'index.html'),
         urunler: resolve(__dirname, 'urunler.html'),
         hakkimizda: resolve(__dirname, 'hakkimizda.html'),
+        'vizyon-misyon': resolve(__dirname, 'vizyon-misyon.html'),
         iletisim: resolve(__dirname, 'iletisim.html'),
         'data-kablolari': resolve(__dirname, 'data-kablolari.html'),
         'koaksiyel-kablolar': resolve(__dirname, 'koaksiyel-kablolar.html'),
