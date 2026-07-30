@@ -468,7 +468,7 @@ html.js-reveal .reveal.in{
 .card-media img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;}
 .card-media .card-xsec{width:auto;height:84%;display:block;}
 /* Kablo fotoğrafı olan kartlarda letterbox alanı görselin kırmızı zeminiyle harmanlansın */
-.card-media:has(img){background:radial-gradient(120% 95% at 50% 45%, #B0141A 0%, #8F0F14 70%, #720B10 100%);}
+.card-media:has(img){background:#7E1212;}
 .card-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1 1 auto;}
 .card-name{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:8px;}
 .card-desc{font-size:.92rem;color:var(--body);line-height:1.55;margin-bottom:18px;min-height:2.8em;}
