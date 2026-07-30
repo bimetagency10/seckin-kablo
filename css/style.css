@@ -465,8 +465,10 @@ html.js-reveal .reveal.in{
    <div class="card-media"><img src="assets/img/products/<kod>.jpg" alt="..."></div>
    (SVG'yi silip <img> koyun; CSS img'i otomatik cover yapar) */
 .card-media{position:relative;margin:16px 16px 0;border-radius:14px;overflow:hidden;aspect-ratio:16 / 9;background:linear-gradient(135deg,#FAFAF9,var(--red-soft));display:grid;place-items:center;}
-.card-media img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;padding:6px;}
+.card-media img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;}
 .card-media .card-xsec{width:auto;height:84%;display:block;}
+/* Kablo fotoğrafı olan kartlarda letterbox alanı görselin kırmızı zeminiyle harmanlansın */
+.card-media:has(img){background:radial-gradient(120% 95% at 50% 45%, #B0141A 0%, #8F0F14 70%, #720B10 100%);}
 .card-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1 1 auto;}
 .card-name{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:8px;}
 .card-desc{font-size:.92rem;color:var(--body);line-height:1.55;margin-bottom:18px;min-height:2.8em;}
@@ -600,7 +602,13 @@ html.js-reveal .reveal.in{
   .section{padding:80px 0;}
   .slider-arrow{width:44px;height:44px;}
   .slide-overlay{padding-left:clamp(64px,8vw,88px);}
-  .product-grid{grid-template-columns:1fr;}
+  .product-grid{grid-template-columns:1fr;gap:18px;}
+  /* Mobilde ürün kartları — medya ferahlığı ve sıkı iç boşluk */
+  .card-media{margin:12px 12px 0;aspect-ratio:16 / 10;}
+  .card-body{padding:14px 16px 16px;}
+  .card-name{font-size:1.05rem;margin-bottom:6px;}
+  .card-desc{font-size:.9rem;margin-bottom:14px;min-height:0;}
+  .card-head{padding:11px 14px;}
   .offer-band{flex-direction:column;align-items:stretch;gap:22px;}
   .offer-band-actions{flex-direction:column;}
   .offer-band-actions .btn{width:100%;justify-content:center;}
