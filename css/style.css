@@ -464,8 +464,8 @@ html.js-reveal .reveal.in{
 /* MEDYA yuvası — SVG'yi gerçek foto ile değiştirmek için tek satır:
    <div class="card-media"><img src="assets/img/products/<kod>.jpg" alt="..."></div>
    (SVG'yi silip <img> koyun; CSS img'i otomatik cover yapar) */
-.card-media{position:relative;margin:16px 16px 0;border-radius:14px;overflow:hidden;aspect-ratio:16 / 8;background:linear-gradient(135deg,#FAFAF9,var(--red-soft));display:grid;place-items:center;}
-.card-media img{width:100%;height:100%;object-fit:cover;display:block;}
+.card-media{position:relative;margin:16px 16px 0;border-radius:14px;overflow:hidden;aspect-ratio:16 / 9;background:linear-gradient(135deg,#FAFAF9,var(--red-soft));display:grid;place-items:center;}
+.card-media img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
 .card-media .card-xsec{width:auto;height:84%;display:block;}
 .card-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1 1 auto;}
 .card-name{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:8px;}
