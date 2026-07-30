@@ -39,38 +39,37 @@
   </style>
 </head>
 <body>
-  <a href="#ana" class="skip-link">İçeriğe geç</a>
+  <a href="#ana" class="skip-link" data-i18n="a11y.skip">İçeriğe geç</a>
   <header class="navbar">
     <div class="nav-inner">
       <a href="/" class="logo brand-logo brand-logo--md" aria-label="Seçkin Kablo — Anasayfa"><img src="assets/img/logo.png" alt="Seçkin Kablo" width="234" height="106" loading="eager"></a>
       <nav aria-label="Ana menü">
         <ul class="nav-menu">
-          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Anasayfa</a></li>
           <li class="has-drop">
-            <a href="urunler.html">Ürünler</a>
+            <a href="urunler.html" data-i18n="nav.products">Ürünler</a>
             <div class="dropdown">
-              <a href="data-kablolari.html">Data Kabloları</a>
-              <a href="koaksiyel-kablolar.html">Koaksiyel Görüntü Kabloları</a>
-              <a href="cctv-kablolari.html">CCTV Kamera Kabloları</a>
-              <a href="yangin-alarm-kablolari.html">Yangın Alarm Kabloları</a>
-              <a href="sinyal-kontrol-kablolari.html">Sinyal Kontrol Kabloları</a>
-              <a href="telefon-kablolari.html">Telefon Kabloları</a>
-              <a href="kumanda-kablolari.html">Kumanda Kabloları</a>
+              <a href="data-kablolari.html" data-i18n="prod.data">Data Kabloları</a>
+              <a href="koaksiyel-kablolar.html" data-i18n="prod.koakFull">Koaksiyel Görüntü Kabloları</a>
+              <a href="cctv-kablolari.html" data-i18n="prod.cctvFull">CCTV Kamera Kabloları</a>
+              <a href="yangin-alarm-kablolari.html" data-i18n="prod.yanginFull">Yangın Alarm Kabloları</a>
+              <a href="sinyal-kontrol-kablolari.html" data-i18n="prod.sinyalFull">Sinyal Kontrol Kabloları</a>
+              <a href="telefon-kablolari.html" data-i18n="prod.telefonFull">Telefon Kabloları</a>
+              <a href="kumanda-kablolari.html" data-i18n="prod.kumandaFull">Kumanda Kabloları</a>
             </div>
           </li>
           <li class="has-drop">
-            <a href="hakkimizda.html">Kurumsal</a>
+            <a href="hakkimizda.html" data-i18n="nav.corporate">Kurumsal</a>
             <div class="dropdown">
-              <a href="hakkimizda.html">Hakkımızda</a>
-              <a href="vizyon-misyon.html">Vizyon, Misyon, Kurumsal Değerlerimiz</a>
-              <a href="politikalarimiz.html">Politikalarımız</a>
+              <a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+              <a href="politikalarimiz.html" data-i18n="nav.policies">Politikalarımız</a>
             </div>
           </li>
-          <li><a href="iletisim.html" class="active">İletişim</a></li>
+          <li><a href="iletisim.html" class="active" data-i18n="nav.contact">İletişim</a></li>
         </ul>
       </nav>
       <div class="nav-cta">
-        <a href="#" class="btn btn-grad">Katalog PDF</a>
+        <a href="#" class="btn btn-grad" data-i18n="btn.catalog">Katalog PDF</a>
         <button class="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -83,12 +82,12 @@
       <div class="blob blob-a"></div>
       <div class="wrap">
         <nav class="breadcrumb" aria-label="Sayfa yolu">
-          <a href="index.html">Anasayfa</a>
+          <a href="index.html" data-i18n="nav.home">Anasayfa</a>
           <span class="sep">/</span>
-          <span class="cur">İletişim</span>
+          <span class="cur" data-i18n="nav.contact">İletişim</span>
         </nav>
-        <h1>Bize <span class="gradient-text">Ulaşın</span></h1>
-        <p class="lead">Teklif, bayilik ve genel sorularınız için buradayız. Metrajınızı ve ihtiyaçlarınızı iletin, ekibimiz en kısa sürede size dönüş yapsın.</p>
+        <h1 data-i18n-html="contact.t001">Bize <span class="gradient-text">Ulaşın</span></h1>
+        <p class="lead" data-i18n="contact.t002">Teklif, bayilik ve genel sorularınız için buradayız. Metrajınızı ve ihtiyaçlarınızı iletin, ekibimiz en kısa sürede size dönüş yapsın.</p>
       </div>
     </section>
 
@@ -99,35 +98,35 @@
 
           <!-- SOL: cam form kartı (Türkçe doğrulama + başarı durumu; backend yok, mailto yedeği) -->
           <form id="iletisim-form" class="form-card reveal" novalidate>
-            <div class="form-success" role="status" aria-live="polite">Mesajınız alındı. En kısa sürede size dönüş yapacağız.</div>
+            <div class="form-success" role="status" aria-live="polite" data-i18n="contact.t003">Mesajınız alındı. En kısa sürede size dönüş yapacağız.</div>
 
             <div class="form-row">
               <div class="field">
-                <label for="ad-soyad">Ad Soyad *</label>
+                <label for="ad-soyad" data-i18n="contact.t004">Ad Soyad *</label>
                 <input type="text" id="ad-soyad" name="ad-soyad" autocomplete="name" required>
                 <span class="err" aria-live="polite"></span>
               </div>
               <div class="field">
-                <label for="firma">Firma</label>
+                <label for="firma" data-i18n="contact.t005">Firma</label>
                 <input type="text" id="firma" name="firma" autocomplete="organization">
               </div>
             </div>
 
             <div class="form-row">
               <div class="field">
-                <label for="eposta">E-posta *</label>
+                <label for="eposta" data-i18n="contact.t006">E-posta *</label>
                 <input type="email" id="eposta" name="eposta" autocomplete="email" required>
                 <span class="err" aria-live="polite"></span>
               </div>
               <div class="field">
-                <label for="telefon">Telefon</label>
+                <label for="telefon" data-i18n="footer.telefon">Telefon</label>
                 <input type="tel" id="telefon" name="telefon" autocomplete="tel">
                 <span class="err" aria-live="polite"></span>
               </div>
             </div>
 
             <div class="field">
-              <label for="konu">Konu *</label>
+              <label for="konu" data-i18n="contact.t007">Konu *</label>
               <select id="konu" name="konu" required>
                 <option value="" selected disabled>Seçiniz</option>
                 <option value="teklif">Teklif</option>
@@ -138,15 +137,15 @@
             </div>
 
             <div class="field">
-              <label for="mesaj">Mesaj *</label>
+              <label for="mesaj" data-i18n="contact.t008">Mesaj *</label>
               <textarea id="mesaj" name="mesaj" required></textarea>
               <span class="err" aria-live="polite"></span>
             </div>
 
-            <button type="submit" class="btn btn-grad">Gönder
+            <button type="submit" class="btn btn-grad"><span data-i18n="form.submit">Gönder</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </button>
-            <p class="form-note">* Bilgileriniz KVKK kapsamında korunur.</p>
+            <p class="form-note" data-i18n="contact.t009">* Bilgileriniz KVKK kapsamında korunur.</p>
           </form>
 
           <!-- SAĞ: iletişim bilgileri -->
@@ -156,7 +155,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0-1 .8-1.6 1.7-1.4l2.4.5c.7.2 1.2.8 1.3 1.5l.3 2.2c.1.6-.1 1.2-.6 1.6l-1.3 1a12 12 0 005.8 5.8l1-1.3c.4-.5 1-.7 1.6-.6l2.2.3c.7.1 1.3.6 1.5 1.3l.5 2.4c.2.9-.4 1.7-1.4 1.7A16 16 0 014 5z"/></svg>
               </div>
               <div>
-                <div class="k">Telefon</div>
+                <div class="k" data-i18n="footer.telefon">Telefon</div>
                 <div class="v"><a href="tel:+905334795530">0 533 479 55 30</a></div>
               </div>
             </div>
@@ -166,7 +165,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
               </div>
               <div>
-                <div class="k">E-posta</div>
+                <div class="k" data-i18n="contact.t010">E-posta</div>
                 <div class="v"><a href="mailto:info@seckinkablo.com">info@seckinkablo.com</a></div>
               </div>
             </div>
@@ -176,7 +175,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg>
               </div>
               <div>
-                <div class="k">Web</div>
+                <div class="k" data-i18n="contact.t011">Web</div>
                 <div class="v"><a href="https://www.seckinkablo.com" target="_blank" rel="noopener">www.seckinkablo.com</a></div>
               </div>
             </div>
@@ -186,8 +185,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.4 7-11a7 7 0 10-14 0c0 4.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
               </div>
               <div>
-                <div class="k">Konum</div>
-                <div class="v">İstanbul</div>
+                <div class="k" data-i18n="contact.t012">Konum</div>
+                <div class="v" data-i18n="contact.t013">İstanbul</div>
               </div>
             </div>
 
@@ -197,8 +196,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
               </div>
               <div>
-                <div class="k">Çalışma Saatleri</div>
-                <div class="v">Hafta içi 08:30–18:00</div>
+                <div class="k" data-i18n="contact.t014">Çalışma Saatleri</div>
+                <div class="v" data-i18n="contact.t015">Hafta içi 08:30–18:00</div>
               </div>
             </div>
           </div>
@@ -217,8 +216,8 @@
             <div class="ico">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.4 7-11a7 7 0 10-14 0c0 4.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
             </div>
-            <span class="mono">Harita yakında</span>
-            <div class="sub">İstanbul</div>
+            <span class="mono" data-i18n="contact.t016">Harita yakında</span>
+            <div class="sub" data-i18n="contact.t017">İstanbul</div>
           </div>
         </div>
 
@@ -227,7 +226,7 @@
           <div class="ico">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
           </div>
-          <p>Teklif talepleriniz aynı gün yanıtlanır.</p>
+          <p data-i18n="contact.t018">Teklif talepleriniz aynı gün yanıtlanır.</p>
         </div>
       </div>
     </section>
@@ -238,8 +237,8 @@
     <div class="wrap">
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="logo-chip"><img src="assets/img/logo.png" alt="Seçkin Kablo"></div>
-          <p class="about-txt">Türkiyenin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.</p>
+          <div class="logo-chip"><img src="assets/img/logo-footer.png" alt="Seçkin Kablo"></div>
+          <p class="about-txt" data-i18n="footer.about">Türkiyenin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.</p>
           <div class="socials">
             <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 112.5 6 2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM10 9h3.8v1.7h.05a4.2 4.2 0 013.8-2.1c4 0 4.75 2.6 4.75 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.05 1.4-2.05 2.8V21h-4z"/></svg></a>
             <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
@@ -247,15 +246,15 @@
           </div>
         </div>
         <div class="footer-col">
-          <h4>Site</h4>
-          <a href="index.html">Anasayfa</a><a href="urunler.html">Ürünler</a><a href="hakkimizda.html">Hakkımızda</a><a href="politikalarimiz.html">Politikalarımız</a><a href="iletisim.html">İletişim</a>
+          <h4 data-i18n="footer.site">Site</h4>
+          <a href="index.html" data-i18n="nav.home">Anasayfa</a><a href="urunler.html" data-i18n="nav.products">Ürünler</a><a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a><a href="politikalarimiz.html" data-i18n="nav.policies">Politikalarımız</a><a href="iletisim.html" data-i18n="nav.contact">İletişim</a>
         </div>
         <div class="footer-col">
-          <h4>Ürün Grupları</h4>
-          <a href="data-kablolari.html">Data Kabloları</a><a href="koaksiyel-kablolar.html">Koaksiyel Görüntü</a><a href="cctv-kablolari.html">CCTV Kamera</a><a href="yangin-alarm-kablolari.html">Yangın Alarm</a><a href="sinyal-kontrol-kablolari.html">Sinyal Kontrol</a><a href="telefon-kablolari.html">Telefon</a><a href="kumanda-kablolari.html">Kumanda</a>
+          <h4 data-i18n="footer.productGroups">Ürün Grupları</h4>
+          <a href="data-kablolari.html" data-i18n="prod.data">Data Kabloları</a><a href="koaksiyel-kablolar.html" data-i18n="footer.koak">Koaksiyel Görüntü</a><a href="cctv-kablolari.html" data-i18n="footer.cctv">CCTV Kamera</a><a href="yangin-alarm-kablolari.html" data-i18n="footer.yangin">Yangın Alarm</a><a href="sinyal-kontrol-kablolari.html" data-i18n="footer.sinyal">Sinyal Kontrol</a><a href="telefon-kablolari.html" data-i18n="footer.telefon">Telefon</a><a href="kumanda-kablolari.html" data-i18n="footer.kumanda">Kumanda</a>
         </div>
         <div class="footer-col">
-          <h4>İletişim</h4>
+          <h4 data-i18n="nav.contact">İletişim</h4>
           <ul class="foot-contact">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@seckinkablo.com</span></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg><span>www.seckinkablo.com</span></li>
@@ -264,11 +263,12 @@
       </div>
       <div class="footer-bottom">
         <span>© <span id="year">2026</span> SEÇKİN KABLO — Türkiyenin En Seçkin Kablosu</span>
-        <span>Tüm hakları saklıdır.</span>
+        <span data-i18n="footer.rights">Tüm hakları saklıdır.</span>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 
   <!-- İletişim formu — istemci taraflı doğrulama (Türkçe mesajlar) + başarı durumu + mailto yedeği.

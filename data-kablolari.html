@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a href="#ana" class="skip-link">İçeriğe geç</a>
+  <a href="#ana" class="skip-link" data-i18n="a11y.skip">İçeriğe geç</a>
 
   <!-- ================= NAVBAR ================= -->
   <header class="navbar">
@@ -30,32 +30,31 @@
       <a href="/" class="logo brand-logo brand-logo--md" aria-label="Seçkin Kablo — Anasayfa"><img src="assets/img/logo.png" alt="Seçkin Kablo" width="234" height="106" loading="eager"></a>
       <nav aria-label="Ana menü">
         <ul class="nav-menu">
-          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Anasayfa</a></li>
           <li class="has-drop">
-            <a href="urunler.html" class="active">Ürünler</a>
+            <a href="urunler.html" class="active" data-i18n="nav.products">Ürünler</a>
             <div class="dropdown">
-              <a href="data-kablolari.html">Data Kabloları</a>
-              <a href="koaksiyel-kablolar.html">Koaksiyel Görüntü Kabloları</a>
-              <a href="cctv-kablolari.html">CCTV Kamera Kabloları</a>
-              <a href="yangin-alarm-kablolari.html">Yangın Alarm Kabloları</a>
-              <a href="sinyal-kontrol-kablolari.html">Sinyal Kontrol Kabloları</a>
-              <a href="telefon-kablolari.html">Telefon Kabloları</a>
-              <a href="kumanda-kablolari.html">Kumanda Kabloları</a>
+              <a href="data-kablolari.html" data-i18n="prod.data">Data Kabloları</a>
+              <a href="koaksiyel-kablolar.html" data-i18n="prod.koakFull">Koaksiyel Görüntü Kabloları</a>
+              <a href="cctv-kablolari.html" data-i18n="prod.cctvFull">CCTV Kamera Kabloları</a>
+              <a href="yangin-alarm-kablolari.html" data-i18n="prod.yanginFull">Yangın Alarm Kabloları</a>
+              <a href="sinyal-kontrol-kablolari.html" data-i18n="prod.sinyalFull">Sinyal Kontrol Kabloları</a>
+              <a href="telefon-kablolari.html" data-i18n="prod.telefonFull">Telefon Kabloları</a>
+              <a href="kumanda-kablolari.html" data-i18n="prod.kumandaFull">Kumanda Kabloları</a>
             </div>
           </li>
           <li class="has-drop">
-            <a href="hakkimizda.html">Kurumsal</a>
+            <a href="hakkimizda.html" data-i18n="nav.corporate">Kurumsal</a>
             <div class="dropdown">
-              <a href="hakkimizda.html">Hakkımızda</a>
-              <a href="vizyon-misyon.html">Vizyon, Misyon, Kurumsal Değerlerimiz</a>
-              <a href="politikalarimiz.html">Politikalarımız</a>
+              <a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+              <a href="politikalarimiz.html" data-i18n="nav.policies">Politikalarımız</a>
             </div>
           </li>
-          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="iletisim.html" data-i18n="nav.contact">İletişim</a></li>
         </ul>
       </nav>
       <div class="nav-cta">
-        <a href="#" class="btn btn-grad">Katalog PDF</a>
+        <a href="#" class="btn btn-grad" data-i18n="btn.catalog">Katalog PDF</a>
         <button class="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -69,14 +68,14 @@
       <div class="detail-hero">
         <div class="detail-hero-text">
           <div class="breadcrumb">
-            <a href="index.html">Anasayfa</a>
+            <a href="index.html" data-i18n="nav.home">Anasayfa</a>
             <span class="sep">/</span>
-            <a href="urunler.html">Ürünler</a>
+            <a href="urunler.html" data-i18n="nav.products">Ürünler</a>
             <span class="sep">/</span>
-            <span class="cur">Data Kabloları</span>
+            <span class="cur" data-i18n="prod.data">Data Kabloları</span>
           </div>
-          <h1>Data <span class="gradient-text">Kabloları</span></h1>
-          <p class="lead">Cat 6 ve Cat 5e sınıfında UTP, FTP ve SFTP yapıları ile 10 Gigabit'e kadar güvenilir veri iletimi; 100 ± 5 Ω kararlı empedans, düşük kapasite ve LSZH/LS0H kılıf seçenekleriyle yapısal kablolama altyapısının omurgasını oluşturur.</p>
+          <h1 data-i18n-html="data.t001">Data <span class="gradient-text">Kabloları</span></h1>
+          <p class="lead" data-i18n="data.t003">Cat 6 ve Cat 5e sınıfında UTP, FTP ve SFTP yapıları ile 10 Gigabit'e kadar güvenilir veri iletimi; 100 ± 5 Ω kararlı empedans, düşük kapasite ve LSZH/LS0H kılıf seçenekleriyle yapısal kablolama altyapısının omurgasını oluşturur.</p>
         </div>
         <div class="mini-cable"><div class="cable-scene"><div class="cable-float">
           <div class="ring sheath"></div><div class="ring insulation"></div><div class="ring core"></div>
@@ -93,28 +92,28 @@
 
           <!-- 01 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">23 AWG</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="data.t004">23 AWG</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/cat6-utp-23.jpg" alt="Cat 6 UTP 23 AWG"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Cat 6 UTP kesiti"><circle cx="100" cy="100" r="88" fill="#F4EEEA" stroke="#3A3A42" stroke-width="7"/><g stroke="#C4161C" stroke-width="7" stroke-linecap="round"><line x1="100" y1="54" x2="100" y2="146"/><line x1="54" y1="100" x2="146" y2="100"/></g><g stroke="#7A4A18" stroke-width="1.4"><circle cx="117" cy="59" r="14" fill="#EFE7E0"/><circle cx="117" cy="59" r="8" fill="#B87333"/><circle cx="141" cy="83" r="14" fill="#EFE7E0"/><circle cx="141" cy="83" r="8" fill="#B87333"/><circle cx="141" cy="117" r="14" fill="#EFE7E0"/><circle cx="141" cy="117" r="8" fill="#B87333"/><circle cx="117" cy="141" r="14" fill="#EFE7E0"/><circle cx="117" cy="141" r="8" fill="#B87333"/><circle cx="83" cy="141" r="14" fill="#EFE7E0"/><circle cx="83" cy="141" r="8" fill="#B87333"/><circle cx="59" cy="117" r="14" fill="#EFE7E0"/><circle cx="59" cy="117" r="8" fill="#B87333"/><circle cx="59" cy="83" r="14" fill="#EFE7E0"/><circle cx="59" cy="83" r="8" fill="#B87333"/><circle cx="83" cy="59" r="14" fill="#EFE7E0"/><circle cx="83" cy="59" r="8" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">Cat 6 UTP 23 AWG</h3>
-              <p class="card-desc">Ekransız Cat 6; 500 MHz'e kadar 10 Gigabit Ethernet ile ses, görüntü ve veri iletimi.</p>
+              <h3 class="card-name" data-i18n="data.t005">Cat 6 UTP 23 AWG</h3>
+              <p class="card-desc" data-i18n="data.t006">Ekransız Cat 6; 500 MHz'e kadar 10 Gigabit Ethernet ile ses, görüntü ve veri iletimi.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>Bant Genişliği / Uygulama</th><td>500 MHz · 10 Gigabit Ethernet</td></tr>
-                  <tr><th>Ekran</th><td>Ekransız (UTP)</td></tr>
-                  <tr><th>Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
-                  <tr><th>Kapasite</th><td>42 pF/m</td></tr>
-                  <tr><th>Yayılma hızı</th><td>%78–80</td></tr>
-                  <tr><th>Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
-                  <tr><th>Test gerilimi</th><td>1000 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>125 V</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−20…+60 °C</td></tr>
-                  <tr><th>Bükülme çapı</th><td>8 × D</td></tr>
-                  <tr><th>İç iletken</th><td>ø 23 AWG elektrolitik bakır tel</td></tr>
-                  <tr><th>Yalıtkan</th><td>Fiziksel köpüklü PE (TIA 568)</td></tr>
-                  <tr><th>Dış kılıf</th><td>LSZH/LS0H · RAL 5015 gri · ø 7,0 mm</td></tr>
+                  <tr><th data-i18n="data.t007">Bant Genişliği / Uygulama</th><td data-i18n="data.t008">500 MHz · 10 Gigabit Ethernet</td></tr>
+                  <tr><th data-i18n="data.t009">Ekran</th><td data-i18n="data.t010">Ekransız (UTP)</td></tr>
+                  <tr><th data-i18n="data.t011">Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
+                  <tr><th data-i18n="data.t012">Kapasite</th><td data-i18n="data.t013">42 pF/m</td></tr>
+                  <tr><th data-i18n="data.t014">Yayılma hızı</th><td>%78–80</td></tr>
+                  <tr><th data-i18n="data.t015">Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
+                  <tr><th data-i18n="data.t016">Test gerilimi</th><td data-i18n="data.t017">1000 V</td></tr>
+                  <tr><th data-i18n="data.t018">Çalışma gerilimi</th><td data-i18n="data.t019">125 V</td></tr>
+                  <tr><th data-i18n="data.t020">Çalışma sıcaklığı</th><td data-i18n="data.t021">−20…+60 °C</td></tr>
+                  <tr><th data-i18n="data.t022">Bükülme çapı</th><td data-i18n="data.t023">8 × D</td></tr>
+                  <tr><th data-i18n="data.t024">İç iletken</th><td data-i18n="data.t025">ø 23 AWG elektrolitik bakır tel</td></tr>
+                  <tr><th data-i18n="data.t026">Yalıtkan</th><td data-i18n="data.t027">Fiziksel köpüklü PE (TIA 568)</td></tr>
+                  <tr><th data-i18n="data.t028">Dış kılıf</th><td data-i18n="data.t029">LSZH/LS0H · RAL 5015 gri · ø 7,0 mm</td></tr>
                 </tbody></table>
                 <p class="use-note"><b>Kullanım:</b> bilgi iletim sistemleri, ses-görüntü-data uygulamaları.</p>
               </div></div>
@@ -123,28 +122,28 @@
 
           <!-- 02 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">23 AWG</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="data.t030">23 AWG</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/cat6-ftp-23.jpg" alt="Cat 6 FTP 23 AWG"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Cat 6 FTP kesiti"><circle cx="100" cy="100" r="88" fill="#F4EEEA" stroke="#3A3A42" stroke-width="7"/><circle cx="100" cy="100" r="76" fill="none" stroke="#BFC3C8" stroke-width="5"/><g stroke="#C4161C" stroke-width="7" stroke-linecap="round"><line x1="100" y1="54" x2="100" y2="146"/><line x1="54" y1="100" x2="146" y2="100"/></g><g stroke="#7A4A18" stroke-width="1.4"><circle cx="117" cy="59" r="14" fill="#EFE7E0"/><circle cx="117" cy="59" r="8" fill="#B87333"/><circle cx="141" cy="83" r="14" fill="#EFE7E0"/><circle cx="141" cy="83" r="8" fill="#B87333"/><circle cx="141" cy="117" r="14" fill="#EFE7E0"/><circle cx="141" cy="117" r="8" fill="#B87333"/><circle cx="117" cy="141" r="14" fill="#EFE7E0"/><circle cx="117" cy="141" r="8" fill="#B87333"/><circle cx="83" cy="141" r="14" fill="#EFE7E0"/><circle cx="83" cy="141" r="8" fill="#B87333"/><circle cx="59" cy="117" r="14" fill="#EFE7E0"/><circle cx="59" cy="117" r="8" fill="#B87333"/><circle cx="59" cy="83" r="14" fill="#EFE7E0"/><circle cx="59" cy="83" r="8" fill="#B87333"/><circle cx="83" cy="59" r="14" fill="#EFE7E0"/><circle cx="83" cy="59" r="8" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">Cat 6 FTP 23 AWG</h3>
-              <p class="card-desc">Folyo (Al-Pet) ekranlı Cat 6; 500 MHz/10 Gigabit iletimde girişime karşı korumalı.</p>
+              <h3 class="card-name" data-i18n="data.t031">Cat 6 FTP 23 AWG</h3>
+              <p class="card-desc" data-i18n="data.t032">Folyo (Al-Pet) ekranlı Cat 6; 500 MHz/10 Gigabit iletimde girişime karşı korumalı.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>Bant Genişliği / Uygulama</th><td>500 MHz · 10 Gigabit Ethernet</td></tr>
-                  <tr><th>Ekran</th><td>Alüminyum (Al-Pet) folyo, min. %100 kaplama</td></tr>
-                  <tr><th>Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
-                  <tr><th>Kapasite</th><td>42 pF/m</td></tr>
-                  <tr><th>Yayılma hızı</th><td>%78–80</td></tr>
-                  <tr><th>Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
-                  <tr><th>Test gerilimi</th><td>1000 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>125 V</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−20…+60 °C</td></tr>
-                  <tr><th>Bükülme çapı</th><td>4 × D</td></tr>
-                  <tr><th>İç iletken</th><td>ø 23 AWG elektrolitik bakır tel</td></tr>
-                  <tr><th>Yalıtkan</th><td>Fiziksel köpüklü PE (TIA 568)</td></tr>
-                  <tr><th>Dış kılıf</th><td>LSZH/LS0H · RAL 5015 gri · ø 7,0 mm</td></tr>
+                  <tr><th data-i18n="data.t033">Bant Genişliği / Uygulama</th><td data-i18n="data.t034">500 MHz · 10 Gigabit Ethernet</td></tr>
+                  <tr><th data-i18n="data.t035">Ekran</th><td data-i18n="data.t036">Alüminyum (Al-Pet) folyo, min. %100 kaplama</td></tr>
+                  <tr><th data-i18n="data.t037">Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
+                  <tr><th data-i18n="data.t038">Kapasite</th><td data-i18n="data.t039">42 pF/m</td></tr>
+                  <tr><th data-i18n="data.t040">Yayılma hızı</th><td>%78–80</td></tr>
+                  <tr><th data-i18n="data.t041">Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
+                  <tr><th data-i18n="data.t042">Test gerilimi</th><td data-i18n="data.t043">1000 V</td></tr>
+                  <tr><th data-i18n="data.t044">Çalışma gerilimi</th><td data-i18n="data.t045">125 V</td></tr>
+                  <tr><th data-i18n="data.t046">Çalışma sıcaklığı</th><td data-i18n="data.t047">−20…+60 °C</td></tr>
+                  <tr><th data-i18n="data.t048">Bükülme çapı</th><td data-i18n="data.t049">4 × D</td></tr>
+                  <tr><th data-i18n="data.t050">İç iletken</th><td data-i18n="data.t051">ø 23 AWG elektrolitik bakır tel</td></tr>
+                  <tr><th data-i18n="data.t052">Yalıtkan</th><td data-i18n="data.t053">Fiziksel köpüklü PE (TIA 568)</td></tr>
+                  <tr><th data-i18n="data.t054">Dış kılıf</th><td data-i18n="data.t055">LSZH/LS0H · RAL 5015 gri · ø 7,0 mm</td></tr>
                 </tbody></table>
                 <p class="use-note"><b>Kullanım:</b> bilgi iletim sistemleri, ses-görüntü-data uygulamaları.</p>
               </div></div>
@@ -153,27 +152,27 @@
 
           <!-- 03 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">23 AWG</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="data.t056">23 AWG</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/cat6-sftp-23.jpg" alt="Cat 6 SFTP 23 AWG"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Cat 6 SFTP kesiti"><circle cx="100" cy="100" r="88" fill="#F4EEEA" stroke="#3A3A42" stroke-width="7"/><circle cx="100" cy="100" r="79" fill="none" stroke="#8C8F96" stroke-width="6" stroke-dasharray="5 4"/><circle cx="100" cy="100" r="70" fill="none" stroke="#BFC3C8" stroke-width="4"/><g stroke="#C4161C" stroke-width="7" stroke-linecap="round"><line x1="100" y1="54" x2="100" y2="146"/><line x1="54" y1="100" x2="146" y2="100"/></g><g stroke="#7A4A18" stroke-width="1.4"><circle cx="117" cy="59" r="14" fill="#EFE7E0"/><circle cx="117" cy="59" r="8" fill="#B87333"/><circle cx="141" cy="83" r="14" fill="#EFE7E0"/><circle cx="141" cy="83" r="8" fill="#B87333"/><circle cx="141" cy="117" r="14" fill="#EFE7E0"/><circle cx="141" cy="117" r="8" fill="#B87333"/><circle cx="117" cy="141" r="14" fill="#EFE7E0"/><circle cx="117" cy="141" r="8" fill="#B87333"/><circle cx="83" cy="141" r="14" fill="#EFE7E0"/><circle cx="83" cy="141" r="8" fill="#B87333"/><circle cx="59" cy="117" r="14" fill="#EFE7E0"/><circle cx="59" cy="117" r="8" fill="#B87333"/><circle cx="59" cy="83" r="14" fill="#EFE7E0"/><circle cx="59" cy="83" r="8" fill="#B87333"/><circle cx="83" cy="59" r="14" fill="#EFE7E0"/><circle cx="83" cy="59" r="8" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">Cat 6 SFTP 23 AWG</h3>
-              <p class="card-desc">Folyo + örgü ekranlı Cat 6; 500 MHz/10 Gigabit'te en yüksek parazit koruması.</p>
+              <h3 class="card-name" data-i18n="data.t057">Cat 6 SFTP 23 AWG</h3>
+              <p class="card-desc" data-i18n="data.t058">Folyo + örgü ekranlı Cat 6; 500 MHz/10 Gigabit'te en yüksek parazit koruması.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>Bant Genişliği / Uygulama</th><td>500 MHz · 10 Gigabit Ethernet</td></tr>
-                  <tr><th>Ekran</th><td>Folyo + bakır örgü ekran (S/FTP)</td></tr>
-                  <tr><th>Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
-                  <tr><th>Kapasite</th><td>42 pF/m</td></tr>
-                  <tr><th>Yayılma hızı</th><td>%78–80</td></tr>
-                  <tr><th>Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
-                  <tr><th>Test gerilimi</th><td>1000 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>125 V</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−20…+60 °C</td></tr>
-                  <tr><th>Bükülme çapı</th><td>8 × D</td></tr>
-                  <tr><th>İç iletken</th><td>ø 23 AWG elektrolitik bakır tel</td></tr>
-                  <tr><th>Dış kılıf</th><td>LSZH/LS0H</td></tr>
+                  <tr><th data-i18n="data.t059">Bant Genişliği / Uygulama</th><td data-i18n="data.t060">500 MHz · 10 Gigabit Ethernet</td></tr>
+                  <tr><th data-i18n="data.t061">Ekran</th><td data-i18n="data.t062">Folyo + bakır örgü ekran (S/FTP)</td></tr>
+                  <tr><th data-i18n="data.t063">Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
+                  <tr><th data-i18n="data.t064">Kapasite</th><td data-i18n="data.t065">42 pF/m</td></tr>
+                  <tr><th data-i18n="data.t066">Yayılma hızı</th><td>%78–80</td></tr>
+                  <tr><th data-i18n="data.t067">Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
+                  <tr><th data-i18n="data.t068">Test gerilimi</th><td data-i18n="data.t069">1000 V</td></tr>
+                  <tr><th data-i18n="data.t070">Çalışma gerilimi</th><td data-i18n="data.t071">125 V</td></tr>
+                  <tr><th data-i18n="data.t072">Çalışma sıcaklığı</th><td data-i18n="data.t073">−20…+60 °C</td></tr>
+                  <tr><th data-i18n="data.t074">Bükülme çapı</th><td data-i18n="data.t075">8 × D</td></tr>
+                  <tr><th data-i18n="data.t076">İç iletken</th><td data-i18n="data.t077">ø 23 AWG elektrolitik bakır tel</td></tr>
+                  <tr><th data-i18n="data.t078">Dış kılıf</th><td data-i18n="data.t079">LSZH/LS0H</td></tr>
                 </tbody></table>
                 <p class="use-note"><b>Kullanım:</b> bilgi iletim sistemleri, ses-görüntü-data uygulamaları.</p>
               </div></div>
@@ -182,27 +181,27 @@
 
           <!-- 04 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">24 AWG</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="data.t080">24 AWG</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/cat6-utp-24.jpg" alt="Cat 6 UTP 24 AWG"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Cat 6 UTP kesiti"><circle cx="100" cy="100" r="88" fill="#F4EEEA" stroke="#3A3A42" stroke-width="7"/><g stroke="#C4161C" stroke-width="7" stroke-linecap="round"><line x1="100" y1="54" x2="100" y2="146"/><line x1="54" y1="100" x2="146" y2="100"/></g><g stroke="#7A4A18" stroke-width="1.4"><circle cx="117" cy="59" r="14" fill="#EFE7E0"/><circle cx="117" cy="59" r="8" fill="#B87333"/><circle cx="141" cy="83" r="14" fill="#EFE7E0"/><circle cx="141" cy="83" r="8" fill="#B87333"/><circle cx="141" cy="117" r="14" fill="#EFE7E0"/><circle cx="141" cy="117" r="8" fill="#B87333"/><circle cx="117" cy="141" r="14" fill="#EFE7E0"/><circle cx="117" cy="141" r="8" fill="#B87333"/><circle cx="83" cy="141" r="14" fill="#EFE7E0"/><circle cx="83" cy="141" r="8" fill="#B87333"/><circle cx="59" cy="117" r="14" fill="#EFE7E0"/><circle cx="59" cy="117" r="8" fill="#B87333"/><circle cx="59" cy="83" r="14" fill="#EFE7E0"/><circle cx="59" cy="83" r="8" fill="#B87333"/><circle cx="83" cy="59" r="14" fill="#EFE7E0"/><circle cx="83" cy="59" r="8" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">Cat 6 UTP 24 AWG</h3>
-              <p class="card-desc">Ekransız Cat 6 (24 AWG); 250 MHz · 1 Gigabit Ethernet yapısal kablolama.</p>
+              <h3 class="card-name" data-i18n="data.t081">Cat 6 UTP 24 AWG</h3>
+              <p class="card-desc" data-i18n="data.t082">Ekransız Cat 6 (24 AWG); 250 MHz · 1 Gigabit Ethernet yapısal kablolama.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>Bant Genişliği / Uygulama</th><td>250 MHz · 1 Gigabit Ethernet</td></tr>
-                  <tr><th>Ekran</th><td>Ekransız (PE çapraz ayırıcı)</td></tr>
-                  <tr><th>Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
-                  <tr><th>Kapasite</th><td>50 pF/m</td></tr>
-                  <tr><th>Yayılma hızı</th><td>%67–69</td></tr>
-                  <tr><th>Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
-                  <tr><th>Test gerilimi</th><td>1000 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>125 V</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−20…+60 °C</td></tr>
-                  <tr><th>Bükülme çapı</th><td>4 × D</td></tr>
-                  <tr><th>İç iletken</th><td>ø 24 AWG elektrolitik bakır tel · HDPE (TIA 568)</td></tr>
-                  <tr><th>Dış kılıf</th><td>LSZH/LS0H · RAL 1018 · ø 6,0 mm</td></tr>
+                  <tr><th data-i18n="data.t083">Bant Genişliği / Uygulama</th><td data-i18n="data.t084">250 MHz · 1 Gigabit Ethernet</td></tr>
+                  <tr><th data-i18n="data.t085">Ekran</th><td data-i18n="data.t086">Ekransız (PE çapraz ayırıcı)</td></tr>
+                  <tr><th data-i18n="data.t087">Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
+                  <tr><th data-i18n="data.t088">Kapasite</th><td data-i18n="data.t089">50 pF/m</td></tr>
+                  <tr><th data-i18n="data.t090">Yayılma hızı</th><td>%67–69</td></tr>
+                  <tr><th data-i18n="data.t091">Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
+                  <tr><th data-i18n="data.t092">Test gerilimi</th><td data-i18n="data.t093">1000 V</td></tr>
+                  <tr><th data-i18n="data.t094">Çalışma gerilimi</th><td data-i18n="data.t095">125 V</td></tr>
+                  <tr><th data-i18n="data.t096">Çalışma sıcaklığı</th><td data-i18n="data.t097">−20…+60 °C</td></tr>
+                  <tr><th data-i18n="data.t098">Bükülme çapı</th><td data-i18n="data.t099">4 × D</td></tr>
+                  <tr><th data-i18n="data.t100">İç iletken</th><td data-i18n="data.t101">ø 24 AWG elektrolitik bakır tel · HDPE (TIA 568)</td></tr>
+                  <tr><th data-i18n="data.t102">Dış kılıf</th><td data-i18n="data.t103">LSZH/LS0H · RAL 1018 · ø 6,0 mm</td></tr>
                 </tbody></table>
                 <p class="use-note"><b>Kullanım:</b> bilgi iletim sistemleri, ses-görüntü-data uygulamaları.</p>
               </div></div>
@@ -211,27 +210,27 @@
 
           <!-- 05 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">24 AWG</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="data.t104">24 AWG</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/cat6-ftp-24.jpg" alt="Cat 6 FTP 24 AWG"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Cat 6 FTP kesiti"><circle cx="100" cy="100" r="88" fill="#F4EEEA" stroke="#3A3A42" stroke-width="7"/><circle cx="100" cy="100" r="76" fill="none" stroke="#BFC3C8" stroke-width="5"/><g stroke="#C4161C" stroke-width="7" stroke-linecap="round"><line x1="100" y1="54" x2="100" y2="146"/><line x1="54" y1="100" x2="146" y2="100"/></g><g stroke="#7A4A18" stroke-width="1.4"><circle cx="117" cy="59" r="14" fill="#EFE7E0"/><circle cx="117" cy="59" r="8" fill="#B87333"/><circle cx="141" cy="83" r="14" fill="#EFE7E0"/><circle cx="141" cy="83" r="8" fill="#B87333"/><circle cx="141" cy="117" r="14" fill="#EFE7E0"/><circle cx="141" cy="117" r="8" fill="#B87333"/><circle cx="117" cy="141" r="14" fill="#EFE7E0"/><circle cx="117" cy="141" r="8" fill="#B87333"/><circle cx="83" cy="141" r="14" fill="#EFE7E0"/><circle cx="83" cy="141" r="8" fill="#B87333"/><circle cx="59" cy="117" r="14" fill="#EFE7E0"/><circle cx="59" cy="117" r="8" fill="#B87333"/><circle cx="59" cy="83" r="14" fill="#EFE7E0"/><circle cx="59" cy="83" r="8" fill="#B87333"/><circle cx="83" cy="59" r="14" fill="#EFE7E0"/><circle cx="83" cy="59" r="8" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">Cat 6 FTP 24 AWG</h3>
-              <p class="card-desc">Folyo ekranlı Cat 6 (24 AWG); 250 MHz · 1 Gigabit korumalı veri iletimi.</p>
+              <h3 class="card-name" data-i18n="data.t105">Cat 6 FTP 24 AWG</h3>
+              <p class="card-desc" data-i18n="data.t106">Folyo ekranlı Cat 6 (24 AWG); 250 MHz · 1 Gigabit korumalı veri iletimi.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>Bant Genişliği / Uygulama</th><td>250 MHz · 1 Gigabit Ethernet</td></tr>
-                  <tr><th>Ekran</th><td>Pet bant (min. %100) + kalaylı bakır tel, toprak teli ø 26 AWG</td></tr>
-                  <tr><th>Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
-                  <tr><th>Kapasite</th><td>50 pF/m</td></tr>
-                  <tr><th>Yayılma hızı</th><td>%67–69</td></tr>
-                  <tr><th>Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
-                  <tr><th>Test gerilimi</th><td>1000 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>125 V</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−20…+60 °C</td></tr>
-                  <tr><th>Bükülme çapı</th><td>4 × D</td></tr>
-                  <tr><th>İç iletken</th><td>ø 24 AWG elektrolitik bakır tel · HDPE (TIA 568)</td></tr>
-                  <tr><th>Dış kılıf</th><td>LSZH/LS0H · RAL 1018 · ø 7,2 mm</td></tr>
+                  <tr><th data-i18n="data.t107">Bant Genişliği / Uygulama</th><td data-i18n="data.t108">250 MHz · 1 Gigabit Ethernet</td></tr>
+                  <tr><th data-i18n="data.t109">Ekran</th><td data-i18n="data.t110">Pet bant (min. %100) + kalaylı bakır tel, toprak teli ø 26 AWG</td></tr>
+                  <tr><th data-i18n="data.t111">Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
+                  <tr><th data-i18n="data.t112">Kapasite</th><td data-i18n="data.t113">50 pF/m</td></tr>
+                  <tr><th data-i18n="data.t114">Yayılma hızı</th><td>%67–69</td></tr>
+                  <tr><th data-i18n="data.t115">Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
+                  <tr><th data-i18n="data.t116">Test gerilimi</th><td data-i18n="data.t117">1000 V</td></tr>
+                  <tr><th data-i18n="data.t118">Çalışma gerilimi</th><td data-i18n="data.t119">125 V</td></tr>
+                  <tr><th data-i18n="data.t120">Çalışma sıcaklığı</th><td data-i18n="data.t121">−20…+60 °C</td></tr>
+                  <tr><th data-i18n="data.t122">Bükülme çapı</th><td data-i18n="data.t123">4 × D</td></tr>
+                  <tr><th data-i18n="data.t124">İç iletken</th><td data-i18n="data.t125">ø 24 AWG elektrolitik bakır tel · HDPE (TIA 568)</td></tr>
+                  <tr><th data-i18n="data.t126">Dış kılıf</th><td data-i18n="data.t127">LSZH/LS0H · RAL 1018 · ø 7,2 mm</td></tr>
                 </tbody></table>
                 <p class="use-note"><b>Kullanım:</b> bilgi iletim sistemleri, ses-görüntü-data uygulamaları.</p>
               </div></div>
@@ -240,27 +239,27 @@
 
           <!-- 06 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">24 AWG</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="data.t128">24 AWG</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/cat6-sftp-24.jpg" alt="Cat 6 SFTP 24 AWG"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Cat 6 SFTP kesiti"><circle cx="100" cy="100" r="88" fill="#F4EEEA" stroke="#3A3A42" stroke-width="7"/><circle cx="100" cy="100" r="79" fill="none" stroke="#8C8F96" stroke-width="6" stroke-dasharray="5 4"/><circle cx="100" cy="100" r="70" fill="none" stroke="#BFC3C8" stroke-width="4"/><g stroke="#C4161C" stroke-width="7" stroke-linecap="round"><line x1="100" y1="54" x2="100" y2="146"/><line x1="54" y1="100" x2="146" y2="100"/></g><g stroke="#7A4A18" stroke-width="1.4"><circle cx="117" cy="59" r="14" fill="#EFE7E0"/><circle cx="117" cy="59" r="8" fill="#B87333"/><circle cx="141" cy="83" r="14" fill="#EFE7E0"/><circle cx="141" cy="83" r="8" fill="#B87333"/><circle cx="141" cy="117" r="14" fill="#EFE7E0"/><circle cx="141" cy="117" r="8" fill="#B87333"/><circle cx="117" cy="141" r="14" fill="#EFE7E0"/><circle cx="117" cy="141" r="8" fill="#B87333"/><circle cx="83" cy="141" r="14" fill="#EFE7E0"/><circle cx="83" cy="141" r="8" fill="#B87333"/><circle cx="59" cy="117" r="14" fill="#EFE7E0"/><circle cx="59" cy="117" r="8" fill="#B87333"/><circle cx="59" cy="83" r="14" fill="#EFE7E0"/><circle cx="59" cy="83" r="8" fill="#B87333"/><circle cx="83" cy="59" r="14" fill="#EFE7E0"/><circle cx="83" cy="59" r="8" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">Cat 6 SFTP 24 AWG</h3>
-              <p class="card-desc">Folyo + örgü ekranlı Cat 6 (24 AWG); 250 MHz · 1 Gigabit yüksek korumalı iletim.</p>
+              <h3 class="card-name" data-i18n="data.t129">Cat 6 SFTP 24 AWG</h3>
+              <p class="card-desc" data-i18n="data.t130">Folyo + örgü ekranlı Cat 6 (24 AWG); 250 MHz · 1 Gigabit yüksek korumalı iletim.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>Bant Genişliği / Uygulama</th><td>250 MHz · 1 Gigabit Ethernet</td></tr>
-                  <tr><th>Ekran</th><td>Al-Pet folyo (%100) + kalaylı bakır örgü (%50)</td></tr>
-                  <tr><th>Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
-                  <tr><th>Kapasite</th><td>50 pF/m</td></tr>
-                  <tr><th>Yayılma hızı</th><td>%67–69</td></tr>
-                  <tr><th>Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
-                  <tr><th>Test gerilimi</th><td>1000 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>125 V</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−20…+60 °C</td></tr>
-                  <tr><th>Bükülme çapı</th><td>4 × D</td></tr>
-                  <tr><th>İç iletken</th><td>ø 24 AWG elektrolitik bakır tel · HDPE (TIA 568)</td></tr>
-                  <tr><th>Dış kılıf</th><td>LSZH/LS0H · RAL 1018 · ø 7,6 mm</td></tr>
+                  <tr><th data-i18n="data.t131">Bant Genişliği / Uygulama</th><td data-i18n="data.t132">250 MHz · 1 Gigabit Ethernet</td></tr>
+                  <tr><th data-i18n="data.t133">Ekran</th><td data-i18n="data.t134">Al-Pet folyo (%100) + kalaylı bakır örgü (%50)</td></tr>
+                  <tr><th data-i18n="data.t135">Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
+                  <tr><th data-i18n="data.t136">Kapasite</th><td data-i18n="data.t137">50 pF/m</td></tr>
+                  <tr><th data-i18n="data.t138">Yayılma hızı</th><td>%67–69</td></tr>
+                  <tr><th data-i18n="data.t139">Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
+                  <tr><th data-i18n="data.t140">Test gerilimi</th><td data-i18n="data.t141">1000 V</td></tr>
+                  <tr><th data-i18n="data.t142">Çalışma gerilimi</th><td data-i18n="data.t143">125 V</td></tr>
+                  <tr><th data-i18n="data.t144">Çalışma sıcaklığı</th><td data-i18n="data.t145">−20…+60 °C</td></tr>
+                  <tr><th data-i18n="data.t146">Bükülme çapı</th><td data-i18n="data.t147">4 × D</td></tr>
+                  <tr><th data-i18n="data.t148">İç iletken</th><td data-i18n="data.t149">ø 24 AWG elektrolitik bakır tel · HDPE (TIA 568)</td></tr>
+                  <tr><th data-i18n="data.t150">Dış kılıf</th><td data-i18n="data.t151">LSZH/LS0H · RAL 1018 · ø 7,6 mm</td></tr>
                 </tbody></table>
                 <p class="use-note"><b>Kullanım:</b> bilgi iletim sistemleri, ses-görüntü-data uygulamaları.</p>
               </div></div>
@@ -269,27 +268,27 @@
 
           <!-- 07 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">24 AWG</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="data.t152">24 AWG</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/cat5e-utp-24.jpg" alt="Cat 5e UTP 24 AWG"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Cat 5e UTP kesiti"><circle cx="100" cy="100" r="88" fill="#F4EEEA" stroke="#3A3A42" stroke-width="7"/><g stroke="#7A4A18" stroke-width="1.4"><circle cx="117" cy="59" r="14" fill="#EFE7E0"/><circle cx="117" cy="59" r="8" fill="#B87333"/><circle cx="141" cy="83" r="14" fill="#EFE7E0"/><circle cx="141" cy="83" r="8" fill="#B87333"/><circle cx="141" cy="117" r="14" fill="#EFE7E0"/><circle cx="141" cy="117" r="8" fill="#B87333"/><circle cx="117" cy="141" r="14" fill="#EFE7E0"/><circle cx="117" cy="141" r="8" fill="#B87333"/><circle cx="83" cy="141" r="14" fill="#EFE7E0"/><circle cx="83" cy="141" r="8" fill="#B87333"/><circle cx="59" cy="117" r="14" fill="#EFE7E0"/><circle cx="59" cy="117" r="8" fill="#B87333"/><circle cx="59" cy="83" r="14" fill="#EFE7E0"/><circle cx="59" cy="83" r="8" fill="#B87333"/><circle cx="83" cy="59" r="14" fill="#EFE7E0"/><circle cx="83" cy="59" r="8" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">Cat 5e UTP 24 AWG</h3>
-              <p class="card-desc">Ekransız Cat 5e; 250 MHz · 1 Gigabit Ethernet ses-görüntü-veri tesisat kablolaması.</p>
+              <h3 class="card-name" data-i18n="data.t153">Cat 5e UTP 24 AWG</h3>
+              <p class="card-desc" data-i18n="data.t154">Ekransız Cat 5e; 250 MHz · 1 Gigabit Ethernet ses-görüntü-veri tesisat kablolaması.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>Bant Genişliği / Uygulama</th><td>250 MHz · 1 Gigabit Ethernet</td></tr>
-                  <tr><th>Ekran</th><td>Ekransız (UTP)</td></tr>
-                  <tr><th>Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
-                  <tr><th>Kapasite</th><td>50 pF/m</td></tr>
-                  <tr><th>Yayılma hızı</th><td>%67–69</td></tr>
-                  <tr><th>Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
-                  <tr><th>Test gerilimi</th><td>1000 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>125 V</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−20…+60 °C</td></tr>
-                  <tr><th>Bükülme çapı</th><td>4 × D</td></tr>
-                  <tr><th>İç iletken</th><td>ø 24 AWG elektro bakır tel · HDPE (TIA 568)</td></tr>
-                  <tr><th>Dış kılıf</th><td>LSZH/LS0H · RAL 1015 · ø 5,0 mm</td></tr>
+                  <tr><th data-i18n="data.t155">Bant Genişliği / Uygulama</th><td data-i18n="data.t156">250 MHz · 1 Gigabit Ethernet</td></tr>
+                  <tr><th data-i18n="data.t157">Ekran</th><td data-i18n="data.t158">Ekransız (UTP)</td></tr>
+                  <tr><th data-i18n="data.t159">Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
+                  <tr><th data-i18n="data.t160">Kapasite</th><td data-i18n="data.t161">50 pF/m</td></tr>
+                  <tr><th data-i18n="data.t162">Yayılma hızı</th><td>%67–69</td></tr>
+                  <tr><th data-i18n="data.t163">Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
+                  <tr><th data-i18n="data.t164">Test gerilimi</th><td data-i18n="data.t165">1000 V</td></tr>
+                  <tr><th data-i18n="data.t166">Çalışma gerilimi</th><td data-i18n="data.t167">125 V</td></tr>
+                  <tr><th data-i18n="data.t168">Çalışma sıcaklığı</th><td data-i18n="data.t169">−20…+60 °C</td></tr>
+                  <tr><th data-i18n="data.t170">Bükülme çapı</th><td data-i18n="data.t171">4 × D</td></tr>
+                  <tr><th data-i18n="data.t172">İç iletken</th><td data-i18n="data.t173">ø 24 AWG elektro bakır tel · HDPE (TIA 568)</td></tr>
+                  <tr><th data-i18n="data.t174">Dış kılıf</th><td data-i18n="data.t175">LSZH/LS0H · RAL 1015 · ø 5,0 mm</td></tr>
                 </tbody></table>
                 <p class="use-note"><b>Kullanım:</b> bilgi iletim sistemleri, ses-görüntü-data uygulamaları.</p>
               </div></div>
@@ -298,27 +297,27 @@
 
           <!-- 08 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">24 AWG</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="data.t176">24 AWG</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/cat5e-ftp-24.jpg" alt="Cat 5e FTP 24 AWG"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Cat 5e FTP kesiti"><circle cx="100" cy="100" r="88" fill="#F4EEEA" stroke="#3A3A42" stroke-width="7"/><circle cx="100" cy="100" r="76" fill="none" stroke="#BFC3C8" stroke-width="5"/><g stroke="#7A4A18" stroke-width="1.4"><circle cx="117" cy="59" r="14" fill="#EFE7E0"/><circle cx="117" cy="59" r="8" fill="#B87333"/><circle cx="141" cy="83" r="14" fill="#EFE7E0"/><circle cx="141" cy="83" r="8" fill="#B87333"/><circle cx="141" cy="117" r="14" fill="#EFE7E0"/><circle cx="141" cy="117" r="8" fill="#B87333"/><circle cx="117" cy="141" r="14" fill="#EFE7E0"/><circle cx="117" cy="141" r="8" fill="#B87333"/><circle cx="83" cy="141" r="14" fill="#EFE7E0"/><circle cx="83" cy="141" r="8" fill="#B87333"/><circle cx="59" cy="117" r="14" fill="#EFE7E0"/><circle cx="59" cy="117" r="8" fill="#B87333"/><circle cx="59" cy="83" r="14" fill="#EFE7E0"/><circle cx="59" cy="83" r="8" fill="#B87333"/><circle cx="83" cy="59" r="14" fill="#EFE7E0"/><circle cx="83" cy="59" r="8" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">Cat 5e FTP 24 AWG</h3>
-              <p class="card-desc">Folyo ekranlı Cat 5e; 250 MHz · 1 Gigabit korumalı veri iletimi.</p>
+              <h3 class="card-name" data-i18n="data.t177">Cat 5e FTP 24 AWG</h3>
+              <p class="card-desc" data-i18n="data.t178">Folyo ekranlı Cat 5e; 250 MHz · 1 Gigabit korumalı veri iletimi.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>Bant Genişliği / Uygulama</th><td>250 MHz · 1 Gigabit Ethernet</td></tr>
-                  <tr><th>Ekran</th><td>Pet bant (min. %100) + kalaylı bakır tel, toprak teli ø 26 AWG</td></tr>
-                  <tr><th>Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
-                  <tr><th>Kapasite</th><td>50 pF/m</td></tr>
-                  <tr><th>Yayılma hızı</th><td>%67–69</td></tr>
-                  <tr><th>Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
-                  <tr><th>Test gerilimi</th><td>1000 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>125 V</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−20…+60 °C</td></tr>
-                  <tr><th>Bükülme çapı</th><td>4 × D</td></tr>
-                  <tr><th>İç iletken</th><td>ø 24 AWG elektrolitik bakır tel · HDPE (TIA 568)</td></tr>
-                  <tr><th>Dış kılıf</th><td>LSZH/LS0H · RAL 1015 · ø 6,0 mm</td></tr>
+                  <tr><th data-i18n="data.t179">Bant Genişliği / Uygulama</th><td data-i18n="data.t180">250 MHz · 1 Gigabit Ethernet</td></tr>
+                  <tr><th data-i18n="data.t181">Ekran</th><td data-i18n="data.t182">Pet bant (min. %100) + kalaylı bakır tel, toprak teli ø 26 AWG</td></tr>
+                  <tr><th data-i18n="data.t183">Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
+                  <tr><th data-i18n="data.t184">Kapasite</th><td data-i18n="data.t185">50 pF/m</td></tr>
+                  <tr><th data-i18n="data.t186">Yayılma hızı</th><td>%67–69</td></tr>
+                  <tr><th data-i18n="data.t187">Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
+                  <tr><th data-i18n="data.t188">Test gerilimi</th><td data-i18n="data.t189">1000 V</td></tr>
+                  <tr><th data-i18n="data.t190">Çalışma gerilimi</th><td data-i18n="data.t191">125 V</td></tr>
+                  <tr><th data-i18n="data.t192">Çalışma sıcaklığı</th><td data-i18n="data.t193">−20…+60 °C</td></tr>
+                  <tr><th data-i18n="data.t194">Bükülme çapı</th><td data-i18n="data.t195">4 × D</td></tr>
+                  <tr><th data-i18n="data.t196">İç iletken</th><td data-i18n="data.t197">ø 24 AWG elektrolitik bakır tel · HDPE (TIA 568)</td></tr>
+                  <tr><th data-i18n="data.t198">Dış kılıf</th><td data-i18n="data.t199">LSZH/LS0H · RAL 1015 · ø 6,0 mm</td></tr>
                 </tbody></table>
                 <p class="use-note"><b>Kullanım:</b> bilgi iletim sistemleri, ses-görüntü-data uygulamaları.</p>
               </div></div>
@@ -327,27 +326,27 @@
 
           <!-- 09 -->
           <div class="product-card acc-item">
-            <div class="card-head"><span class="card-accent"></span><span class="card-code">24 AWG</span></div>
+            <div class="card-head"><span class="card-accent"></span><span class="card-code" data-i18n="data.t200">24 AWG</span></div>
             <!-- MEDYA: gerçek foto için SVG'yi şununla değiştirin → <img src="assets/img/products/cat5e-sftp-24.jpg" alt="Cat 5e SFTP 24 AWG"> -->
             <div class="card-media"><svg class="card-xsec" viewBox="0 0 200 200" role="img" aria-label="Cat 5e SFTP kesiti"><circle cx="100" cy="100" r="88" fill="#F4EEEA" stroke="#3A3A42" stroke-width="7"/><circle cx="100" cy="100" r="79" fill="none" stroke="#8C8F96" stroke-width="6" stroke-dasharray="5 4"/><circle cx="100" cy="100" r="70" fill="none" stroke="#BFC3C8" stroke-width="4"/><g stroke="#7A4A18" stroke-width="1.4"><circle cx="117" cy="59" r="14" fill="#EFE7E0"/><circle cx="117" cy="59" r="8" fill="#B87333"/><circle cx="141" cy="83" r="14" fill="#EFE7E0"/><circle cx="141" cy="83" r="8" fill="#B87333"/><circle cx="141" cy="117" r="14" fill="#EFE7E0"/><circle cx="141" cy="117" r="8" fill="#B87333"/><circle cx="117" cy="141" r="14" fill="#EFE7E0"/><circle cx="117" cy="141" r="8" fill="#B87333"/><circle cx="83" cy="141" r="14" fill="#EFE7E0"/><circle cx="83" cy="141" r="8" fill="#B87333"/><circle cx="59" cy="117" r="14" fill="#EFE7E0"/><circle cx="59" cy="117" r="8" fill="#B87333"/><circle cx="59" cy="83" r="14" fill="#EFE7E0"/><circle cx="59" cy="83" r="8" fill="#B87333"/><circle cx="83" cy="59" r="14" fill="#EFE7E0"/><circle cx="83" cy="59" r="8" fill="#B87333"/></g></svg></div>
             <div class="card-body">
-              <h3 class="card-name">Cat 5e SFTP 24 AWG</h3>
-              <p class="card-desc">Folyo + örgü ekranlı Cat 5e; 250 MHz · 1 Gigabit yüksek korumalı iletim.</p>
+              <h3 class="card-name" data-i18n="data.t201">Cat 5e SFTP 24 AWG</h3>
+              <p class="card-desc" data-i18n="data.t202">Folyo + örgü ekranlı Cat 5e; 250 MHz · 1 Gigabit yüksek korumalı iletim.</p>
               <button class="acc-head" type="button" aria-expanded="false">Teknik Detay <span class="ic"></span></button>
               <div class="acc-body"><div class="acc-inner">
                 <table class="spec-table"><tbody>
-                  <tr><th>Bant Genişliği / Uygulama</th><td>250 MHz · 1 Gigabit Ethernet</td></tr>
-                  <tr><th>Ekran</th><td>Al-Pet folyo (min. %100) + kalaylı bakır örgü (%50)</td></tr>
-                  <tr><th>Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
-                  <tr><th>Kapasite</th><td>50 pF/m</td></tr>
-                  <tr><th>Yayılma hızı</th><td>%67–69</td></tr>
-                  <tr><th>Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
-                  <tr><th>Test gerilimi</th><td>1000 V</td></tr>
-                  <tr><th>Çalışma gerilimi</th><td>125 V</td></tr>
-                  <tr><th>Çalışma sıcaklığı</th><td>−20…+60 °C</td></tr>
-                  <tr><th>Bükülme çapı</th><td>4 × D</td></tr>
-                  <tr><th>İç iletken</th><td>ø 24 AWG elektro bakır tel · HDPE (TIA 568)</td></tr>
-                  <tr><th>Dış kılıf</th><td>LSZH/LS0H · RAL 1015 · ø 6,4 mm</td></tr>
+                  <tr><th data-i18n="data.t203">Bant Genişliği / Uygulama</th><td data-i18n="data.t204">250 MHz · 1 Gigabit Ethernet</td></tr>
+                  <tr><th data-i18n="data.t205">Ekran</th><td data-i18n="data.t206">Al-Pet folyo (min. %100) + kalaylı bakır örgü (%50)</td></tr>
+                  <tr><th data-i18n="data.t207">Empedans</th><td>100 ± 5 Ω @100 MHz</td></tr>
+                  <tr><th data-i18n="data.t208">Kapasite</th><td data-i18n="data.t209">50 pF/m</td></tr>
+                  <tr><th data-i18n="data.t210">Yayılma hızı</th><td>%67–69</td></tr>
+                  <tr><th data-i18n="data.t211">Yalıtım direnci</th><td>&gt;5000 MΩ/m</td></tr>
+                  <tr><th data-i18n="data.t212">Test gerilimi</th><td data-i18n="data.t213">1000 V</td></tr>
+                  <tr><th data-i18n="data.t214">Çalışma gerilimi</th><td data-i18n="data.t215">125 V</td></tr>
+                  <tr><th data-i18n="data.t216">Çalışma sıcaklığı</th><td data-i18n="data.t217">−20…+60 °C</td></tr>
+                  <tr><th data-i18n="data.t218">Bükülme çapı</th><td data-i18n="data.t219">4 × D</td></tr>
+                  <tr><th data-i18n="data.t220">İç iletken</th><td data-i18n="data.t221">ø 24 AWG elektro bakır tel · HDPE (TIA 568)</td></tr>
+                  <tr><th data-i18n="data.t222">Dış kılıf</th><td data-i18n="data.t223">LSZH/LS0H · RAL 1015 · ø 6,4 mm</td></tr>
                 </tbody></table>
                 <p class="use-note"><b>Kullanım:</b> bilgi iletim sistemleri, ses-görüntü-data uygulamaları.</p>
               </div></div>
@@ -358,12 +357,12 @@
 
         <div class="offer-band">
           <div class="offer-band-text">
-            <h3>Bu gruptan teklif al</h3>
-            <p>İhtiyaç duyduğunuz Cat 6 / Cat 5e tip, ekran yapısı ve metrajı iletin; ekibimiz aynı gün fiyat ve stok dönüşü yapsın.</p>
+            <h3 data-i18n="data.t224">Bu gruptan teklif al</h3>
+            <p data-i18n="data.t225">İhtiyaç duyduğunuz Cat 6 / Cat 5e tip, ekran yapısı ve metrajı iletin; ekibimiz aynı gün fiyat ve stok dönüşü yapsın.</p>
           </div>
           <div class="offer-band-actions">
-            <a class="btn btn-grad" href="iletisim.html">Teklif Al</a>
-            <a class="btn btn-ghost" href="#">Katalog PDF</a>
+            <a class="btn btn-grad" href="iletisim.html" data-i18n="btn.quote">Teklif Al</a>
+            <a class="btn btn-ghost" href="#" data-i18n="btn.catalog">Katalog PDF</a>
           </div>
         </div>
     </div>
@@ -373,27 +372,27 @@
   <section class="section soft">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">Diğer Gruplar</span>
-        <h2>İlgili <span class="gradient-text">Kategoriler</span></h2>
+        <span class="eyebrow" data-i18n="data.t226">Diğer Gruplar</span>
+        <h2 data-i18n-html="data.t002">İlgili <span class="gradient-text">Kategoriler</span></h2>
       </div>
       <div class="related-grid">
         <a href="koaksiyel-kablolar.html" class="cat-card reveal">
           <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.2"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg></div>
-          <h3>Koaksiyel Görüntü Kabloları</h3>
-          <p>RG6, RG11, RG59 ve Mini U serisi; uydu, anten ve TV dağıtım sistemleri.</p>
-          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <h3 data-i18n="prod.koakFull">Koaksiyel Görüntü Kabloları</h3>
+          <p data-i18n="data.t227">RG6, RG11, RG59 ve Mini U serisi; uydu, anten ve TV dağıtım sistemleri.</p>
+          <span class="cat-link"><span data-i18n="common.review">İncele</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
         <a href="cctv-kablolari.html" class="cat-card reveal">
           <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8l14-3 1.6 5.2-14 3z"/><path d="M4.6 12.8V19h7"/><circle cx="9" cy="9.4" r="1"/><path d="M18.2 10.4l3-1v5l-3-1"/></svg></div>
-          <h3>CCTV Kamera Kabloları</h3>
-          <p>Besleme + görüntü kombine yapılar; kapalı devre kamera ve video sistemleri.</p>
-          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <h3 data-i18n="prod.cctvFull">CCTV Kamera Kabloları</h3>
+          <p data-i18n="data.t228">Besleme + görüntü kombine yapılar; kapalı devre kamera ve video sistemleri.</p>
+          <span class="cat-link"><span data-i18n="common.review">İncele</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
         <a href="sinyal-kontrol-kablolari.html" class="cat-card reveal">
           <div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h3l2 6 4-14 2 8h5"/></svg></div>
-          <h3>Sinyal Kontrol Kabloları</h3>
-          <p>LIYY, LIYCY, LIHH serisi; elektronik kontrol ve sinyal iletişimi.</p>
-          <span class="cat-link">İncele <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <h3 data-i18n="prod.sinyalFull">Sinyal Kontrol Kabloları</h3>
+          <p data-i18n="data.t229">LIYY, LIYCY, LIHH serisi; elektronik kontrol ve sinyal iletişimi.</p>
+          <span class="cat-link"><span data-i18n="common.review">İncele</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
       </div>
     </div>
@@ -405,8 +404,8 @@
     <div class="wrap">
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="logo-chip"><img src="assets/img/logo.png" alt="Seçkin Kablo"></div>
-          <p class="about-txt">Türkiyenin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.</p>
+          <div class="logo-chip"><img src="assets/img/logo-footer.png" alt="Seçkin Kablo"></div>
+          <p class="about-txt" data-i18n="footer.about">Türkiyenin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.</p>
           <div class="socials">
             <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 112.5 6 2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM10 9h3.8v1.7h.05a4.2 4.2 0 013.8-2.1c4 0 4.75 2.6 4.75 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.05 1.4-2.05 2.8V21h-4z"/></svg></a>
             <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
@@ -414,15 +413,15 @@
           </div>
         </div>
         <div class="footer-col">
-          <h4>Site</h4>
-          <a href="index.html">Anasayfa</a><a href="urunler.html">Ürünler</a><a href="hakkimizda.html">Hakkımızda</a><a href="politikalarimiz.html">Politikalarımız</a><a href="iletisim.html">İletişim</a>
+          <h4 data-i18n="footer.site">Site</h4>
+          <a href="index.html" data-i18n="nav.home">Anasayfa</a><a href="urunler.html" data-i18n="nav.products">Ürünler</a><a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a><a href="politikalarimiz.html" data-i18n="nav.policies">Politikalarımız</a><a href="iletisim.html" data-i18n="nav.contact">İletişim</a>
         </div>
         <div class="footer-col">
-          <h4>Ürün Grupları</h4>
-          <a href="data-kablolari.html">Data Kabloları</a><a href="koaksiyel-kablolar.html">Koaksiyel Görüntü</a><a href="cctv-kablolari.html">CCTV Kamera</a><a href="yangin-alarm-kablolari.html">Yangın Alarm</a><a href="sinyal-kontrol-kablolari.html">Sinyal Kontrol</a><a href="telefon-kablolari.html">Telefon</a><a href="kumanda-kablolari.html">Kumanda</a>
+          <h4 data-i18n="footer.productGroups">Ürün Grupları</h4>
+          <a href="data-kablolari.html" data-i18n="prod.data">Data Kabloları</a><a href="koaksiyel-kablolar.html" data-i18n="footer.koak">Koaksiyel Görüntü</a><a href="cctv-kablolari.html" data-i18n="footer.cctv">CCTV Kamera</a><a href="yangin-alarm-kablolari.html" data-i18n="footer.yangin">Yangın Alarm</a><a href="sinyal-kontrol-kablolari.html" data-i18n="footer.sinyal">Sinyal Kontrol</a><a href="telefon-kablolari.html" data-i18n="footer.telefon">Telefon</a><a href="kumanda-kablolari.html" data-i18n="footer.kumanda">Kumanda</a>
         </div>
         <div class="footer-col">
-          <h4>İletişim</h4>
+          <h4 data-i18n="nav.contact">İletişim</h4>
           <ul class="foot-contact">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@seckinkablo.com</span></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg><span>www.seckinkablo.com</span></li>
@@ -431,10 +430,11 @@
       </div>
       <div class="footer-bottom">
         <span>© <span id="year">2026</span> SEÇKİN KABLO — Türkiyenin En Seçkin Kablosu</span>
-        <span>Tüm hakları saklıdır.</span>
+        <span data-i18n="footer.rights">Tüm hakları saklıdır.</span>
       </div>
     </div>
   </footer>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
