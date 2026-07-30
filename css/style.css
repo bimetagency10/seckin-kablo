@@ -373,7 +373,7 @@ html.js-reveal .reveal.in{
 .footer .wrap{position:relative;z-index:1;}
 .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1.2fr 1.2fr;gap:44px;padding-bottom:52px;}
 .footer .logo-chip{display:inline-block;margin-bottom:22px;}
-.footer .logo-chip img{height:46px;width:auto;display:block;filter:none;transition:opacity .3s var(--ease);}
+.footer .logo-chip img{height:76px;width:auto;display:block;filter:none;transition:opacity .3s var(--ease);}
 .footer .logo-chip:hover img{opacity:.85;}
 .footer .about-txt{font-size:.92rem;line-height:1.8;max-width:320px;color:rgba(255,255,255,.72);}
 .footer h4{position:relative;color:#FFFFFF;font-family:var(--font-display);font-size:1rem;margin-bottom:22px;padding-bottom:12px;}
