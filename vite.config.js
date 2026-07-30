@@ -43,6 +43,8 @@ export default defineConfig({
         'telefon-kablolari': resolve(__dirname, 'telefon-kablolari.html'),
         'kumanda-kablolari': resolve(__dirname, 'kumanda-kablolari.html'),
         politikalarimiz: resolve(__dirname, 'politikalarimiz.html'),
+        'kvkk-aydinlatma-metni': resolve(__dirname, 'kvkk-aydinlatma-metni.html'),
+        'cerez-politikasi': resolve(__dirname, 'cerez-politikasi.html'),
       },
     },
   },

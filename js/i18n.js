@@ -28,7 +28,7 @@ window.I18N = {
     "nav.contact": "İletişim",
     "btn.catalog": "Katalog",
     "footer.productGroups": "Ürün Grupları",
-    "footer.about": "Türkiyenin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.",
+    "footer.about": "Türkiye'nin en seçkin kablosu. Data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında yüksek saflıkta bakır iletken ve belgeli üretim.",
     "footer.site": "Site",
     "footer.koak": "Koaksiyel Görüntü",
     "footer.cctv": "CCTV Kamera",
@@ -45,8 +45,8 @@ window.I18N = {
     "home.t002": "Data, koaksiyel, CCTV — <span class=\"gradient-text\">tek çatı</span> altında.",
     "home.t003": "Her uygulama için <span class=\"gradient-text\">seçkin</span> kablo",
     "home.t004": "Kaliteyi <span class=\"gradient-text\">ölçülebilir</span> kılan detaylar",
-    "home.t005": "Seçkin Kablo — Türkiyenin En Seçkin Kablosu",
-    "home.t006": "TÜRKİYENİN EN SEÇKİN KABLOSU",
+    "home.t005": "Seçkin Kablo — Türkiye'nin En Seçkin Kablosu",
+    "home.t006": "TÜRKİYE'NİN EN SEÇKİN KABLOSU",
     "home.t007": "Yüksek saflıkta bakır, belgeli üretim ve her metresi test edilmiş kablolar.",
     "home.t008": "SEKTÖRE ÖZEL ÇÖZÜMLER",
     "home.t009": "Zayıf akım ve veri altyapısının tamamı için sertifikalı, izlenebilir üretim.",
@@ -105,7 +105,7 @@ window.I18N = {
     "about.t004": "Kuruluştan bugüne, tek bir odak: seçkin kablo.",
     "about.t005": "7 ürün grubunda 60'tan fazla çeşit",
     "about.t006": "Ürettiğimiz her kablonun kalbinde yüksek saflıkta bakır iletken yer alır. İletkenin saflığı, yalıtımın niteliği ve ekranlamanın doğru uygulanması, bir kablonun sinyali kayıpsız taşımasını belirler. Bu nedenle üretimimizi malzeme seçiminden sevkiyata kadar ölçülebilir kalite ve standartlara uygunluk üzerine kurarız.",
-    "about.t007": "Değişen ihtiyaçların önünde durabilmek için halojensiz (LSZH/HFFR) ve yangına dayanıklı kablo teknolojilerine yatırım yapıyoruz. Amacımız; insan ve tesis güvenliğini önceleyen, uluslararası standartlarla uyumlu ve izlenebilir çözümleri Türkiye'nin dört bir yanındaki projelere ulaştırmak. Bizim için \"Türkiyenin En Seçkin Kablosu\" bir slogan değil, her sevkiyatta yeniden hak ettiğimiz bir sorumluluktur.",
+    "about.t007": "Değişen ihtiyaçların önünde durabilmek için halojensiz (LSZH/HFFR) ve yangına dayanıklı kablo teknolojilerine yatırım yapıyoruz. Amacımız; insan ve tesis güvenliğini önceleyen, uluslararası standartlarla uyumlu ve izlenebilir çözümleri Türkiye'nin dört bir yanındaki projelere ulaştırmak. Bizim için \"Türkiye'nin En Seçkin Kablosu\" bir slogan değil, her sevkiyatta yeniden hak ettiğimiz bir sorumluluktur.",
     "about.t008": "2003'ten beri",
     "about.t009": "7 Ürün Grubu",
     "about.t010": "60+ Çeşit",
@@ -3650,7 +3650,12 @@ window.I18N = {
     try { document.cookie = kill + ';domain=.' + location.hostname; } catch(e){}
   }
   var gtLoaded = false;
+  function skConsentOk(){
+    try { return window.SK_consent ? window.SK_consent.ok() : (localStorage.getItem('sk-cerez-tercihi') === 'tum'); }
+    catch(e){ return false; }
+  }
   function ensureGT(){
+    if (!skConsentOk()) return; /* cerez onayi olmadan Google Translate yuklenmez (KVKK) */
     if (gtLoaded) return; gtLoaded = true;
     if (!document.getElementById('google_translate_element')){
       var d = document.createElement('div');
@@ -3674,7 +3679,13 @@ window.I18N = {
   function setLang(target){
     var cur = getLang();
     if (target === cur){ closeAll(); return; }
-    if (isAuto(target)){ setCookie('/tr/' + target); gotoLang(target); return; }
+    if (isAuto(target)){
+      if (!skConsentOk()){
+        if (window.SK_consent) window.SK_consent.request(function(){ setCookie('/tr/' + target); gotoLang(target); });
+        closeAll(); return;
+      }
+      setCookie('/tr/' + target); gotoLang(target); return;
+    }
     /* target is a real language (tr/en) */
     clearGT();
     if (isAuto(cur)){ gotoLang(target); return; }   /* shed GT-mutated DOM via reload */
