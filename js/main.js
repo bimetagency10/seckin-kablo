@@ -243,14 +243,14 @@
       title: 'Enerjiyi ve veriyi, <span class="gradient-text">seçkin</span> standartlarda taşıyoruz.',
       subtitle: 'Data, koaksiyel görüntü, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında; yüksek saflıkta bakır iletken ve uluslararası standartlarla üretilmiş geniş ürün gamı.',
       primaryLabel: 'Ürünleri Keşfet', primaryHref: 'urunler.html',
-      ghostLabel: 'Katalog PDF', ghostHref: '#'
+      ghostLabel: 'Katalog', ghostHref: '#'
     },
     {
       eyebrow: 'BELGELİ ÜRETİM',
       title: 'Kaliteyi <span class="gradient-text">belgelerle</span> kanıtlıyoruz.',
       subtitle: 'TSE, CE, VDE ve RoHS standartlarına uygun üretim; yüksek saflıkta bakır iletken ve LSZH-HFFR halojensiz seçeneklerle güvenli, izlenebilir kablo çözümleri.',
       primaryLabel: 'Standartlarımız', primaryHref: 'hakkimizda.html',
-      ghostLabel: 'Katalog PDF', ghostHref: '#'
+      ghostLabel: 'Katalog', ghostHref: '#'
     },
     {
       eyebrow: 'YURT İÇİ & İHRACAT',
