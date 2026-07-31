@@ -13,3 +13,19 @@
   });
   window.SK_track = track;
 })();
+
+/* Mobilde interaktif katalog yerine PDF ac (kucuk ekranda sayfa cevirme kullanissiz) */
+(function () {
+  var PDF = '/assets/katalog/seckin-katalog.pdf';
+  var HTML = '/katalog.html';
+  var mq = window.matchMedia('(max-width: 820px)');
+  function uygula() {
+    var hedef = mq.matches ? PDF : HTML;
+    document.querySelectorAll('a[data-event="katalog"]').forEach(function (a) {
+      a.setAttribute('href', hedef);
+    });
+  }
+  uygula();
+  if (mq.addEventListener) mq.addEventListener('change', uygula);
+  else if (mq.addListener) mq.addListener(uygula);
+})();

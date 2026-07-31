@@ -29,6 +29,14 @@
 - İnteraktif ürün kataloğu (75 sayfa) `/katalog.html` olarak yayına alındı;
   tüm "Katalog" butonları buraya yönlendirildi, PDF indirme katalog içinde
 
+### Mobil düzeltmeler
+- Menü açılınca beliren ikinci navbar (panel içi marka satırı) kaldırıldı
+- Navbar altındaki gölge + kırmızı çizgi, sticky başlıktan akıştaki ayrı bir
+  katmana taşındı — kaydırırken ekranı takip etmiyor
+- Mobilde hero fotoğrafı tam genişlik ve sola dayalı
+- Mobilde (≤820px) Katalog butonları PDF açıyor; masaüstünde interaktif katalog
+- Katalog PDF'i v7.1 ile güncellendi (115 sayfa)
+
 ### Blok D — Fırsatlar
 - Kablo Seçim Rehberi sayfası; public/llms.txt (AI arama)
 - Ürün sayfalarına arama/filtre; CTA "Aynı Gün Teklif Al"

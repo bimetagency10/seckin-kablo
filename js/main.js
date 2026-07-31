@@ -16,22 +16,6 @@
     }, { passive: true });
   }
   if (hamburger && navMenu) {
-    /* Mobil menü paneli üstüne marka satırı (logo + kapat) — her sayfaya
-       tek noktadan eklenir; HTML dosyalarında tekrar edilmez. */
-    if (!navMenu.querySelector('.nav-brand-row')) {
-      var brandRow = document.createElement('li');
-      brandRow.className = 'nav-brand-row';
-      brandRow.innerHTML =
-        '<a class="brand-logo brand-logo--md" href="/" aria-label="Seçkin Kablo — Anasayfa">' +
-          '<img src="assets/img/logo.png" alt="Seçkin Kablo" width="234" height="106">' +
-        '</a>' +
-        '<button type="button" class="nav-brand-close" aria-label="Menüyü kapat">' +
-          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">' +
-            '<path d="M6 6l12 12M18 6L6 18"/>' +
-          '</svg>' +
-        '</button>';
-      navMenu.insertBefore(brandRow, navMenu.firstChild);
-    }
 
     /* Body scroll kilidi: menü açıkken sayfa kaymasın; kapanınca eski konum korunur. */
     var lockedScrollY = 0;
