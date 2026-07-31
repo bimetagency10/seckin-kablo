@@ -16,6 +16,7 @@
 - [Telefon Kabloları](https://seckinkablo.com/telefon-kablolari.html): bina içi/dışı çok çiftli tipler
 - [Kumanda Kabloları](https://seckinkablo.com/kumanda-kablolari.html): numaralı damar, ekranlı seçenekler
 - [Kablo Seçim Rehberi](https://seckinkablo.com/kablo-secim-rehberi.html): UTP/FTP/SFTP, LSZH, F180, RG seçimi
+- [Ürün Kataloğu 2026](https://seckinkablo.com/katalog.html): 76 sayfalık çevrimiçi katalog (PDF indirme dahil)
 - [İletişim](https://seckinkablo.com/iletisim.html): teklif formu, telefon: +90 537 297 65 45, info@seckinkablo.com
 
 ## Şirket

@@ -25,6 +25,10 @@
 - vercel.json (cache + güvenlik başlıkları), GitHub Actions build kontrolü
 - Inline CSS'ler style.css'e taşındı; ölü slider CSS silindi; 170 SVG'ye aria-hidden
 
+### Katalog
+- İnteraktif ürün kataloğu (75 sayfa) `/katalog.html` olarak yayına alındı;
+  tüm "Katalog" butonları buraya yönlendirildi, PDF indirme katalog içinde
+
 ### Blok D — Fırsatlar
 - Kablo Seçim Rehberi sayfası; public/llms.txt (AI arama)
 - Ürün sayfalarına arama/filtre; CTA "Aynı Gün Teklif Al"

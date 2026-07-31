@@ -25,6 +25,9 @@ Vite ile derlenir, Vercel'de yayınlanır: https://seckinkablo.com
 - **Form:** İletişim formu Web3Forms'a POST atar (access key `iletisim.html` içinde).
 - **Analitik:** Vercel Web Analytics (`@vercel/analytics` inject) + `data-event`
   öznitelikli özel olaylar (katalog, whatsapp, telefon, form-gonderildi).
+- **Katalog:** `public/katalog.html` — kendi kendine yeten interaktif katalog
+  (76 gömülü sayfa görseli). Vite tarafından işlenmez, olduğu gibi kopyalanır.
+  Güncellerken yeni sürümü aynı yola yazın; PDF `assets/katalog/seckin-katalog.pdf`.
 - **KVKK:** çerez banner'ı (`js/cookie-consent.js`) onay vermeden Google Translate
   yüklemez; fontlar yereldir.
 
