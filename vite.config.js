@@ -66,6 +66,8 @@ export default defineConfig({
         politikalarimiz: resolve(__dirname, 'politikalarimiz.html'),
         'kvkk-aydinlatma-metni': resolve(__dirname, 'kvkk-aydinlatma-metni.html'),
         'cerez-politikasi': resolve(__dirname, 'cerez-politikasi.html'),
+        bayilik: resolve(__dirname, 'bayilik.html'),
+        'kablo-secim-rehberi': resolve(__dirname, 'kablo-secim-rehberi.html'),
       },
     },
   },
