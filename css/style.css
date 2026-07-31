@@ -132,8 +132,7 @@ html.js-reveal .reveal.in{
    ========================================================= */
 .navbar{
   position:sticky;top:0;z-index:1000;height:var(--nav-h);
-  background:rgba(245,245,245,.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid rgba(15,15,20,.06);transition:box-shadow .3s;
+  background:#F5F5F5;transition:box-shadow .3s;
 }
 .navbar.scrolled{box-shadow:0 8px 30px rgba(15,15,20,.05);}
 .nav-inner{max-width:var(--wrap);margin:0 auto;height:100%;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
@@ -1089,11 +1088,11 @@ button.is-loading{opacity:.6;pointer-events:none;}
 }
 
 /* ===== Bolum gecisleri: renk yerine golgelendirme ===== */
-.section::before{content:'';position:absolute;top:0;left:0;right:0;height:72px;z-index:-1;
-  background:linear-gradient(to bottom,rgba(15,15,20,.10),rgba(15,15,20,.03) 60%,transparent);pointer-events:none;}
+.section::before{content:'';position:absolute;top:0;left:0;right:0;height:96px;z-index:-1;
+  background:linear-gradient(to bottom,rgba(15,15,20,.16),rgba(15,15,20,.05) 55%,transparent);pointer-events:none;}
 .footer{position:relative;}
-.footer::before{content:'';position:absolute;top:-72px;left:0;right:0;height:72px;
-  background:linear-gradient(to bottom,transparent,rgba(15,15,20,.14));pointer-events:none;}
+.footer::before{content:'';position:absolute;top:-96px;left:0;right:0;height:96px;
+  background:linear-gradient(to bottom,transparent,rgba(15,15,20,.20));pointer-events:none;}
 
 /* istatistik seridi sonrasi gecis golgesi */
 .hero{padding-bottom:0;}
@@ -1101,3 +1100,25 @@ button.is-loading{opacity:.6;pointer-events:none;}
 .hero .stats::after{content:'';position:absolute;left:50%;transform:translateX(-50%);bottom:0;
   width:100vw;height:56px;background:linear-gradient(to bottom,transparent,rgba(15,15,20,.08));
   pointer-events:none;}
+
+/* ===== Kirmizi isikli gecis cizgileri ===== */
+.navbar::before{content:'';position:absolute;top:100%;left:0;right:0;height:40px;
+  background:linear-gradient(to bottom,rgba(15,15,20,.18),rgba(15,15,20,.05) 55%,transparent);
+  pointer-events:none;}
+.navbar::after{content:'';position:absolute;top:100%;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent 4%,var(--red) 28%,var(--red-bright) 50%,var(--red) 72%,transparent 96%);
+  box-shadow:0 0 18px 2px rgba(224,43,49,.55),0 0 44px 6px rgba(224,43,49,.22);
+  pointer-events:none;}
+.section::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;z-index:0;
+  background:linear-gradient(90deg,transparent 6%,rgba(196,22,28,.85) 30%,var(--red-bright) 50%,rgba(196,22,28,.85) 70%,transparent 94%);
+  box-shadow:0 0 16px 2px rgba(224,43,49,.45),0 0 40px 6px rgba(224,43,49,.18);
+  pointer-events:none;}
+.footer .footer-line{position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent 6%,rgba(196,22,28,.9) 30%,var(--red-bright) 50%,rgba(196,22,28,.9) 70%,transparent 94%);
+  box-shadow:0 0 18px 2px rgba(224,43,49,.5);pointer-events:none;}
+/* istatistik seridi altindaki gecis: golge koyulastir + kirmizi cizgi */
+.hero .stats::after{height:72px;background:linear-gradient(to bottom,transparent,rgba(15,15,20,.14));}
+.hero .stats::before{content:'';position:absolute;left:50%;transform:translateX(-50%);bottom:0;
+  width:100vw;height:2px;z-index:1;
+  background:linear-gradient(90deg,transparent 6%,rgba(196,22,28,.85) 30%,var(--red-bright) 50%,rgba(196,22,28,.85) 70%,transparent 94%);
+  box-shadow:0 0 16px 2px rgba(224,43,49,.45);pointer-events:none;}
