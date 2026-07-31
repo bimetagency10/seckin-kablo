@@ -428,3 +428,22 @@
   var y = document.querySelector('#year');
   if (y) y.textContent = new Date().getFullYear();
 })();
+
+/* ===== urun sayfasi filtre kutusu ===== */
+(function () {
+  'use strict';
+  var giris = document.querySelector('.urun-filtre-input');
+  if (!giris) return;
+  var kartlar = Array.prototype.slice.call(document.querySelectorAll('.product-card'));
+  var yok = document.querySelector('.urun-filtre-yok');
+  giris.addEventListener('input', function () {
+    var q = giris.value.trim().toLowerCase();
+    var gorunen = 0;
+    kartlar.forEach(function (k) {
+      var uygun = !q || k.textContent.toLowerCase().indexOf(q) !== -1;
+      k.style.display = uygun ? '' : 'none';
+      if (uygun) gorunen++;
+    });
+    if (yok) yok.hidden = gorunen !== 0;
+  });
+})();

@@ -38,7 +38,7 @@ window.I18N = {
     "footer.kumanda": "Kumanda",
     "footer.rights": "Tüm hakları saklıdır.",
     "form.submit": "Gönder",
-    "btn.quote": "Teklif Al",
+    "btn.quote": "Aynı Gün Teklif Al",
 
     /* ---- home ---- */
     "home.t001": "Bakırdan binaya, <span class=\"gradient-text\">kusursuz</span> iletim.",
@@ -1836,7 +1836,7 @@ window.I18N = {
     "footer.kumanda": "Control",
     "footer.rights": "All rights reserved.",
     "form.submit": "Send",
-    "btn.quote": "Get a Quote",
+    "btn.quote": "Same-Day Quote",
 
     /* ---- home ---- */
     "home.t001": "From copper to building, <span class=\"gradient-text\">flawless</span> transmission.",

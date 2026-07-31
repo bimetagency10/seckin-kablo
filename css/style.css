@@ -1265,3 +1265,20 @@ button.is-loading{opacity:.6;pointer-events:none;}
       -webkit-text-fill-color:transparent;color:transparent;font-style:italic;}
 
 .table-scroll{overflow-x:auto;margin-top:14px;}
+
+/* ===== urun filtresi + SSS ===== */
+.urun-filtre{margin:0 0 22px;}
+.urun-filtre-input{width:100%;max-width:420px;min-height:48px;padding:12px 16px;font:inherit;
+  border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:var(--sh-rest);}
+.urun-filtre-input:focus-visible{outline:2px solid var(--red);outline-offset:1px;}
+.urun-filtre-yok{display:block;margin-top:12px;color:var(--body);}
+.sss-blok{margin:56px 0 40px;}
+.sss-blok h3{font-family:var(--font-display);font-size:1.35rem;margin-bottom:18px;}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh-rest);
+  margin-bottom:10px;overflow:hidden;}
+.faq-item summary{cursor:pointer;padding:16px 20px;font-weight:600;color:var(--ink);list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:44px;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:'+';font-size:1.3rem;color:var(--red);flex:none;transition:transform .2s;}
+.faq-item[open] summary::after{transform:rotate(45deg);}
+.faq-item p{padding:0 20px 16px;color:var(--body);}

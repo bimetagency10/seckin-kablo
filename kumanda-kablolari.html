@@ -25,6 +25,7 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://seckinkablo.com/#org", "name": "Seçkin Kablo", "legalName": "BTK KABLO ANONİM ŞİRKETİ", "url": "https://seckinkablo.com/", "logo": "https://seckinkablo.com/assets/img/logo.png", "email": "info@seckinkablo.com", "telephone": "+90 537 297 65 45", "address": {"@type": "PostalAddress", "streetAddress": "Veliköy Mah. 19. Cad. No:10", "addressLocality": "Çerkezköy", "addressRegion": "Tekirdağ", "addressCountry": "TR"}, "vatID": "1871618160"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://seckinkablo.com/"}, {"@type": "ListItem", "position": 2, "name": "Ürünler", "item": "https://seckinkablo.com/urunler.html"}, {"@type": "ListItem", "position": 3, "name": "Kumanda Kabloları", "item": "https://seckinkablo.com/kumanda-kablolari.html"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Kumanda Kabloları", "description": "LSCYCY, YSLY, HSLH, HSLHCH ve NSLYÖ serisi kumanda kabloları; bükülü bakır iletken, 300/500 V çalışma gerilimi, halojensiz ve yağa dayanıklı seçeneklerle esnek kumanda ve otomasyon hatları.", "url": "https://seckinkablo.com/kumanda-kablolari.html", "brand": {"@type": "Brand", "name": "Seçkin Kablo"}, "manufacturer": {"@id": "https://seckinkablo.com/#org"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Kumanda kablosu ile enerji kablosu arasındaki fark nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Kumanda kabloları çok damarlı yapıda kontrol sinyali ve küçük güçleri taşır; enerji kabloları ise ana güç iletimi için tasarlanır."}}, {"@type": "Question", "name": "Numaralı damar ne işe yarar?", "acceptedAnswer": {"@type": "Answer", "text": "Pano ve saha bağlantılarında damarların hatasız eşleştirilmesini sağlar; devreye alma ve arıza bulma süresini ciddi biçimde kısaltır."}}, {"@type": "Question", "name": "Ekranlı kumanda kablosu ne zaman gerekli?", "acceptedAnswer": {"@type": "Answer", "text": "Sürücü (invertör) çıkışları ve yüksek frekanslı anahtarlama yapılan bölgelerde, sinyal bütünlüğü için ekranlı tipler (örn. LSCYCY) kullanılmalıdır."}}, {"@type": "Question", "name": "Hareketli uygulamalarda hangi tip seçilmeli?", "acceptedAnswer": {"@type": "Answer", "text": "Sürekli hareket eden taşıyıcı ve makine uygulamalarında çok telli, bükülgen iletkenli tipler seçilmelidir; rijit iletken yorulup kırılır."}}]}</script>
 </head>
 <body>
   <a href="#ana" class="skip-link" data-i18n="a11y.skip">İçeriğe geç</a>
@@ -60,6 +61,7 @@
   <!-- ================= DETAY: ÜRÜN KART GRID'İ ================= -->
   <section class="section">
     <div class="wrap">
+      <div class="urun-filtre"><label for="uf-kumanda" class="sr-only">Ürün ara</label><input id="uf-kumanda" type="search" class="urun-filtre-input" placeholder="Bu sayfada ürün ara — ör. RG6, 4+1, LSZH…" autocomplete="off"><span class="urun-filtre-yok" hidden>Eşleşen ürün bulunamadı.</span></div>
       <div class="product-grid">
 
           <!-- 01 -->
@@ -453,13 +455,19 @@
 
         </div>
 
+        <div class="sss-blok"><h3>Sık Sorulan Sorular — Kumanda Kabloları</h3>
+        <details class="faq-item"><summary>Kumanda kablosu ile enerji kablosu arasındaki fark nedir?</summary><p>Kumanda kabloları çok damarlı yapıda kontrol sinyali ve küçük güçleri taşır; enerji kabloları ise ana güç iletimi için tasarlanır.</p></details>
+        <details class="faq-item"><summary>Numaralı damar ne işe yarar?</summary><p>Pano ve saha bağlantılarında damarların hatasız eşleştirilmesini sağlar; devreye alma ve arıza bulma süresini ciddi biçimde kısaltır.</p></details>
+        <details class="faq-item"><summary>Ekranlı kumanda kablosu ne zaman gerekli?</summary><p>Sürücü (invertör) çıkışları ve yüksek frekanslı anahtarlama yapılan bölgelerde, sinyal bütünlüğü için ekranlı tipler (örn. LSCYCY) kullanılmalıdır.</p></details>
+        <details class="faq-item"><summary>Hareketli uygulamalarda hangi tip seçilmeli?</summary><p>Sürekli hareket eden taşıyıcı ve makine uygulamalarında çok telli, bükülgen iletkenli tipler seçilmelidir; rijit iletken yorulup kırılır.</p></details>
+        </div>
         <div class="offer-band">
           <div class="offer-band-text">
             <h3 data-i18n="kumanda.t147">Bu gruptan teklif al</h3>
             <p data-i18n="kumanda.t148">İhtiyaç duyduğunuz kumanda kablosu tipi, damar sayısı, kesit ve metrajı iletin; ekibimiz aynı gün fiyat ve stok dönüşü yapsın.</p>
           </div>
           <div class="offer-band-actions">
-            <a class="btn btn-grad" href="iletisim.html" data-i18n="btn.quote">Teklif Al</a>
+            <a class="btn btn-grad" href="iletisim.html?konu=teklif&urun=kumanda" data-i18n="btn.quote">Teklif Al</a>
             <a class="btn btn-ghost" href="assets/katalog/seckin-katalog.pdf" target="_blank" rel="noopener" data-event="katalog" data-i18n="btn.catalog">Katalog</a>
             <a class="btn btn-ghost" href="https://wa.me/905372976545" target="_blank" rel="noopener" data-event="whatsapp">WhatsApp</a>
           </div>

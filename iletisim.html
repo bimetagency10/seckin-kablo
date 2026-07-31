@@ -93,6 +93,26 @@
               <span class="err" aria-live="polite"></span>
             </div>
 
+            <div class="form-row">
+              <div class="field">
+                <label for="urun-grubu">Ürün Grubu</label>
+                <select id="urun-grubu" name="urun-grubu">
+                  <option value="" selected>Seçiniz (isteğe bağlı)</option>
+                  <option value="data">Data Kabloları</option>
+                  <option value="koaksiyel">Koaksiyel Görüntü Kabloları</option>
+                  <option value="cctv">CCTV Kamera Kabloları</option>
+                  <option value="yangin">Yangın Alarm Kabloları</option>
+                  <option value="sinyal">Sinyal Kontrol Kabloları</option>
+                  <option value="telefon">Telefon Kabloları</option>
+                  <option value="kumanda">Kumanda Kabloları</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="metraj">Tahmini Metraj</label>
+                <input type="text" id="metraj" name="metraj" placeholder="ör. 2.000 m" autocomplete="off">
+              </div>
+            </div>
+
             <div class="field">
               <label for="mesaj" data-i18n="contact.t008">Mesaj *</label>
               <textarea id="mesaj" name="mesaj" required></textarea>
@@ -238,6 +258,14 @@
         el.addEventListener('change', function () { clearError(el); });
       });
 
+      // URL parametrelerinden on secim: iletisim.html?konu=teklif&urun=data
+      try {
+        var qp = new URLSearchParams(location.search);
+        if (qp.get('konu') && konu) konu.value = qp.get('konu');
+        var uSec = form.querySelector('#urun-grubu');
+        if (qp.get('urun') && uSec) uSec.value = qp.get('urun');
+      } catch (e) {}
+
       var kvkk = form.querySelector('#kvkk-onay');
       if (kvkk) kvkk.addEventListener('change', function () { clearError(kvkk); });
 
@@ -290,6 +318,8 @@
           'E-posta': eposta.value.trim(),
           'Telefon': telefon.value.trim(),
           'Konu': konuMetni,
+          'Ürün Grubu': (function(){ var u = form.querySelector('#urun-grubu'); return u && u.value ? u.options[u.selectedIndex].text : '-'; })(),
+          'Metraj': form.querySelector('#metraj').value.trim() || '-',
           'Mesaj': mesaj.value.trim(),
           'KVKK Onayı': 'Evet — ' + new Date().toISOString()
         };
