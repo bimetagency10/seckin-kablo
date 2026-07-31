@@ -1053,10 +1053,6 @@ button.is-loading{opacity:.6;pointer-events:none;}
   .sk-cerez-btns{justify-content:stretch;}.btn-cerez{flex:1;}}
 
 /* ===== Blok-B eklemeleri ===== */
-.nav-wa{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:12px;
-  color:#25D366;border:1px solid var(--line);background:#fff;transition:background .2s,transform .2s;}
-.nav-wa svg{width:22px;height:22px;}
-.nav-wa:hover{background:rgba(37,211,102,.1);transform:translateY(-1px);}
 .hero-h1{max-width:var(--wrap);margin:0 auto 20px;padding-inline:24px;text-align:center;
   font-size:clamp(.95rem,1.5vw,1.1rem);font-weight:600;color:var(--body);letter-spacing:.01em;}
-@media (max-width:600px){.nav-wa{display:none;}}
+.nav-cta .btn{padding:9px 18px;font-size:.88rem;}
