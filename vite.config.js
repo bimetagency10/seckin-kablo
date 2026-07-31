@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { cpSync, existsSync } from 'fs'
+import { cpSync, existsSync, readFileSync } from 'fs'
 import { defineConfig } from 'vite'
 
 // js/ ve assets/ klasörlerini dist/ içine olduğu gibi kopyalar.
@@ -19,12 +19,33 @@ function copyStaticDirs() {
   }
 }
 
+
+// Header/footer tek kaynak: partials/header.html + partials/footer.html
+// Sayfalarda <!--sk:header active="..."--> ve <!--sk:footer--> tokenlari kullanilir.
+function skPartials() {
+  return {
+    name: 'sk-partials',
+    transformIndexHtml: {
+      order: 'pre',
+      handler(html) {
+        return html
+          .replace(/<!--sk:header active="([^"]*)"-->/, (m, aktif) => {
+            let h = readFileSync(resolve(__dirname, 'partials/header.html'), 'utf-8')
+            if (aktif) h = h.split(`href="${aktif}"`).join(`href="${aktif}" class="active"`)
+            return h
+          })
+          .replace(/<!--sk:footer-->/, () => readFileSync(resolve(__dirname, 'partials/footer.html'), 'utf-8'))
+      },
+    },
+  }
+}
+
 // Çok sayfalı (multi-page) statik site derlemesi.
 // Her HTML sayfası ayrı bir rollup girdisidir.
 export default defineConfig({
   root: '.',
   base: './',
-  plugins: [copyStaticDirs()],
+  plugins: [skPartials(), copyStaticDirs()],
   build: {
     outDir: 'dist',
     emptyOutDir: true,
