@@ -475,10 +475,14 @@ html.js-reveal .reveal.in{
     /* opak zemin (yarı-saydam rgba + backdrop-blur kaldırıldı; arkadaki içerik sızmasın) */
     background:var(--bg);
     flex-direction:column;align-items:stretch;gap:2px;padding:0;max-height:0;overflow:hidden;
-    transition:max-height .4s var(--ease);box-shadow:var(--sh-soft);border-bottom:1px solid var(--line);
+    transition:max-height .4s var(--ease);
+    /* kapaliyken hicbir sey cizilmesin: kenarlik/golge fixed oldugu icin
+       ekranda sabit gri bir cizgi olarak takip ediyordu */
+    box-shadow:none;border-bottom:0;visibility:hidden;
     z-index:1200;
   }
-.nav-menu.open{max-height:calc(100vh - var(--nav-h));overflow-y:auto;padding:14px;-webkit-overflow-scrolling:touch;}
+.nav-menu.open{max-height:calc(100vh - var(--nav-h));overflow-y:auto;padding:14px;-webkit-overflow-scrolling:touch;
+    visibility:visible;box-shadow:var(--sh-soft);border-bottom:1px solid var(--line);}
 .nav-menu>li{width:100%;min-width:0;}
 .nav-menu>li>a{padding:14px 18px;border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
 /* Mobilde dropdown: hover davranışı devre dışı, akordeon olarak açılır (max-height geçişli) */
