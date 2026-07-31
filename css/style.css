@@ -157,7 +157,7 @@ html.js-reveal .reveal.in{
   border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh-soft);padding:10px;
   opacity:0;visibility:hidden;transition:all .25s var(--ease);
 }
-.has-drop:hover .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+.has-drop:hover .dropdown,.has-drop:focus-within .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
 .dropdown a{display:flex;align-items:center;gap:11px;padding:11px 14px;border-radius:var(--r-sm);font-size:.92rem;font-weight:500;color:var(--ink);transition:background .18s,color .18s;}
 .dropdown a::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--grad);flex:none;}
 .dropdown a:hover{background:var(--red-soft);color:var(--red);}
@@ -181,7 +181,7 @@ html.js-reveal .reveal.in{
 .hero-sub{font-size:1.16rem;color:var(--body);margin:24px 0 34px;max-width:520px;}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
 .hero-trust{display:flex;align-items:center;gap:18px;margin-top:38px;color:var(--body);font-size:.86rem;}
-.hero-trust .t-label{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--body);opacity:.7;}
+.hero-trust .t-label{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--body);}
 .hero-trust .t-items{display:flex;gap:14px;}
 .hero-trust .t-items span{font-weight:600;color:var(--ink);font-family:var(--font-mono);font-size:.82rem;}
 .hero-trust .dot{width:4px;height:4px;border-radius:50%;background:var(--red);opacity:.5;}
@@ -460,7 +460,7 @@ html.js-reveal .reveal.in{
 /* üst şerit — sade: solda küçük kırmızı vurgu çizgisi, sağda mono ürün kodu */
 .card-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 18px;border-bottom:1px solid var(--line);}
 .card-accent{width:22px;height:3px;border-radius:3px;background:var(--grad);flex:none;}
-.card-code{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:rgba(20,20,25,.45);}
+.card-code{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:rgba(20,20,25,.62);}
 /* MEDYA yuvası — SVG'yi gerçek foto ile değiştirmek için tek satır:
    <div class="card-media"><img src="assets/img/products/<kod>.jpg" alt="..."></div>
    (SVG'yi silip <img> koyun; CSS img'i otomatik cover yapar) */
@@ -1051,3 +1051,12 @@ button.is-loading{opacity:.6;pointer-events:none;}
 .btn-cerez:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
 @media (max-width:560px){#sk-cerez-banner{flex-direction:column;align-items:stretch;}
   .sk-cerez-btns{justify-content:stretch;}.btn-cerez{flex:1;}}
+
+/* ===== Blok-B eklemeleri ===== */
+.nav-wa{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:12px;
+  color:#25D366;border:1px solid var(--line);background:#fff;transition:background .2s,transform .2s;}
+.nav-wa svg{width:22px;height:22px;}
+.nav-wa:hover{background:rgba(37,211,102,.1);transform:translateY(-1px);}
+.hero-h1{max-width:var(--wrap);margin:0 auto 20px;padding-inline:24px;text-align:center;
+  font-size:clamp(.95rem,1.5vw,1.1rem);font-weight:600;color:var(--body);letter-spacing:.01em;}
+@media (max-width:600px){.nav-wa{display:none;}}
