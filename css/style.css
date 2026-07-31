@@ -1118,7 +1118,7 @@ button.is-loading{opacity:.6;pointer-events:none;}
   box-shadow:0 0 18px 2px rgba(224,43,49,.5);pointer-events:none;}
 /* istatistik seridi altindaki gecis: golge koyulastir + kirmizi cizgi */
 .hero .stats::after{height:72px;background:linear-gradient(to bottom,transparent,rgba(15,15,20,.14));}
-.hero .stats::before{content:'';position:absolute;left:50%;transform:translateX(-50%);bottom:0;
-  width:100vw;height:2px;z-index:1;
-  background:linear-gradient(90deg,transparent 6%,rgba(196,22,28,.85) 30%,var(--red-bright) 50%,rgba(196,22,28,.85) 70%,transparent 94%);
-  box-shadow:0 0 16px 2px rgba(224,43,49,.45);pointer-events:none;}
+
+
+.section-tight{padding-top:44px;}
+.hero .stats{padding-bottom:48px;}
