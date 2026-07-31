@@ -10,7 +10,7 @@ function copyStaticDirs() {
   return {
     name: 'copy-static-dirs',
     closeBundle() {
-      for (const dir of ['js', 'assets']) {
+      for (const dir of ['assets']) {
         if (existsSync(dir)) {
           cpSync(dir, resolve(__dirname, 'dist', dir), { recursive: true })
         }
