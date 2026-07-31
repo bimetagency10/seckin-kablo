@@ -5,7 +5,7 @@
 
 /* ---------- Tokenlar ---------- */
 :root{
-  --bg:#FFFFFF;         --bg-soft:#FAFAF9;
+  --bg:#F5F5F5;         --bg-soft:#F5F5F5;
   --ink:#0F0F14;        --body:#5A5A66;
   --red:#C4161C;        --red-bright:#E02B31;   --red-deep:#8F0F14;
   --red-soft:rgba(196,22,28,.07);
@@ -1087,3 +1087,10 @@ button.is-loading{opacity:.6;pointer-events:none;}
   .hero-static-actions{flex-direction:column;width:100%;}
   .hero-static-actions .btn{width:100%;justify-content:center;}
 }
+
+/* ===== Bolum gecisleri: renk yerine golgelendirme ===== */
+.section::before{content:'';position:absolute;top:0;left:0;right:0;height:52px;z-index:-1;
+  background:linear-gradient(to bottom,rgba(15,15,20,.06),transparent);pointer-events:none;}
+.footer{position:relative;}
+.footer::before{content:'';position:absolute;top:-52px;left:0;right:0;height:52px;
+  background:linear-gradient(to bottom,transparent,rgba(15,15,20,.10));pointer-events:none;}
