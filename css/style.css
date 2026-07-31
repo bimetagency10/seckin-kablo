@@ -1036,7 +1036,6 @@ button.is-loading{opacity:.6;pointer-events:none;}
 .soc-wait{opacity:.45;cursor:default;}
 .soc-wait:hover{transform:none;}
 
-.footer-legal{display:block;font-size:.78rem;color:rgba(255,255,255,.45);margin-top:6px;}
 
 #sk-cerez-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:999;
   max-width:720px;margin-inline:auto;background:#fff;border:1px solid var(--line);
