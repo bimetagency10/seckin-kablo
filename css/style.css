@@ -1122,3 +1122,7 @@ button.is-loading{opacity:.6;pointer-events:none;}
 .footer .footer-line{position:absolute;top:0;left:0;right:0;height:2px;
   background:linear-gradient(90deg,transparent 6%,rgba(196,22,28,.9) 30%,var(--red-bright) 50%,rgba(196,22,28,.9) 70%,transparent 94%);
   box-shadow:0 0 18px 2px rgba(224,43,49,.5);pointer-events:none;}
+
+/* istatistik seridi: iki gecis golgesinin ortasinda, simetrik bosluk */
+.hero .stats{margin-top:0;padding:64px 0;}
+.hero .stats::after{height:56px;}
