@@ -19,7 +19,7 @@
 ### Blok C — Yapısal
 - Header/footer tek kaynak (partials + Vite plugin)
 - JS'ler tek hash'li Vite bundle'ında (gzip ~40 KB)
-- Bayilik sayfası; 7 ürün sayfasına SSS + FAQPage schema
+- 7 ürün sayfasına SSS + FAQPage schema
 - Ürün bağlamlı teklif formu (ürün grubu + metraj alanları, URL ön-doldurma)
 - CCTV boş spec satırları kaldırıldı; 29 kullanım cümlesi ürün-özel yazıldı
 - vercel.json (cache + güvenlik başlıkları), GitHub Actions build kontrolü

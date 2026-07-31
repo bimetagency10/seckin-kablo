@@ -1282,3 +1282,7 @@ button.is-loading{opacity:.6;pointer-events:none;}
 .faq-item summary::after{content:'+';font-size:1.3rem;color:var(--red);flex:none;transition:transform .2s;}
 .faq-item[open] summary::after{transform:rotate(45deg);}
 .faq-item p{padding:0 20px 16px;color:var(--body);}
+
+/* istatistik seridi: ust golge bitisi ile alt golge baslangici arasinda tam ortada
+   (ust bos alan 64px = alt bos alan 120-56=64px) */
+.hero .stats{margin-top:0;padding:64px 0 120px;}
