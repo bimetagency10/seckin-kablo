@@ -1057,18 +1057,22 @@ button.is-loading{opacity:.6;pointer-events:none;}
 .nav-cta .btn{padding:9px 18px;font-size:.88rem;}
 
 /* ===== Statik hero (slider yerine; foto sol, metin sag) ===== */
-.hero-static{display:flex;align-items:center;gap:clamp(24px,4vw,56px);
+.hero-static{position:relative;display:flex;align-items:center;gap:clamp(20px,3vw,48px);
   background:var(--bg-soft);border-radius:28px;overflow:hidden;
-  padding:clamp(24px,4vw,48px);min-height:480px;box-shadow:var(--sh-soft);}
-.hero-static-img{width:58%;max-width:820px;height:auto;object-fit:contain;flex:none;}
+  padding:clamp(20px,3vw,36px) clamp(24px,4vw,48px) clamp(20px,3vw,36px) 0;
+  min-height:480px;
+  box-shadow:var(--sh-soft),0 38px 64px -30px rgba(15,15,20,.38);}
+.hero-static-img{width:74%;max-width:none;height:auto;object-fit:contain;flex:none;margin-left:0;}
+.hero-static::after{content:'';position:absolute;left:0;right:0;bottom:0;height:110px;
+  background:linear-gradient(to bottom,transparent,rgba(15,15,20,.14));pointer-events:none;}
 .hero-static-text{display:flex;flex-direction:column;align-items:flex-start;min-width:0;}
 .hero-static-title{color:var(--ink);font-family:var(--font-display);font-weight:800;
   font-size:clamp(1.9rem,3.2vw,3rem);line-height:1.12;letter-spacing:-.02em;margin-top:18px;}
 .hero-static-sub{color:var(--body);font-size:clamp(1rem,1.3vw,1.12rem);max-width:520px;margin-top:16px;}
 .hero-static-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:28px;}
 @media (max-width:900px){
-  .hero-static{flex-direction:column;min-height:0;padding:24px;text-align:left;}
-  .hero-static-img{width:100%;max-width:560px;}
+  .hero-static{flex-direction:column;min-height:0;padding:24px 24px 40px;text-align:left;}
+  .hero-static-img{width:100%;max-width:640px;}
 }
 @media (max-width:560px){
   .hero-static-actions{flex-direction:column;width:100%;}
