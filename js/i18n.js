@@ -147,9 +147,6 @@ window.I18N = {
     "contact.t013": "İstanbul",
     "contact.t014": "Çalışma Saatleri",
     "contact.t015": "Hafta içi 08:30–18:00",
-    "contact.t016": "Harita yakında",
-    "contact.t017": "İstanbul",
-    "contact.t018": "Teklif talepleriniz aynı gün yanıtlanır.",
 
     /* ---- policies ---- */
     "policies.t001": "Kalite, Çevre ve <span class=\"gradient-text\">İSG</span> Politikamız",
@@ -1945,9 +1942,6 @@ window.I18N = {
     "contact.t013": "Istanbul",
     "contact.t014": "Working Hours",
     "contact.t015": "Hafta içi 08:30–18:00",
-    "contact.t016": "Map coming soon",
-    "contact.t017": "Istanbul",
-    "contact.t018": "Your quote requests are answered the same day.",
 
     /* ---- policies ---- */
     "policies.t001": "Our Quality, Environment & <span class=\"gradient-text\">OHS Policy</span>",
