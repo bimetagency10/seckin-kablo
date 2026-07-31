@@ -1117,3 +1117,8 @@ button.is-loading{opacity:.6;pointer-events:none;}
 
 .section-tight{padding-top:44px;}
 .hero .stats{padding-bottom:48px;}
+
+/* footer ustu kirmizi isik cizgisi */
+.footer .footer-line{position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent 6%,rgba(196,22,28,.9) 30%,var(--red-bright) 50%,rgba(196,22,28,.9) 70%,transparent 94%);
+  box-shadow:0 0 18px 2px rgba(224,43,49,.5);pointer-events:none;}
