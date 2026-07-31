@@ -1063,7 +1063,7 @@ button.is-loading{opacity:.6;pointer-events:none;}
 .hero-static-text{display:flex;flex-direction:column;align-items:flex-start;
   max-width:420px;margin-left:auto;min-width:0;}
 .hero-static-title{color:var(--ink);font-family:var(--font-display);font-weight:800;
-  font-size:clamp(1.8rem,2.9vw,2.7rem);line-height:1.12;letter-spacing:-.02em;margin-top:18px;}
+  font-size:clamp(1.8rem,2.9vw,2.7rem);line-height:1.12;letter-spacing:-.02em;margin-top:0;}
 .hero-static-sub{color:var(--body);font-size:clamp(.98rem,1.25vw,1.1rem);max-width:460px;margin-top:14px;}
 .hero-static-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;}
 /* fotografin alt kenarini golgeye gomen katman */
