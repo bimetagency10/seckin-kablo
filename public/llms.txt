@@ -1,0 +1,27 @@
+# Seçkin Kablo
+
+> Seçkin Kablo (BTK Kablo A.Ş. markası), Türkiye'de zayıf akım kabloları üreticisidir.
+> 7 ürün grubunda 60+ ürün çeşidi: data (Cat 5e/Cat 6), koaksiyel görüntü, CCTV kamera,
+> yangın alarm (F180/LSZH), sinyal-kontrol (LiYY/LiYCY), telefon ve kumanda kabloları.
+> TSE ve CE uyumlu, metraj baskılı ve izlenebilir üretim. Toptan tedarik ve bayilik
+> kanallarıyla çalışır; teklif taleplerine aynı gün dönüş yapılır.
+
+## Sayfalar
+
+- [Ürünler](https://seckinkablo.com/urunler.html): 7 ürün grubunun genel görünümü
+- [Data Kabloları](https://seckinkablo.com/data-kablolari.html): Cat 5e / Cat 6, UTP-FTP-SFTP, LSZH seçenekleri
+- [Koaksiyel Görüntü Kabloları](https://seckinkablo.com/koaksiyel-kablolar.html): RG59, RG6, RG11, Trisheld, multiswitch tipleri
+- [CCTV Kamera Kabloları](https://seckinkablo.com/cctv-kablolari.html): 2+1 / 4+1 / 12+1, Mini ve RG6 tabanlı tipler
+- [Yangın Alarm Kabloları](https://seckinkablo.com/yangin-alarm-kablolari.html): F180 devre bütünlüğü, LSZH
+- [Sinyal Kontrol Kabloları](https://seckinkablo.com/sinyal-kontrol-kablolari.html): LiYY, LiYCY ekranlı tipler
+- [Telefon Kabloları](https://seckinkablo.com/telefon-kablolari.html): bina içi/dışı çok çiftli tipler
+- [Kumanda Kabloları](https://seckinkablo.com/kumanda-kablolari.html): numaralı damar, ekranlı seçenekler
+- [Kablo Seçim Rehberi](https://seckinkablo.com/kablo-secim-rehberi.html): UTP/FTP/SFTP, LSZH, F180, RG seçimi
+- [Bayilik](https://seckinkablo.com/bayilik.html): bayilik başvurusu ve avantajlar
+- [İletişim](https://seckinkablo.com/iletisim.html): teklif formu, telefon: +90 537 297 65 45, info@seckinkablo.com
+
+## Şirket
+
+- Ticari unvan: BTK KABLO ANONİM ŞİRKETİ
+- Adres: Veliköy Mah. 19. Cad. No:10, Çerkezköy / Tekirdağ, Türkiye
+- Web: https://seckinkablo.com
