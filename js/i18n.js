@@ -38,14 +38,14 @@ window.I18N = {
     "footer.kumanda": "Kumanda",
     "footer.rights": "Tüm hakları saklıdır.",
     "form.submit": "Gönder",
-    "btn.quote": "Teklif Al",
+    "btn.quote": "Aynı Gün Teklif Al",
 
     /* ---- home ---- */
     "home.t001": "Bakırdan binaya, <span class=\"gradient-text\">kusursuz</span> iletim.",
     "home.t002": "Data, koaksiyel, CCTV — <span class=\"gradient-text\">tek çatı</span> altında.",
     "home.t003": "Her uygulama için <span class=\"gradient-text\">seçkin</span> kablo",
     "home.t004": "Kaliteyi <span class=\"gradient-text\">ölçülebilir</span> kılan detaylar",
-    "home.t005": "Seçkin Kablo — Türkiye'nin En Seçkin Kablosu",
+    "home.t005": "Seçkin Kablo — Data, Koaksiyel, CCTV, Yangın Alarm, Sinyal, Telefon ve Kumanda Kabloları Üreticisi",
     "home.t006": "TÜRKİYE'NİN EN SEÇKİN KABLOSU",
     "home.t007": "Yüksek saflıkta bakır, belgeli üretim ve her metresi test edilmiş kablolar.",
     "home.t008": "SEKTÖRE ÖZEL ÇÖZÜMLER",
@@ -56,7 +56,7 @@ window.I18N = {
     "home.t013": "Ürün Çeşidi",
     "home.t014": "Bant Genişliğine Kadar",
     "home.t015": "Belgeli Üretim",
-    "home.t016": "Zayıf akım ve veri altyapısının tamamını tek çatı altında topluyoruz. Aşağıdan ilgili grubu inceleyin.",
+    "home.t016": "Zayıf akım ve veri altyapısının tamamını tek çatı altında topluyoruz. Kablo üreticisi olarak bayilerimize ve projelere toptan tedarik ile OEM üretim desteği sağlıyoruz.",
     "home.t017": "Cat 6 ve Cat 5e UTP · FTP · SFTP; 10 Gigabit'e kadar güvenilir veri iletimi.",
     "home.t018": "RG6, RG11, RG59 ve Mini U serisi; uydu, anten ve TV dağıtım sistemleri.",
     "home.t019": "Besleme + görüntü kombine yapılar; kapalı devre kamera ve video sistemleri.",
@@ -147,9 +147,6 @@ window.I18N = {
     "contact.t013": "İstanbul",
     "contact.t014": "Çalışma Saatleri",
     "contact.t015": "Hafta içi 08:30–18:00",
-    "contact.t016": "Harita yakında",
-    "contact.t017": "İstanbul",
-    "contact.t018": "Teklif talepleriniz aynı gün yanıtlanır.",
 
     /* ---- policies ---- */
     "policies.t001": "Kalite, Çevre ve <span class=\"gradient-text\">İSG</span> Politikamız",
@@ -1836,14 +1833,14 @@ window.I18N = {
     "footer.kumanda": "Control",
     "footer.rights": "All rights reserved.",
     "form.submit": "Send",
-    "btn.quote": "Get a Quote",
+    "btn.quote": "Same-Day Quote",
 
     /* ---- home ---- */
     "home.t001": "From copper to building, <span class=\"gradient-text\">flawless</span> transmission.",
     "home.t002": "Data, coax, CCTV — <span class=\"gradient-text\">under one roof</span>.",
     "home.t003": "A premium cable for <span class=\"gradient-text\">every</span> application",
     "home.t004": "Details that make quality <span class=\"gradient-text\">measurable</span>",
-    "home.t005": "Seçkin Kablo — Turkey's Most Distinguished Cable",
+    "home.t005": "Seçkin Kablo — Manufacturer of Data, Coaxial, CCTV, Fire Alarm, Signal, Telephone and Control Cables",
     "home.t006": "TÜRKİYE'S FINEST CABLE",
     "home.t007": "High-purity copper, certified production, and cables tested by the metre.",
     "home.t008": "INDUSTRY-SPECIFIC SOLUTIONS",
@@ -1854,7 +1851,7 @@ window.I18N = {
     "home.t013": "Product Types",
     "home.t014": "Up to Bandwidth",
     "home.t015": "Certified Production",
-    "home.t016": "We bring the entire low-current and data infrastructure together under one roof. Browse the relevant group below.",
+    "home.t016": "We bring the entire low-current and data infrastructure under one roof. As a cable manufacturer, we support dealers and projects with wholesale supply and OEM production.",
     "home.t017": "Cat 6 and Cat 5e UTP · FTP · SFTP; reliable data transmission up to 10 Gigabit.",
     "home.t018": "RG6, RG11, RG59 and Mini U series; for satellite, antenna and TV distribution systems.",
     "home.t019": "Combined power + video constructions; for closed-circuit camera and video systems.",
@@ -1945,9 +1942,6 @@ window.I18N = {
     "contact.t013": "Istanbul",
     "contact.t014": "Working Hours",
     "contact.t015": "Hafta içi 08:30–18:00",
-    "contact.t016": "Map coming soon",
-    "contact.t017": "Istanbul",
-    "contact.t018": "Your quote requests are answered the same day.",
 
     /* ---- policies ---- */
     "policies.t001": "Our Quality, Environment & <span class=\"gradient-text\">OHS Policy</span>",
