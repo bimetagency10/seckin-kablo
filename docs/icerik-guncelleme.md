@@ -43,6 +43,17 @@ yoksa dil değiştirildiğinde eski metin görünür.
 Site genelinde arayın (`tel:+90...`, `wa.me/90...`, `info@seckinkablo.com`) —
 footer partial + iletisim.html + JSON-LD (sayfa head'leri) + `public/llms.txt`.
 
+## Katalog güncelleme
+
+1. Yeni PDF'i `assets/katalog/seckin-katalog.pdf` olarak kaydedin (mobilde bu dosya açılır).
+2. Sayfaları yeniden render edin (PyMuPDF gerekir: `pip install pymupdf`):
+   sayfalar `public/katalog/pNNN.webp` (1400px, kalite 78), küçük resimler
+   `public/katalog/tNNN.webp` (200px).
+3. `public/katalog.html` içindeki `PAGES`, `THUMBS` ve `TOC` dizilerini yeni
+   sayfa sayısına göre güncelleyin. `TOC`, bölüm ayraç sayfalarından
+   ("01 / Data Kabloları" gibi) çıkarılır.
+4. `npm run build` ile doğrulayın; katalog `/katalog.html` adresinden açılır.
+
 ## Yayına alma
 
 1. Değişikliği branch'te yapın, push edin → Vercel önizleme URL'inde kontrol edin.

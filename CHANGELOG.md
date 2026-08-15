@@ -26,8 +26,11 @@
 - Inline CSS'ler style.css'e taşındı; ölü slider CSS silindi; 170 SVG'ye aria-hidden
 
 ### Katalog
-- İnteraktif ürün kataloğu (75 sayfa) `/katalog.html` olarak yayına alındı;
-  tüm "Katalog" butonları buraya yönlendirildi, PDF indirme katalog içinde
+- İnteraktif ürün kataloğu `/katalog.html` olarak yayına alındı; tüm "Katalog"
+  butonları buraya yönlendirildi, PDF indirme katalog içinde
+- v10 kataloğu entegre edildi (81 sayfa, 10 bölüm — yeni: Solar Kablolar).
+  Sayfalar base64 gömülü yerine ayrı WebP dosyalarına çıkarıldı: katalog.html
+  8.7 MB → 72 KB, sayfalar ve küçük resimler tembel yükleniyor
 
 ### Mobil düzeltmeler
 - Menü açılınca beliren ikinci navbar (panel içi marka satırı) kaldırıldı
