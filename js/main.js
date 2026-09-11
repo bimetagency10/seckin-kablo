@@ -225,7 +225,7 @@
     {
       eyebrow: "TÜRKİYE'NİN EN SEÇKİN KABLOSU",
       title: 'Enerjiyi ve veriyi, <span class="gradient-text">seçkin</span> standartlarda taşıyoruz.',
-      subtitle: 'Data, koaksiyel görüntü, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarında; yüksek saflıkta bakır iletken ve uluslararası standartlarla üretilmiş geniş ürün gamı.',
+      subtitle: 'Data, koaksiyel görüntü, CCTV, yangın alarm, sinyal-kontrol, telefon, kumanda, solar, PUR ve yangına dayanıklı kablolarda; yüksek saflıkta bakır iletken ve uluslararası standartlarla üretilmiş geniş ürün gamı.',
       primaryLabel: 'Ürünleri Keşfet', primaryHref: 'urunler.html',
       ghostLabel: 'Katalog', ghostHref: 'assets/katalog/seckin-katalog.pdf'
     },

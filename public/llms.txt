@@ -1,13 +1,13 @@
 # Seçkin Kablo
 
 > Seçkin Kablo (BTK Kablo A.Ş. markası), Türkiye'de zayıf akım kabloları üreticisidir.
-> 7 ürün grubunda 60+ ürün çeşidi: data (Cat 5e/Cat 6), koaksiyel görüntü, CCTV kamera,
-> yangın alarm (F180/LSZH), sinyal-kontrol (LiYY/LiYCY), telefon ve kumanda kabloları.
+> 10 ürün grubunda 65+ ürün çeşidi: data (Cat 5e/Cat 6), koaksiyel görüntü, CCTV kamera,
+> yangın alarm (F180/LSZH), sinyal-kontrol (LiYY/LiYCY), telefon, kumanda, solar (H1Z2Z2-K), PUR (YSL11Y) ve yangına dayanıklı (FE180/PH120) kablolar.
 > TSE ve CE uyumlu, metraj baskılı ve izlenebilir üretim. Toptan tedarik kanallarıyla çalışır; teklif taleplerine aynı gün dönüş yapılır.
 
 ## Sayfalar
 
-- [Ürünler](https://seckinkablo.com/urunler.html): 7 ürün grubunun genel görünümü
+- [Ürünler](https://seckinkablo.com/urunler.html): 10 ürün grubunun genel görünümü
 - [Data Kabloları](https://seckinkablo.com/data-kablolari.html): Cat 5e / Cat 6, UTP-FTP-SFTP, LSZH seçenekleri
 - [Koaksiyel Görüntü Kabloları](https://seckinkablo.com/koaksiyel-kablolar.html): RG59, RG6, RG11, Trisheld, multiswitch tipleri
 - [CCTV Kamera Kabloları](https://seckinkablo.com/cctv-kablolari.html): 2+1 / 4+1 / 12+1, Mini ve RG6 tabanlı tipler
