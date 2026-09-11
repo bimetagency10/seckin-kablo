@@ -1,15 +1,18 @@
 <!DOCTYPE html><html lang="tr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Seçkin Kablo · Ürün Kataloğu 2026</title>
-<meta name="description" content="Seçkin Kablo 2026 ürün kataloğu — data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, telefon ve kumanda kablolarının teknik özellikleri. Sayfa sayfa inceleyin veya PDF olarak indirin.">
+<meta name="description" content="Seçkin Kablo 2026 ürün kataloğu — data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, kumanda, telefon, solar, PUR ve yangına dayanıklı kabloların teknik özellikleri. Sayfa sayfa inceleyin veya PDF olarak indirin.">
 <link rel="canonical" href="https://seckinkablo.com/katalog.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ürün Kataloğu 2026 — Seçkin Kablo">
-<meta property="og:description" content="Seçkin Kablo 2026 ürün kataloğunu çevrimiçi inceleyin: 7 ürün grubu, 60+ ürün çeşidi, teknik tablolar.">
+<meta property="og:description" content="Seçkin Kablo 2026 ürün kataloğunu çevrimiçi inceleyin: 10 ürün grubu (data, koaksiyel, CCTV, yangın alarm, sinyal-kontrol, kumanda, telefon, solar, PUR, yangına dayanıklı), teknik tablolar.">
 <meta property="og:url" content="https://seckinkablo.com/katalog.html">
-<meta property="og:image" content="https://seckinkablo.com/og-image.png">
+<meta property="og:image" content="https://seckinkablo.com/og-katalog.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#141416">
+<link rel="preload" as="image" href="katalog/p001.webp" fetchpriority="high">
 <link rel="icon" href="assets/img/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -64,7 +67,8 @@ footer{display:flex;align-items:center;justify-content:center;gap:14px;padding:1
   <select id="jump"></select>
   <button id="mode">Çift Sayfa</button>
   <button id="tg">Küçük Resimler</button>
-  <a class="sk-btn" href="assets/katalog/seckin-katalog.pdf" download title="Kataloğu PDF olarak indir">PDF İndir</a>
+  <a class="sk-btn" href="assets/katalog/seckin-katalog.pdf" download title="Kataloğu PDF olarak indir" data-event="katalog-pdf-indir" onclick="window.va&&window.va('event',{name:'katalog-pdf-indir'})">PDF İndir</a>
+  <a class="sk-btn" href="/katalog-metin.html" title="Erişilebilir metin sürümü">Metin</a>
   <a class="sk-btn" href="/" title="Seçkin Kablo web sitesine dön">← Siteye Dön</a>
   <button id="fs">Tam Ekran</button>
 </header>
@@ -81,9 +85,9 @@ footer{display:flex;align-items:center;justify-content:center;gap:14px;padding:1
   <button id="last">»</button>
 </footer>
 <script>
-const PAGES = ["katalog/p001.webp", "katalog/p002.webp", "katalog/p003.webp", "katalog/p004.webp", "katalog/p005.webp", "katalog/p006.webp", "katalog/p007.webp", "katalog/p008.webp", "katalog/p009.webp", "katalog/p010.webp", "katalog/p011.webp", "katalog/p012.webp", "katalog/p013.webp", "katalog/p014.webp", "katalog/p015.webp", "katalog/p016.webp", "katalog/p017.webp", "katalog/p018.webp", "katalog/p019.webp", "katalog/p020.webp", "katalog/p021.webp", "katalog/p022.webp", "katalog/p023.webp", "katalog/p024.webp", "katalog/p025.webp", "katalog/p026.webp", "katalog/p027.webp", "katalog/p028.webp", "katalog/p029.webp", "katalog/p030.webp", "katalog/p031.webp", "katalog/p032.webp", "katalog/p033.webp", "katalog/p034.webp", "katalog/p035.webp", "katalog/p036.webp", "katalog/p037.webp", "katalog/p038.webp", "katalog/p039.webp", "katalog/p040.webp", "katalog/p041.webp", "katalog/p042.webp", "katalog/p043.webp", "katalog/p044.webp", "katalog/p045.webp", "katalog/p046.webp", "katalog/p047.webp", "katalog/p048.webp", "katalog/p049.webp", "katalog/p050.webp", "katalog/p051.webp", "katalog/p052.webp", "katalog/p053.webp", "katalog/p054.webp", "katalog/p055.webp", "katalog/p056.webp", "katalog/p057.webp", "katalog/p058.webp", "katalog/p059.webp", "katalog/p060.webp", "katalog/p061.webp", "katalog/p062.webp", "katalog/p063.webp", "katalog/p064.webp", "katalog/p065.webp", "katalog/p066.webp", "katalog/p067.webp", "katalog/p068.webp", "katalog/p069.webp", "katalog/p070.webp", "katalog/p071.webp", "katalog/p072.webp", "katalog/p073.webp", "katalog/p074.webp", "katalog/p075.webp", "katalog/p076.webp", "katalog/p077.webp", "katalog/p078.webp", "katalog/p079.webp", "katalog/p080.webp", "katalog/p081.webp"],
-      THUMBS = ["katalog/t001.webp", "katalog/t002.webp", "katalog/t003.webp", "katalog/t004.webp", "katalog/t005.webp", "katalog/t006.webp", "katalog/t007.webp", "katalog/t008.webp", "katalog/t009.webp", "katalog/t010.webp", "katalog/t011.webp", "katalog/t012.webp", "katalog/t013.webp", "katalog/t014.webp", "katalog/t015.webp", "katalog/t016.webp", "katalog/t017.webp", "katalog/t018.webp", "katalog/t019.webp", "katalog/t020.webp", "katalog/t021.webp", "katalog/t022.webp", "katalog/t023.webp", "katalog/t024.webp", "katalog/t025.webp", "katalog/t026.webp", "katalog/t027.webp", "katalog/t028.webp", "katalog/t029.webp", "katalog/t030.webp", "katalog/t031.webp", "katalog/t032.webp", "katalog/t033.webp", "katalog/t034.webp", "katalog/t035.webp", "katalog/t036.webp", "katalog/t037.webp", "katalog/t038.webp", "katalog/t039.webp", "katalog/t040.webp", "katalog/t041.webp", "katalog/t042.webp", "katalog/t043.webp", "katalog/t044.webp", "katalog/t045.webp", "katalog/t046.webp", "katalog/t047.webp", "katalog/t048.webp", "katalog/t049.webp", "katalog/t050.webp", "katalog/t051.webp", "katalog/t052.webp", "katalog/t053.webp", "katalog/t054.webp", "katalog/t055.webp", "katalog/t056.webp", "katalog/t057.webp", "katalog/t058.webp", "katalog/t059.webp", "katalog/t060.webp", "katalog/t061.webp", "katalog/t062.webp", "katalog/t063.webp", "katalog/t064.webp", "katalog/t065.webp", "katalog/t066.webp", "katalog/t067.webp", "katalog/t068.webp", "katalog/t069.webp", "katalog/t070.webp", "katalog/t071.webp", "katalog/t072.webp", "katalog/t073.webp", "katalog/t074.webp", "katalog/t075.webp", "katalog/t076.webp", "katalog/t077.webp", "katalog/t078.webp", "katalog/t079.webp", "katalog/t080.webp", "katalog/t081.webp"],
-      TOC = [["Kapak", 1], ["İçindekiler", 2], ["Data Kabloları", 3], ["Koaksiyel Kablolar", 12], ["CCTV Kamera Kabloları", 35], ["Yangın Alarm Kabloları", 50], ["Sinyal Kontrol Kabloları", 58], ["Kumanda Kabloları", 68], ["Telefon Kabloları", 76], ["Solar Kablolar", 79]];
+const PAGES = ["katalog/p001.webp", "katalog/p002.webp", "katalog/p003.webp", "katalog/p004.webp", "katalog/p005.webp", "katalog/p006.webp", "katalog/p007.webp", "katalog/p008.webp", "katalog/p009.webp", "katalog/p010.webp", "katalog/p011.webp", "katalog/p012.webp", "katalog/p013.webp", "katalog/p014.webp", "katalog/p015.webp", "katalog/p016.webp", "katalog/p017.webp", "katalog/p018.webp", "katalog/p019.webp", "katalog/p020.webp", "katalog/p021.webp", "katalog/p022.webp", "katalog/p023.webp", "katalog/p024.webp", "katalog/p025.webp", "katalog/p026.webp", "katalog/p027.webp", "katalog/p028.webp", "katalog/p029.webp", "katalog/p030.webp", "katalog/p031.webp", "katalog/p032.webp", "katalog/p033.webp", "katalog/p034.webp", "katalog/p035.webp", "katalog/p036.webp", "katalog/p037.webp", "katalog/p038.webp", "katalog/p039.webp", "katalog/p040.webp", "katalog/p041.webp", "katalog/p042.webp", "katalog/p043.webp", "katalog/p044.webp", "katalog/p045.webp", "katalog/p046.webp", "katalog/p047.webp", "katalog/p048.webp", "katalog/p049.webp", "katalog/p050.webp", "katalog/p051.webp", "katalog/p052.webp", "katalog/p053.webp", "katalog/p054.webp", "katalog/p055.webp", "katalog/p056.webp", "katalog/p057.webp", "katalog/p058.webp", "katalog/p059.webp", "katalog/p060.webp", "katalog/p061.webp", "katalog/p062.webp", "katalog/p063.webp", "katalog/p064.webp", "katalog/p065.webp", "katalog/p066.webp", "katalog/p067.webp", "katalog/p068.webp", "katalog/p069.webp", "katalog/p070.webp", "katalog/p071.webp", "katalog/p072.webp", "katalog/p073.webp", "katalog/p074.webp", "katalog/p075.webp", "katalog/p076.webp", "katalog/p077.webp", "katalog/p078.webp", "katalog/p079.webp", "katalog/p080.webp", "katalog/p081.webp", "katalog/p082.webp", "katalog/p083.webp", "katalog/p084.webp"],
+      THUMBS = ["katalog/t001.webp", "katalog/t002.webp", "katalog/t003.webp", "katalog/t004.webp", "katalog/t005.webp", "katalog/t006.webp", "katalog/t007.webp", "katalog/t008.webp", "katalog/t009.webp", "katalog/t010.webp", "katalog/t011.webp", "katalog/t012.webp", "katalog/t013.webp", "katalog/t014.webp", "katalog/t015.webp", "katalog/t016.webp", "katalog/t017.webp", "katalog/t018.webp", "katalog/t019.webp", "katalog/t020.webp", "katalog/t021.webp", "katalog/t022.webp", "katalog/t023.webp", "katalog/t024.webp", "katalog/t025.webp", "katalog/t026.webp", "katalog/t027.webp", "katalog/t028.webp", "katalog/t029.webp", "katalog/t030.webp", "katalog/t031.webp", "katalog/t032.webp", "katalog/t033.webp", "katalog/t034.webp", "katalog/t035.webp", "katalog/t036.webp", "katalog/t037.webp", "katalog/t038.webp", "katalog/t039.webp", "katalog/t040.webp", "katalog/t041.webp", "katalog/t042.webp", "katalog/t043.webp", "katalog/t044.webp", "katalog/t045.webp", "katalog/t046.webp", "katalog/t047.webp", "katalog/t048.webp", "katalog/t049.webp", "katalog/t050.webp", "katalog/t051.webp", "katalog/t052.webp", "katalog/t053.webp", "katalog/t054.webp", "katalog/t055.webp", "katalog/t056.webp", "katalog/t057.webp", "katalog/t058.webp", "katalog/t059.webp", "katalog/t060.webp", "katalog/t061.webp", "katalog/t062.webp", "katalog/t063.webp", "katalog/t064.webp", "katalog/t065.webp", "katalog/t066.webp", "katalog/t067.webp", "katalog/t068.webp", "katalog/t069.webp", "katalog/t070.webp", "katalog/t071.webp", "katalog/t072.webp", "katalog/t073.webp", "katalog/t074.webp", "katalog/t075.webp", "katalog/t076.webp", "katalog/t077.webp", "katalog/t078.webp", "katalog/t079.webp", "katalog/t080.webp", "katalog/t081.webp", "katalog/t082.webp", "katalog/t083.webp", "katalog/t084.webp"],
+      TOC = [["Kapak", 1], ["İçindekiler", 2], ["Data Kabloları", 3], ["Koaksiyel Kablolar", 12], ["CCTV Kamera Kabloları", 35], ["Yangın Alarm Kabloları", 50], ["Sinyal Kontrol Kabloları", 57], ["Kumanda Kabloları", 65], ["Telefon Kabloları", 71], ["Solar Kablolar", 74], ["PUR Kablolar", 76], ["Yangına Dayanıklı Kablolar", 79]];
 const N = PAGES.length;
 let cur = 1, spread = true;
 const book = document.getElementById('book'), stage = document.getElementById('stage');
@@ -119,7 +123,18 @@ function render() {
   for (const [, p] of TOC) if (cur >= p) sec = p;
   jump.value = sec;
 }
-function go(p) { cur = Math.min(N, Math.max(1, p)); render(); }
+const prefetched = new Set();
+function prefetch(p) {
+  if (p < 1 || p > N || prefetched.has(p)) return;
+  prefetched.add(p);
+  const im = new Image(); im.decoding = 'async'; im.src = PAGES[p-1];
+}
+function prefetchNeighbors() {
+  const step = (spread && cur > 1 && cur < N) ? 2 : 1;
+  [cur + step, cur - step, cur + step*2].forEach(prefetch);
+}
+function go(p) { cur = Math.min(N, Math.max(1, p)); render();
+  (window.requestIdleCallback || setTimeout)(prefetchNeighbors, 1); }
 function step(d) { go(cur + (spread && cur > 1 && cur < N ? 2 * d : d)); }
 document.getElementById('prev').onclick = () => step(-1);
 document.getElementById('next').onclick = () => step(1);
@@ -150,4 +165,5 @@ stage.addEventListener('touchend', e => {
 }, {passive:true});
 addEventListener('resize', render);
 render();
+(window.requestIdleCallback || setTimeout)(prefetchNeighbors, 500);
 </script></body></html>

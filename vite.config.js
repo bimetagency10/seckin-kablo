@@ -22,10 +22,9 @@ function copyStaticDirs() {
 
 // Header/footer tek kaynak: partials/header.html + partials/footer.html
 // Sayfalarda <!--sk:header active="..."--> ve <!--sk:footer--> tokenlari kullanilir.
-// Ayrica tum sayfalarin </head>'ine Vercel Web Analytics scripti otomatik enjekte edilir
-// (cerezsiz, IP anonim; tek kaynak olsun diye burada — sayfa duzenlemesine gerek yok).
+// Not: Vercel Web Analytics artik src/entry.js icinde @vercel/analytics inject()
+// ile yuklenir; CDN script tag'i tekrar enjekte edilmez (cift sayimi onler).
 function skPartials() {
-  const analyticsTag = '  <script defer src="/_vercel/insights/script.js"></script>\n'
   return {
     name: 'sk-partials',
     transformIndexHtml: {
@@ -38,7 +37,6 @@ function skPartials() {
             return h
           })
           .replace(/<!--sk:footer-->/, () => readFileSync(resolve(__dirname, 'partials/footer.html'), 'utf-8'))
-          .replace('</head>', `${analyticsTag}</head>`)
       },
     },
   }

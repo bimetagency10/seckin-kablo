@@ -330,7 +330,10 @@
               success.classList.add('show');
               success.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
             }
-            if (window.SK_track) window.SK_track('form-gonderildi');
+            if (window.SK_track) window.SK_track('form-gonderildi', {
+              konu: konu.value || 'bilinmiyor',
+              urun: (function(){ var u = form.querySelector('#urun-grubu'); return u && u.value || 'yok'; })()
+            });
             form.reset();
             setTimeout(function () { if (success) success.classList.remove('show'); }, 8000);
           } else { throw new Error(data.message || 'Gönderim başarısız'); }
