@@ -89,7 +89,16 @@ const PAGES = ["katalog/p001.webp", "katalog/p002.webp", "katalog/p003.webp", "k
       THUMBS = ["katalog/t001.webp", "katalog/t002.webp", "katalog/t003.webp", "katalog/t004.webp", "katalog/t005.webp", "katalog/t006.webp", "katalog/t007.webp", "katalog/t008.webp", "katalog/t009.webp", "katalog/t010.webp", "katalog/t011.webp", "katalog/t012.webp", "katalog/t013.webp", "katalog/t014.webp", "katalog/t015.webp", "katalog/t016.webp", "katalog/t017.webp", "katalog/t018.webp", "katalog/t019.webp", "katalog/t020.webp", "katalog/t021.webp", "katalog/t022.webp", "katalog/t023.webp", "katalog/t024.webp", "katalog/t025.webp", "katalog/t026.webp", "katalog/t027.webp", "katalog/t028.webp", "katalog/t029.webp", "katalog/t030.webp", "katalog/t031.webp", "katalog/t032.webp", "katalog/t033.webp", "katalog/t034.webp", "katalog/t035.webp", "katalog/t036.webp", "katalog/t037.webp", "katalog/t038.webp", "katalog/t039.webp", "katalog/t040.webp", "katalog/t041.webp", "katalog/t042.webp", "katalog/t043.webp", "katalog/t044.webp", "katalog/t045.webp", "katalog/t046.webp", "katalog/t047.webp", "katalog/t048.webp", "katalog/t049.webp", "katalog/t050.webp", "katalog/t051.webp", "katalog/t052.webp", "katalog/t053.webp", "katalog/t054.webp", "katalog/t055.webp", "katalog/t056.webp", "katalog/t057.webp", "katalog/t058.webp", "katalog/t059.webp", "katalog/t060.webp", "katalog/t061.webp", "katalog/t062.webp", "katalog/t063.webp", "katalog/t064.webp", "katalog/t065.webp", "katalog/t066.webp", "katalog/t067.webp", "katalog/t068.webp", "katalog/t069.webp", "katalog/t070.webp", "katalog/t071.webp", "katalog/t072.webp", "katalog/t073.webp", "katalog/t074.webp", "katalog/t075.webp", "katalog/t076.webp", "katalog/t077.webp", "katalog/t078.webp", "katalog/t079.webp", "katalog/t080.webp", "katalog/t081.webp", "katalog/t082.webp", "katalog/t083.webp", "katalog/t084.webp"],
       TOC = [["Kapak", 1], ["İçindekiler", 2], ["Data Kabloları", 3], ["Koaksiyel Kablolar", 12], ["CCTV Kamera Kabloları", 35], ["Yangın Alarm Kabloları", 50], ["Sinyal Kontrol Kabloları", 57], ["Kumanda Kabloları", 65], ["Telefon Kabloları", 71], ["Solar Kablolar", 74], ["PUR Kablolar", 76], ["Yangına Dayanıklı Kablolar", 79]];
 const N = PAGES.length;
-let cur = 1, spread = true;
+function initialPage(){
+  try{
+    const q = new URLSearchParams(location.search).get('p');
+    const h = (location.hash||'').replace(/^#p=?/,'');
+    const n = parseInt(q||h,10);
+    if(Number.isFinite(n)) return Math.min(N, Math.max(1, n));
+  }catch(_){}
+  return 1;
+}
+let cur = initialPage(), spread = true;
 const book = document.getElementById('book'), stage = document.getElementById('stage');
 const slider = document.getElementById('slider'), pgno = document.getElementById('pgno');
 slider.max = N;
