@@ -24,3 +24,7 @@ yarn-error.log*
 .vercel
 .gstack/
 .claude/
+
+# Katalogdan cikarilan gecici gorsel klasorleri ve eski katalog surumleri
+0[0-9]-*/
+seckin_katalog_v*.pdf

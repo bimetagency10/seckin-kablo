@@ -4,3 +4,14 @@ dist
 .claude
 .gstack
 .vercel
+
+# Calisma artiklari (yayina gerek yok)
+0*-data/
+0*-koaksiyel/
+0*-cctv/
+0*-yangin/
+0*-sinyal/
+0*-kumanda/
+0*-telefon/
+0*-solar/
+seckin_katalog_v*.pdf
