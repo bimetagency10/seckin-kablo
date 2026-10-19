@@ -69,6 +69,7 @@ export default defineConfig({
         'solar-kablolari': resolve(__dirname, 'solar-kablolari.html'),
         'pur-kablolari': resolve(__dirname, 'pur-kablolari.html'),
         'yangina-dayanikli-kablolar': resolve(__dirname, 'yangina-dayanikli-kablolar.html'),
+        kalite: resolve(__dirname, 'kalite.html'),
         politikalarimiz: resolve(__dirname, 'politikalarimiz.html'),
         'kvkk-aydinlatma-metni': resolve(__dirname, 'kvkk-aydinlatma-metni.html'),
         'cerez-politikasi': resolve(__dirname, 'cerez-politikasi.html'),

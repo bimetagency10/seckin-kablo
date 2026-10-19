@@ -1,23 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>https://www.seckinkablo.com/</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://www.seckinkablo.com/urunler.html</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://www.seckinkablo.com/hakkimizda.html</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://www.seckinkablo.com/vizyon-misyon.html</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://www.seckinkablo.com/kalite.html</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://www.seckinkablo.com/politikalarimiz.html</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://www.seckinkablo.com/iletisim.html</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://www.seckinkablo.com/kvkk-aydinlatma-metni.html</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://www.seckinkablo.com/cerez-politikasi.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://www.seckinkablo.com/data-kablolari.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://www.seckinkablo.com/koaksiyel-kablolar.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://www.seckinkablo.com/cctv-kablolari.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://www.seckinkablo.com/yangin-alarm-kablolari.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://www.seckinkablo.com/sinyal-kontrol-kablolari.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://www.seckinkablo.com/telefon-kablolari.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://www.seckinkablo.com/kumanda-kablolari.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://www.seckinkablo.com/solar-kablolari.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://www.seckinkablo.com/pur-kablolari.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://www.seckinkablo.com/yangina-dayanikli-kablolar.html</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://www.seckinkablo.com/data-kablolari.html</loc><lastmod>2026-10-17</lastmod>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/data/cat6-utp-23awg.webp</image:loc><image:title>Cat 6 UTP 23 AWG</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/data/cat6-ftp-23awg.webp</image:loc><image:title>Cat 6 FTP 23 AWG</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/data/cat6-sftp-23awg.webp</image:loc><image:title>Cat 6 SFTP 23 AWG</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/data/cat6-utp-24awg.webp</image:loc><image:title>Cat 6 UTP 24 AWG</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/data/cat6-ftp-24awg.webp</image:loc><image:title>Cat 6 FTP 24 AWG</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/data/cat6-sftp-24awg.webp</image:loc><image:title>Cat 6 SFTP 24 AWG</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/data/cat5e-utp-24awg.webp</image:loc><image:title>Cat 5e UTP 24 AWG</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/data/cat5e-ftp-24awg.webp</image:loc><image:title>Cat 5e FTP 24 AWG</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/data/cat5e-ftp-24awg.webp</image:loc><image:title>Cat 5e SFTP 24 AWG</image:title></image:image>
+  </url>
+  <url><loc>https://www.seckinkablo.com/koaksiyel-kablolar.html</loc><lastmod>2026-10-17</lastmod>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/mini-u4.jpeg</image:loc><image:title>Mini U-4</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/mini-u6-cucu.jpeg</image:loc><image:title>Mini U-6</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/2x-mini-u4.jpeg</image:loc><image:title>2X Mini U-4</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/2x-mini-u6-cucu.jpeg</image:loc><image:title>2X Mini U-6</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg59-u4.jpeg</image:loc><image:title>RG59 U-4</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg59-u6-cucu.jpeg</image:loc><image:title>RG59 U-6</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg6-u.jpeg</image:loc><image:title>RG6 U</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg6-u4.jpeg</image:loc><image:title>RG6/U-4</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg6-u6-cucu.jpeg</image:loc><image:title>RG6/U-6</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg-u6-trishield.jpeg</image:loc><image:title>RG6 U-4 Trisheld</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg6-u6-cucu-trishield.jpeg</image:loc><image:title>RG6 U-6 Trisheld</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/4x-rg6-u4.webp</image:loc><image:title>4X RG6 U-4</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/4x-rg6-u4-cucu.webp</image:loc><image:title>4X RG6 U-6</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg11-u4.webp</image:loc><image:title>RG11 U-4</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg11-u6-cucu.webp</image:loc><image:title>RG11 U-6</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/mini-u6-cucu-hffr.jpeg</image:loc><image:title>Mini U-6 HFFR</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg59-u6-cucu-hffr.webp</image:loc><image:title>RG59 U-6 HFFR</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg6-u6-cucu-hffr.jpeg</image:loc><image:title>RG6/U-6 HFFR</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg6-u6-cucu-trishield-hffr.jpeg</image:loc><image:title>RG6 U-6 Trisheld HFFR</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg11-u6-cucu-hffr.webp</image:loc><image:title>RG11 U-6 HFFR</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg11-u6-cucu-trishield.webp</image:loc><image:title>RG11 U-6 Trisheld</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/koaksiyel/rg11-u6-cucu-trishield-hffr.webp</image:loc><image:title>RG11 U-6 Trisheld HFFR</image:title></image:image>
+  </url>
+  <url><loc>https://www.seckinkablo.com/cctv-kablolari.html</loc><lastmod>2026-10-17</lastmod>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/cctv/32_CCTV_2plus1_AL_2x022_ONAYLI.webp</image:loc><image:title>CCTV 2+1 AL 2x0,22</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/cctv/36_CCTV_4plus1_AL_4x022_ONAYLI.webp</image:loc><image:title>CCTV 4+1 AL 4x0,22</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/cctv/38_CCTV_4plus1_U6_CuCu_4x022_ONAYLI_v2.webp</image:loc><image:title>CCTV 12+1 AL 12x0,22</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/cctv/33_CCTV_2plus1_AL_2x050_ONAYLI.webp</image:loc><image:title>CCTV 2+1 2x0,50</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/cctv/37_CCTV_4plus1_AL_4x050_ONAYLI.webp</image:loc><image:title>CCTV 4+1 4x0,50</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/cctv/43_CCTV_4plus1_AL_HFFR_ONAYLI.webp</image:loc><image:title>CCTV 4+1 2x0,22+2x0,50</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/cctv/40_MINI_U4_CCTV_ONAYLI.webp</image:loc><image:title>Mini U-4 2x0,75</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/cctv/41_MINI_U6_CCTV_CuCu_ONAYLI.webp</image:loc><image:title>Mini U-6 2x0,75</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/cctv/44_MINI_U4_CCTV_HFFR_ONAYLI.webp</image:loc><image:title>Mini U-4 2x0,50+2x0,75</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/cctv/45_MINI_U6_CCTV_HFFR_ONAYLI.webp</image:loc><image:title>Mini U-6 2x0,50+2x0,75</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/cctv/42_CCTV_2plus1_AL_HFFR_ONAYLI.webp</image:loc><image:title>CCTV RG6/U-4 +2x0,50</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/cctv/34_CCTV_2plus1_U6_CuCu_2x022_ONAYLI.webp</image:loc><image:title>CCTV RG6/U-4 2x0,22+2x0,50</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/cctv/35_CCTV_2plus1_U6_CuCu_2x050_ONAYLI.webp</image:loc><image:title>CCTV RG6/U-6 2x0,50</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/cctv/39_CCTV_4plus1_U6_CuCu_4x050_ONAYLI_v2.webp</image:loc><image:title>CCTV RG6/U-6 2x0,22+2x0,50</image:title></image:image>
+  </url>
+  <url><loc>https://www.seckinkablo.com/yangin-alarm-kablolari.html</loc><lastmod>2026-10-17</lastmod>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/yangin/jysty-2x2x08.webp</image:loc><image:title>J-Y(St)Y…Lg</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/yangin/jhsth-2x2x08.webp</image:loc><image:title>J-H(St)H…Lg</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/yangin/jhsth-1x2x08.webp</image:loc><image:title>J-H(St)H…LgF180</image:title></image:image>
+  </url>
+  <url><loc>https://www.seckinkablo.com/sinyal-kontrol-kablolari.html</loc><lastmod>2026-10-17</lastmod>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/sinyal-kontrol/liyy.webp</image:loc><image:title>LIYY</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/sinyal-kontrol/liycy.webp</image:loc><image:title>LIYCY</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/sinyal-kontrol/liy_st_y.webp</image:loc><image:title>LIY(St)Y</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/sinyal-kontrol/liy_st_cy.webp</image:loc><image:title>LIY(St)CY</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/sinyal-kontrol/lihh.webp</image:loc><image:title>LIHH</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/sinyal-kontrol/lihch.webp</image:loc><image:title>LIHCH</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/sinyal-kontrol/lih_st_h.webp</image:loc><image:title>LIH(St)H</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/sinyal-kontrol/lih_st_ch.webp</image:loc><image:title>LIH(St)CH</image:title></image:image>
+  </url>
+  <url><loc>https://www.seckinkablo.com/telefon-kablolari.html</loc><lastmod>2026-10-17</lastmod>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/telefon/vbv_k.webp</image:loc><image:title>VBV-K</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/telefon/vbv.webp</image:loc><image:title>VBV</image:title></image:image>
+  </url>
+  <url><loc>https://www.seckinkablo.com/kumanda-kablolari.html</loc><lastmod>2026-10-17</lastmod>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/kumanda/lscycy.webp</image:loc><image:title>LSCYCY</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/kumanda/ysyl.webp</image:loc><image:title>YSLY</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/kumanda/hslh.webp</image:loc><image:title>HSLH</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/kumanda/hslhch.webp</image:loc><image:title>HSLHCH</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/kumanda/nslyo.webp</image:loc><image:title>NSLYÖ</image:title></image:image>
+  </url>
+  <url><loc>https://www.seckinkablo.com/solar-kablolari.html</loc><lastmod>2026-10-17</lastmod>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/solar/h1z2z2-k.webp</image:loc><image:title>H1Z2Z2-K</image:title></image:image>
+  </url>
+  <url><loc>https://www.seckinkablo.com/pur-kablolari.html</loc><lastmod>2026-10-17</lastmod>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/pur/ysl11y.webp</image:loc><image:title>YSL11Y</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/pur/11ysl11y.webp</image:loc><image:title>11YSL11Y</image:title></image:image>
+  </url>
+  <url><loc>https://www.seckinkablo.com/yangina-dayanikli-kablolar.html</loc><lastmod>2026-10-17</lastmod>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/yangina-dayanikli/jehsthbd-fe180-ph120.webp</image:loc><image:title>JE-H(St)H Bd FE180 PH120</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/yangina-dayanikli/jehsthbd.webp</image:loc><image:title>JE-H(St)H Bd</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/yangina-dayanikli/lihch-fe180-ph120.webp</image:loc><image:title>LIHCH FE180 PH120</image:title></image:image>
+    <image:image><image:loc>https://www.seckinkablo.com/assets/img/kablolar/yangina-dayanikli/lihch.webp</image:loc><image:title>LIHCH</image:title></image:image>
+  </url>
   <url><loc>https://www.seckinkablo.com/kablo-secim-rehberi.html</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://www.seckinkablo.com/katalog.html</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://www.seckinkablo.com/assets/katalog/seckin-katalog.pdf</loc><lastmod>2026-10-17</lastmod></url>

@@ -15,6 +15,7 @@
 - [Sinyal Kontrol Kabloları](https://www.seckinkablo.com/sinyal-kontrol-kablolari.html): LiYY, LiYCY ekranlı tipler
 - [Telefon Kabloları](https://www.seckinkablo.com/telefon-kablolari.html): bina içi/dışı çok çiftli tipler
 - [Kumanda Kabloları](https://www.seckinkablo.com/kumanda-kablolari.html): numaralı damar, ekranlı seçenekler
+- [Kalite ve Belgelerimiz](https://www.seckinkablo.com/kalite.html): TSE/CE/VDE/EN uyumu, 71 ürün için Performans Beyanı (DoP), izlenebilir üretim
 - [Kablo Seçim Rehberi](https://www.seckinkablo.com/kablo-secim-rehberi.html): UTP/FTP/SFTP, LSZH, F180, RG seçimi
 - [Ürün Kataloğu 2026](https://www.seckinkablo.com/katalog.html): 81 sayfalık çevrimiçi katalog: 10 bölüm, PDF indirme dahil
 - [İletişim](https://www.seckinkablo.com/iletisim.html): teklif formu, telefon: +90 537 297 65 45, info@seckinkablo.com
