@@ -1311,3 +1311,13 @@ button.is-loading{opacity:.6;pointer-events:none;}
 .map-adres span{font-weight:600;color:var(--ink);}
 .map-adres .btn{margin-left:auto;padding:10px 18px;font-size:.9rem;}
 @media (max-width:560px){.map-adres .btn{margin-left:0;width:100%;justify-content:center;}}
+
+/* Kategori sayfalarinda rehbere yonlendiren baglamsal ipucu */
+.rehber-ipucu{margin:40px 0 -16px;color:var(--body);font-size:1rem;}
+.rehber-ipucu a{color:var(--red);font-weight:600;}
+
+/* ==== Kalite sayfasi (kalite.html) — mevcut siniflarin sayfaya ozel ince ayari ==== */
+.kalite-page .badge-row + .policy-card{margin-top:40px;}
+.kalite-page .cta-card .hero-static-actions{justify-content:center;margin-top:0;}
+.kalite-page .cta-card .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55);box-shadow:none;}
+.kalite-page .cta-card .btn-ghost:hover{background:#fff;color:var(--red);border-color:#fff;}

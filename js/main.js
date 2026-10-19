@@ -431,3 +431,27 @@
     if (yok) yok.hidden = gorunen !== 0;
   });
 })();
+
+/* ===== Derin link: #urun-kimligi ile gelindiginde ilgili urun kartini ac =====
+   Urun semasindaki (ItemList) url alanlari bu capalara isaret ediyor. */
+(function () {
+  'use strict';
+  function capayiAc() {
+    var h = (location.hash || '').slice(1);
+    if (!h) return;
+    var el = document.getElementById(h);
+    if (!el || !el.classList.contains('acc-item') || el.classList.contains('open')) return;
+    var head = el.querySelector('.acc-head');
+    var body = el.querySelector('.acc-body');
+    if (!head || !body) return;
+    el.classList.add('open');
+    head.setAttribute('aria-expanded', 'true');
+    body.style.maxHeight = body.scrollHeight + 'px';
+    setTimeout(function () {
+      el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    }, 60);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', capayiAc);
+  else capayiAc();
+  addEventListener('hashchange', capayiAc);
+})();
